@@ -207,7 +207,7 @@
                                 <li><a href="#">03 Comments</a></li>
                             </ul>
                             <h3><a href="news-details.html">{{ $a->judul_indo }}</a></h3>
-                            <p>{!! $a->konten_indo !!}</p>
+                            <p>{!! Str::limit($a->konten_indo, 200) !!}</p>
                             <a href="{{ route('article_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
                         </div>
                     </div>

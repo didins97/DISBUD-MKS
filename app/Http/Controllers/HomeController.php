@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 use App\Models\Artikel;
 use App\Models\Publikasi;
@@ -64,6 +65,7 @@ class HomeController extends Controller
         $semua_publikasi = $semua_publikasi->get();
 
         $artikel = $artikel->where('published_at', '<=', Carbon::now())->take(3)->get();
+        // $artikel->konten_indo = Str::limit($artikel->konten_indo, 50);
         $slider = $semua_artikel->mergeRecursive($semua_publikasi)->mergeRecursive($semua_video)->mergeRecursive($semua_audio)->mergeRecursive($semua_foto)->mergeRecursive($semua_kegiatan)->mergeRecursive($semua_kerjasama);
 
         $kegiatan = $kegiatan->where('published_at', '<=', Carbon::now())->take(3)->get();
