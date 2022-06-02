@@ -22,7 +22,7 @@
       <div id="collapseTwo" class="collapse  {{ Request::segment(3) == 'artikel' || Request::segment(3) == 'foto' || Request::segment(3) == 'video' || Request::segment(3) == 'publikasi' || Request::segment(3) == 'audio' ? 'show' : '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
         <div class="bg-submenu-nav py-2 collapse-inner rounded">
           <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.article.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Artikel</a>
-          <a class="collapse-item {{ Request::segment(3) == 'foto' ? 'active' : '' }}" href="{{ route('admin.photo.index') }}"><i class="fas fa-fw fa-image mr-1"></i>Foto</a>
+          <a class="collapse-item {{ Request::segment(3) == 'foto' ? 'active' : '' }}" href="{{ route('admin.photo.index') }}"><i class="fas fa-fw fa-image mr-1"></i>Konten BudPar</a>
           <a class="collapse-item {{ Request::segment(3) == 'video' ? 'active' : '' }}" href="{{ route('admin.video.index') }}"><i class="fas fa-fw fa-video mr-1"></i>Video</a>
           <a class="collapse-item {{ Request::segment(3) == 'publikasi' ? 'active' : '' }}" href="{{ route('admin.publication.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i>Publikasi</a>
           <a class="collapse-item {{ Request::segment(3) == 'audio' ? 'active' : '' }}" href="{{ route('admin.audio.index') }}"><i class="fas fa-fw fa-volume-up mr-1"></i>Audio</a>

@@ -82,6 +82,7 @@ class ArtikelController extends Controller
         $query_this_article = Artikel::where('slug', $slug)->orWhere('slug_english', $slug)->where('published_at', '<=', Carbon::now())->where('status', 'publikasi');
 
         $artikel = $query_this_article->firstOrFail();
+        
 
         // check draft
         if( $artikel->status == 'draft' && !isset(auth()->user()->id) ) {

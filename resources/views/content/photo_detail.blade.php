@@ -1,236 +1,130 @@
 @extends('layout.app')
 
-@section('title')
-    {{ $foto->judul_indo }} - Jalur Rempah Kemdikbudristek Republik Indonesia
-@endsection
-
 @section('content')
-<main>
-    <div id="content">
-      <section id="artikelDanBerita">
-        <div class="container">
-          <div class="row justify-content-center">
-            <article class="col-lg-8">
-              <header>
-                <h2 class="sub-judul mb-4" id="judulMedia">{{ $foto->judul_indo }}</h2>
-                <p class="penulis-artikel" id="authorMedia">
-                  {{ $foto->penulis == 'admin' ? 'admin' : $foto->kontributor_relasi->nama }}
-                </p>
-                <p class="tgl-artikel mb-4" id="tglMedia">
-                  {{ \Carbon\Carbon::parse($foto->published_at)->isoFormat('D MMMM Y'); }}
-                </p>
-              </header>
-              <div class="slide-foto">
-                @for( $i = 0; $i < count(unserialize($foto->slider_foto)); $i++ )
-                <div>
-                  <div class="wrap-slide-img">
-                    <img src="{{ asset('storage/assets/foto/slider_foto/' . unserialize($foto->slider_foto)[$i]) }}" width="100%">
-                    <div class="wrap-des-foto">
-                      <p>{{ unserialize($foto->caption_slider_foto)[$i] }}</p>
-                    </div>
-                  </div>
-                </div>
-                @endfor
-              </div>
-              <article id="txtMedia">
-                {!! $foto->konten_indo !!}
-              </article>
-              @if( $foto->penulis != 'admin' )
-                <div id="disclaimer" class="mt-4">
-                  <p>Konten ini dibuat oleh kontributor website Jalur Rempah. <br>
-                    Laman Kontributor merupakan platform dari website Jalur Rempah yang digagas khusus untuk masyarakat luas untuk mengirimkan konten (berupa tulisan, foto, dan video) dan membagikan pengalamannya tentang Jalur Rempah. Setiap konten dari kontributor adalah tanggung jawab kontributor sepenuhnya.</p>
-                </div>
-              @endif
-              @php
-                  $konten_name = 'photo';
-                  $konten = $foto;
-              @endphp
-              @include('partials.social-share')
-            </article>
-          </div>
-        </div>
-      </section>
-      <section id="mediaJalurRempah">
-        <section class="container" id="artikel">
-          <header class="row justify-content-start mb-2">
-            <div class="col-md-6">
-              <h2 class="sub-judul">Konten Jalur Rempah</h2>
 
-            </div>
-          </header>
-          <div class="row justify-content-center">
-            <div class="col-lg-12">
-              <div class="row text-center">
-                <div class="col mb-2">
-                  <div class="card no-border card-media">
-                    <div class="card-body">
-                      <img src="{{ asset('assets/img/icon-publication.png') }}" width="25%">
-                      <p class="judul-media">Artikel</p>
-                      <p class="des-media">
 
-                      </p>
-                    </div>
-                    <a href="{{ route('articles') }}" class="stretched-link"></a>
-                  </div>
-                </div>
-                <div class="col mb-2">
-                  <div class="card no-border card-media">
-                    <div class="card-body">
-                      <img src="{{ asset('assets/img/icon-image.png') }}" width="25%">
-                      <p class="judul-media">Foto</p>
-                      <p class="des-media">
 
-                      </p>
-                    </div>
-                    <a href="{{ route('photos') }}" class="stretched-link"></a>
-                  </div>
-                </div>
-                <div class="col mb-2">
-                  <div class="card no-border card-media">
-                    <div class="card-body">
-                      <img src="{{ asset('assets/img/icon-video.png') }}" width="25%">
-                      <p class="judul-media">Video</p>
-                      <p class="des-media">
-
-                      </p>
-                    </div>
-                    <a href="{{ route('videos') }}" class="stretched-link"></a>
-                  </div>
-                </div>
-                <div class="col mb-2">
-                  <div class="card no-border card-media">
-                    <div class="card-body">
-                      <img src="{{ asset('assets/img/icon-publication.png') }}" width="25%">
-                      <p class="judul-media">Publikasi</p>
-                      <p class="des-media">
-
-                      </p>
-                    </div>
-                    <a href="{{ route('publications') }}" class="stretched-link"></a>
-                  </div>
-                </div>
-                <div class="col d-none d-lg-block d-xl-none mb-1">
-                  <div class="card no-border card-media">
-                    <div class="card-body">
-                      <img src="{{ asset('assets/img/icon-sound.png') }}" width="32.5%">
-                      <p class="judul-media">Audio</p>
-                      <p class="des-media">
-
-                      </p>
-                    </div>
-                    <a href="{{ route('audios') }}" class="stretched-link"></a>
-                  </div>
-                </div>
-                <div class="col-6 col-md-3 mb-1 d-lg-none d-xl-block">
-                  <div class="card no-border card-media">
-                    <div class="card-body">
-                      <img src="{{ asset('assets/img/icon-sound.png') }}" width="32.5%">
-                      <p class="judul-media">Audio</p>
-                      <p class="des-media">
-
-                      </p>
-                    </div>
-                    <a href="{{ route('audios') }}" class="stretched-link"></a>
-                  </div>
-                </div>
-                </div>
-            </div>
-          </div>
-        </section>
-      </section>
+<div class="preloader">
+    <div class="lds-ripple">
+        <div></div>
+        <div></div>
     </div>
-  </main>
-@endsection
+</div><!-- /.preloader -->
+<div class="page-wrapper">
+    <nav class="main-nav-one stricky main-nav-one__home-two">
+        <div class="container">
+            <div class="inner-container">
+                <div class="logo-box">
+                    <a href="parasanganta/index.html">
+                        <img src="assets/images/logo/logo-parasanganta.svg" alt="" width="230">
+                    </a>
+                    <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
+                </div><!-- /.logo-box -->
+                <div class="main-nav__main-navigation">
+                    <ul class="main-nav__navigation-box">
+                        <li><a href="parasanganta/index.html">Beranda</a></li>
+                        <li><a href="parasanganta/#">Konten</a></li>
+                        <li><a href="parasanganta/informasi.html">Informasi</a></li>
+                        <li><a href="parasanganta/event.html">Event</a></li>
+                        <li><a href="parasanganta/tentang.html">Tentang</a></li>
+                    </ul><!-- /.main-nav__navigation-box -->
+                </div><!-- /.main-nav__main-navigation -->
+                <div class="main-nav__right">
+                    <a href="#" class="search-popup__toggler"><i class="muzex-icon-search"></i></a>
+                    <!-- <a class="sidemenu-icon side-content__toggler" href="#"><i class="muzex-icon-menu"></i></a> -->
+                </div><!-- /.main-nav__right -->
+            </div><!-- /.inner-container -->
+        </div><!-- /.container -->
+    </nav><!-- /.main-nav-one -->
 
-@section('js')
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="{{ asset('assets/js/slick.min.js') }}"></script>
-<script>
-$(document).ready(function() {
-  if ($(window).width() <= 1000) {
-    $(".navbar").addClass("bg-nav-baru");
-    $(".navbar").removeClass("bg-trans");
-  }
-});
-$(window).scroll(function() {
+    <section class="page-header" style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg);background-size: cover;background-position: center;">
+        <div class="container">
+            <h2>BANGUNAN</h2>
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
 
-  if ($(window).width() >= 1000) {
-    var scroll = $(window).scrollTop();
-    //>=, not <=
-    if (scroll >= 50) {
-      //clearHeader, not clearheader - caps H
-      $(".navbar").addClass("bg-nav-baru");
-      $(".navbar").removeClass("bg-trans");
-    } else {
-      $(".navbar").addClass("bg-trans");
-      $(".navbar").removeClass("bg-nav-baru");
-    }
-  } else {
-    $(".navbar").addClass("bg-nav-baru");
-    $(".navbar").removeClass("bg-trans");
-  }
+    <section class="event-details">
+        <div class="container">
+            <div class="event-details__top">
+                <p class="d-none">Wednesday, Dec 18, 2019</p>
+                <h3>{{$foto->judul_indo}}</h3>
+                
+            </div><!-- /.event-details__top -->
+            <div class="row high-gutter">
+                <div class="col-lg-8 mb-4">
+                    <div class="event-details__main">
+                        <div class="event-details__image d-none">
+                            <img src="assets/images/event/event-d-1-1.jpg" alt="">
+                        </div><!-- /.event-details__image -->
+                        <div class="event-details__content">
+                           {!!$foto->konten_indo!!}
+                        </div><!-- /.event-details__content -->
+                    </div><!-- /.event-details__main -->
+                </div><!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="event-details__booking">
+                        <img src="{{ asset(get_asset_path($foto->getTable(), $foto->thumbnail)) }}" class="event-details__img mb-2" alt="...">
+                        <div class="event-details__booking__wrap">
+                            <ul class="event-details__booking-info list-unstyled">
+                                <li>
+                                    <span>Nama:</span>
+                                    {{$foto->judul_indo}}
+                                </li>
+                                <li>
+                                    <span>Kategori:</span>
+                                    Bangunan Cagar Budaya
+                                </li>
+                                <li>
+                                    <span>Letak:</span>
+                                    Jl. Ujung Pandang No. 1
+                                </li>
+                                <li>
+                                    <span>Kelurahan</span>
+                                    Bulogading
+                                </li>
+                                <li>
+                                    <span>Kecamatan</span>
+                                    Ujung Pandang
+                                </li>
+                            </ul><!-- /.event-details__booking-info list-unstyled -->
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <img src="assets/images/resources/qrcode.png" width="40%" alt="">
+                                </div>
+                            </div>
+                            <!-- /.thm-btn event-details__book-btn -->
+                        </div>
+                    </div><!-- /.event-details__booking -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-12 mt-5 event-details__content">
+                    <h3>Galeri</h3>
+                    <div class="grid-gallery mt-4">
+                @for( $i = 0; $i < count(unserialize($foto->slider_foto)); $i++ )
 
-}); //missing );
-</script>
-<script>
-$(function() {
+                        <div class="item-gallery">
+                          <img src="{{ asset('storage/assets/foto/slider_foto/' . unserialize($foto->slider_foto)[$i]) }}" />
+                        </div>
+                    @endfor
+                        <div class="placeholder"></div>
+                    </div>
+                    <h3 class="mt-5">Peta</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="google-map__contact" allowfullscreen></iframe> 
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.event-details -->
 
-  var minimized_elements = $('p.minimize');
-
-  minimized_elements.each(function() {
-    var t = $(this).text();
-    if (t.length < 90) return;
-
-    $(this).html(
-      t.slice(0, 90) + '<span>...' +
-      '<span style="display:none;">' + t.slice(90, t.length)
-    );
-
-  });
-
-});
-</script>
-
-<script>
-$(document).ready(function() {
-  $('.slide-foto').slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-});
-</script>
-<script>
-$(document).ready(function() {
-      $("iframe").attr("allowfullscreen", "allowfullscreen");
-    });
-</script>
-<script>
-  $('.menu-toggle').click(function(){
-     $(".nav2").toggleClass("mobile-nav");
-     $(".nav2").removeClass("temp-pos");
-     $(this).toggleClass("is-active");
-  });
-</script>
+    <section class="cta-one" style="background-image: url(assets/images/shapes/cta-bg-1-1.jpg);">
+        <div class="container text-center">
+            <h3>Download Informasi Lengkap</h3>
+            <p>
+                Download Informasi lengkap mengenai cagar budaya ini dalam bentuk PDF
+            </p>
+            <div class="cta-one__btn-block ">
+                <button class="thm-btn cta-one__btn-two btn-pill" data-toggle="modal" data-target="#downloadPDF">Download PDF</button><!-- /.thm-btn cta-one__btn-two -->
+            </div>
+            <!-- /.cta-one__btn-block -->
+        </div>
+        <!-- /.container -->
+    </section>
 @endsection

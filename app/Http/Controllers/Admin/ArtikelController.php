@@ -30,7 +30,9 @@ class ArtikelController extends Controller
     {
         $rempahs = Rempah::all();
         $lokasi = Lokasi::all();
-        $kategori_show = KategoriShow::where('id', '!=', 4)->where('id', '!=', 5)->get();
+        // $kategori_show = KategoriShow::where('id', '!=', 4)->where('id', '!=', 5)->get();
+        $kategori_show = KategoriShow::all();
+
         $kontributor = Kontributor::all();
 
         return view('admin.content.article.add', compact('rempahs', 'lokasi', 'kategori_show', 'kontributor'));

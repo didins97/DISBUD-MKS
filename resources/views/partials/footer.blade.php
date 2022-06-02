@@ -1,188 +1,71 @@
-@if( Session::get('lg') == 'en' )
-<footer>
-    <img class="footer-bg-1" src="{{ asset('assets/img/asset-jelajah.png') }}" width="50%">
-    <img class="footer-bg-2 d-none" src="{{ asset('assets/img/asset-jelajah2.png') }}" width="50%">
-    <div class="container wrap-footer">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-3 footer-content mb-4">
-          <img class="logo-footer" src="{{ asset('assets/img/logo-footer-3.png') }}" width="50%">
-          <p class="footer-alamat">The Ministry of Education, Culture, Research, and Technology, Jl. Jenderal Sudirman, Senayan, Jakarta 10270</p>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 mb-4 footer-content">
-          <h3 class="menu-footer mb-3">CONTACT</h3>
-          <ul>
-            <li>
-              jalurrempah@kemdikbud.go.id
-            </li>
-            <li>
-              021-5703303 / 021-57903020
-            </li>
-            <li>
-              021-5733125
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6 col-lg-2 mb-4 footer-content">
-          <h3 class="menu-footer mb-3">ABOUT</h3>
-          <ul>
-            <li>
-              <a href="{{ route('tentangjalur') }}">The Route</a>
-            </li>
-            <li>
-              <a href="{{ route('tentangjejak') }}">The Trace</a>
-            </li>
-            <li>
-              <a href="{{ route('tentangmasadepan') }}">The Future</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6 col-lg-2 mb-4 footer-content">
-          <h3 class="menu-footer mb-3">CONTENTS</h3>
-          <ul>
-            <li>
-              <a href="{{ route('articles') }}">Article</a>
-            </li>
-            <li>
-              <a href="{{ route('photos') }}">Photo</a>
-            </li>
-            <li>
-              <a href="{{ route('videos') }}">Video</a>
-            </li>
-            <li>
-              <a href="{{ route('publications') }}">Publication</a>
-            </li>
-            <li>
-              <a href="{{ route('audios') }}">Audio</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6 col-lg-2 mb-4 footer-content">
-          <h3 class="menu-footer mb-3">SOCIAL MEDIA</h3>
-          <ul class="list-group list-group-horizontal">
-            <li class="list-group-item">
-              <a target="_blank" href="https://web.facebook.com/jalurrempahri">
-                <img src="{{ asset('assets/img/icon-media-sosial/icon-facebook.svg') }}" width="25px">
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a target="_blank" href="https://www.youtube.com/channel/UCyhHsv7jCOiE12pGXbkINoA">
-                <img src="{{ asset('assets/img/icon-media-sosial/icon-youtube.svg') }}" width="25px">
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a target="_blank" href="https://www.instagram.com/jalurrempahri/?hl=id">
-                <img src="{{ asset('assets/img/icon-media-sosial/icon-instagram.svg') }}" width="25px">
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a target="_blank" href="https://twitter.com/JalurrempahRI">
-                <img src="{{ asset('assets/img/icon-media-sosial/icon-twitter.svg') }}" width="25px">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="wrap-footer-down">
-      <div class="row text-center">
-        <div class="col-12">
-          <p>The Ministry of Education, Culture, Research, and Technology, Jl. Jenderal Sudirman, Senayan, Jakarta 10270</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  @else
-  <footer>
-    <img class="footer-bg-1" src="{{ asset('assets/img/asset-jelajah.png') }}" width="50%">
-    <img class="footer-bg-2 d-none" src="{{ asset('assets/img/asset-jelajah2.png') }}" width="50%">
-    <div class="container wrap-footer">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-3 footer-content mb-4">
-          <img class="logo-footer" src="{{ asset('assets/img/logo-footer-3.png') }}" width="50%">
-          <p class="footer-alamat">Kompleks Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, Jalan Jenderal Sudirman, Senayan, Jakarta 10270</p>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 mb-4 footer-content">
-          <h3 class="menu-footer mb-3">KONTAK</h3>
-          <ul>
-            <li>
-              jalurrempah@kemdikbud.go.id
-            </li>
-            <li>
-              021-5703303 / 021-57903020
-            </li>
-            <li>
-              021-5733125
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6 col-lg-2 mb-4 footer-content">
-          <h3 class="menu-footer mb-3">TENTANG</h3>
-          <ul>
-            <li>
-              <a href="{{ route('tentangjalur') }}">Jalur</a>
-            </li>
-            <li>
-              <a href="{{ route('tentangjejak') }}">Jejak</a>
-            </li>
-            <li>
-              <a href="{{ route('tentangmasadepan') }}">Masa Depan</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6 col-lg-2 mb-4 footer-content">
-          <h3 class="menu-footer mb-3">KONTEN</h3>
-          <ul>
-            <li>
-              <a href="{{ route('articles') }}">Artikel</a>
-            </li>
-            <li>
-              <a href="{{ route('photos') }}">Foto</a>
-            </li>
-            <li>
-              <a href="{{ route('videos') }}">Video</a>
-            </li>
-            <li>
-              <a href="{{ route('publications') }}">Publikasi</a>
-            </li>
-            <li>
-              <a href="{{ route('audios') }}">Audio</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6 col-lg-2 mb-4 footer-content">
-          <h3 class="menu-footer mb-3">MEDIA SOSIAL</h3>
-          <ul class="list-group list-group-horizontal">
-            <li class="list-group-item">
-              <a target="_blank" href="https://web.facebook.com/jalurrempahri">
-                <img src="{{ asset('assets/img/icon-media-sosial/icon-facebook.svg') }}" width="25px">
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a target="_blank" href="https://www.youtube.com/channel/UCyhHsv7jCOiE12pGXbkINoA">
-                <img src="{{ asset('assets/img/icon-media-sosial/icon-youtube.svg') }}" width="25px">
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a target="_blank" href="https://www.instagram.com/jalurrempahri/?hl=id">
-                <img src="{{ asset('assets/img/icon-media-sosial/icon-instagram.svg') }}" width="25px">
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a target="_blank" href="https://twitter.com/JalurrempahRI">
-                <img src="{{ asset('assets/img/icon-media-sosial/icon-twitter.svg') }}" width="25px">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="wrap-footer-down">
-      <div class="row text-center">
-        <div class="col-12">
-          <p>Kompleks Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, Jalan Jenderal Sudirman, Senayan, Jakarta 10270</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  @endif
+<footer class="site-footer">
+    <div class="site-footer__upper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-widget footer-widget__about">
+                        <img src="assets/images/logo/logo-disbud.png" alt="" height="90">
+                        <p class="less-line">Dinas Kebudayaan <br> Pemerintah Kota Makassar</p>
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-2">
+                    <div class="footer-widget footer-widget__links">
+                        <h3 class="footer-widget__title">Konten</h3><!-- /.footer-widget__title -->
+                        <ul class="footer-widget__links-list list-unstyled">
+                            <li>
+                                <a href="#">Benda</a>
+                            </li>
+                            <li>
+                                <a href="#">Bangunan</a>
+                            </li>
+                            <li>
+                                <a href="#">Struktur</a>
+                            </li>
+                            <li>
+                                <a href="#">Situs</a>
+                            </li>
+                            <li>
+                                <a href="#">Kawasan</a>
+                            </li>
+                            <li>
+                                <a href="#">Kegiatan</a>
+                            </li>
+                        </ul><!-- /.footer-widget__links-list -->
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-2 -->
+                <div class="col-lg-3">
+                    <div class="footer-widget footer-widget__contact">
+                        <h3 class="footer-widget__title">Kontak</h3><!-- /.footer-widget__title -->
+                        <p>Jl. Balaikota No.11, Baru, <br>Kec. Ujung Pandang, Kota Makassar, Sulawesi Selatan
+                            90111
+                        </p>
+                        <p>(0411) 449817</p>
+                        <p><a href="mailto:example@muzex.com">disbudmakassar@gmail.com</a></p>
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3">
+                    <div class="footer-widget footer-widget__open-hrs">
+                        <h3 class="footer-widget__title">Media Sosial</h3><!-- /.footer-widget__title -->
+                        <a class="sosmed-icon" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="sosmed-icon" href="#"><i class="fab fa-facebook"></i></a>
+                        <a class="sosmed-icon" href="#"><i class="fab fa-twitter"></i></a>
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-3 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.site-footer__upper -->
+    <div class="site-footer__bottom">
+        <div class="container">
+            <div class="inner-container">
+                <p>&copy; Copyright 2022 Dinas Kebudayaan Kota Makassar</p>
+                <a href="index.html" class="site-footer__bottom-logo">
+                    <img src="assets/images/resources/logo-makassar.png" alt="" width="60">
+                </a>
+                <div class="site-footer__bottom-links">
+                    <!-- <a href="#">Terms & conditions</a> -->
+                    <a href="#">Privacy policy & Terms of use</a>
+                </div><!-- /.site-footer__bottom-links -->
+            </div><!-- /.inner-container -->
+        </div><!-- /.container -->
+    </div><!-- /.site-footer__bottom -->
+</footer><!-- /.site-footer -->

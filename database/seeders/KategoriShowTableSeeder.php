@@ -17,19 +17,25 @@ class KategoriShowTableSeeder extends Seeder
     {
         $data = [
             [
-                'isi' => 'Jejak'
+                'isi' => 'Benda'
             ],
             [
-                'isi' => 'Jalur'
+                'isi' => 'Bangunan'
             ],
             [
-                'isi' => 'Masa Depan'
+                'isi' => 'Struktur'
             ],
             [
-                'isi' => 'Kerja Sama'
+                'isi' => 'Situs'
+            ],
+            [
+                'isi' => 'Kawasan'
             ],
             [
                 'isi' => 'Kegiatan'
+            ],
+            [
+                'isi' => 'Events'
             ],
         ];
         DB::table('kategori_shows')->insert($data);

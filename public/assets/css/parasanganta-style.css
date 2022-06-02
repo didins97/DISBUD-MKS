@@ -1,0 +1,197 @@
+.main-nav-one__home-three {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-pill {
+  border-radius: 100px;
+}
+
+.mt-10 {
+  margin-top: 5rem;
+}
+
+.collection-two__home-three .collection-two__content,
+.collection-two__home-three .collection-two__image img {
+  border-radius: 10px;
+}
+
+.collection-two__content:hover > h3 {
+  color: #fff;
+}
+
+.collection-two__home-three .collection-two__image img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.collection-two__bg {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 100vw;
+  z-index: 0;
+  opacity: 0.05;
+}
+
+.collection-two__image img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.block-title-two {
+  padding-top: 150px;
+}
+
+.bg-gray {
+  background-color: #f5f7fa;
+}
+
+.blog-one__date {
+  border-radius: 100px;
+  top: 20px;
+  left: 30px;
+}
+
+.blog-one__image {
+  border-radius: 20px 20px 0px 0px;
+  background-color: #f5f7fa;
+  height: 270px;
+  object-fit: cover;
+}
+
+.blog-one__content {
+  border-radius: 0px 0px 20px 20px;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.collection-two__content {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.event-one__moc {
+  left: 3%;
+  right: 0%;
+}
+
+.event-one::before {
+  background-image: url("../images/backgrounds/bg-event.png");
+}
+
+.event-one__image-inner > img {
+  height: 159px;
+  weight: 159px;
+  object-fit: cover;
+}
+
+.event-one__content {
+  flex: 1 1 50%;
+}
+
+.event-one__single {
+  border-radius: 30px;
+}
+
+.event-one__btn {
+  font-size: 0.9rem;
+}
+
+.footer-widget__about p {
+  line-height: 28px;
+  margin-top: 15px;
+  color: #848484;
+}
+
+.sosmed-icon {
+  color: #848484;
+  margin-right: 0.5rem;
+}
+
+.sosmed-icon:hover {
+  color: #252931;
+}
+
+.sosmed-icon > i {
+  font-size: 2.2rem;
+}
+
+.collection-two__home-three .collection-two__content {
+  box-shadow: 0px 20px 50px 0px rgb(33 37 43 / 10%);
+}
+
+.page-header h2 {
+  letter-spacing: 20px !important;
+}
+
+.collection-two__carousel.owl-theme .owl-nav [class*="owl-"] {
+  border-radius: 12px !important;
+}
+
+.collection-two__content {
+  border-radius: 12px;
+}
+
+.event-details__content .google-map__contact{
+    height: 500px !important;
+}
+
+.event-details__booking{
+    border-radius: 20px;
+    padding: 0px;
+}
+
+.event-details__img{
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.event-details__booking__wrap{
+    padding: 1.5rem;
+}
+
+.modal-dialog{
+    background-color: tomato;
+}
+
+/* gallery */
+
+.grid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  --height: 240; /* Minimal row height */
+  --ratio: 1; /* Default aspect ratio for photos that are not loaded yet */
+}
+
+.item-gallery {
+  flex: calc(var(--height) / var(--ratio));
+  min-width: calc(var(--height) / var(--ratio) * 1px);
+  margin: 2px;
+  font-size: 0;
+}
+
+.item-gallery img {
+  width: 100%;
+}
+
+.placeholder {
+  flex-grow: 99999;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .collection-two__content {
+    bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .page-header h2{
+      letter-spacing: 10px !important;
+  }
+  .event-details{
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+}

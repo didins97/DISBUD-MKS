@@ -1,202 +1,130 @@
 @extends('layout.app')
 
-@section('title')
-    {{ $artikel->judul_indo }} - Jalur Rempah Kemdikbudristek Republik Indonesia
-@endsection
-
 @section('content')
-<header id="hero">
-    <img class="hero-img-2" src="{{ asset('assets/img/hero/hero-2.webp') }}">
-    <div class="text-hero-2">
-      <div class="">
-        <div class="col-lg-12 text-center">
-          <h1>Artikel</h1>
-        </div>
-      </div>
+
+
+
+<div class="preloader">
+    <div class="lds-ripple">
+        <div></div>
+        <div></div>
     </div>
-  </header>
-  <main>
-    <div id="content">
-      <section id="artikel">
-        <img class="item-jelajah item-kompas" src="{{ asset('assets/img/item-kompas.svg') }}">
-        <img class="item-jelajah item-cengkeh" src="{{ asset('assets/img/item-cengkeh.svg') }}">
+</div><!-- /.preloader -->
+<div class="page-wrapper">
+    <nav class="main-nav-one stricky main-nav-one__home-two">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 wrap-detail-artikel">
-              <header>
-                <h2 class="sub-judul">{{ $artikel->judul_indo }}</h2>
-                <div class="info-penulis">
-                  <span class="txt-penulis" class="mr-3" id="penulis" name="penulis">{{ $artikel->penulis != 'admin' ? $artikel->kontributor_relasi->nama : 'admin' }}</span> |
-                  <span class="txt-penulis" id="tglArtikel" name="tglArtikel">{{ \Carbon\Carbon::parse($artikel->published_at)->isoFormat('D MMMM Y') }}</span>
-                </div>
-              </header>
-              <article id="isiKonten">
-                <img class="mb-3 mt-3" src="{{ asset('storage/assets/artikel/thumbnail/' . $artikel->thumbnail) }}" width="100%">
-                {!! $artikel->konten_indo !!}
-              </article>
-              @if( $artikel->penulis != 'admin' )
-              <div id="disclaimer" class="mt-4">
-                <p>Konten ini dibuat oleh kontributor website Jalur Rempah. <br>
-                  Laman Kontributor merupakan platform dari website Jalur Rempah yang digagas khusus untuk masyarakat luas untuk mengirimkan konten (berupa tulisan, foto, dan video) dan membagikan pengalamannya tentang Jalur Rempah. Setiap konten dari kontributor adalah tanggung jawab kontributor sepenuhnya.</p>
-              </div>
-              @endif
-              @php
-                  $konten_name = 'article';
-                  $konten = $artikel;
-              @endphp
-              @include('partials.social-share')
-              @if( $artikelBacaJuga )
-              <div class="wrap-baca-juga">
-                <p>Baca juga: <a href="{{ route('article_detail', $artikelBacaJuga->slug) }}" class="berita-terkait">{{ $artikelBacaJuga->judul_indo }}</a></p>
-              </div>
-              @endif
-            </div>
-            <div class="col-lg-4">
-              <div class="row mb-4">
-                <div class="col-md-12">
-                  <header>
-                    <h2 class="sub-judul">Konten Populer</h2>
-                  </header>
-                  <div class="row">
-                    @foreach( $artikelPopuler as $a )
-                    <div class="col-12 mb-2">
-                      <div class="card no-border no-background">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-5">
-                              <img class="kegiatan-img" id="imgKegiatan" name="imgKegiatan" src="{{ asset('storage/assets/artikel/thumbnail/' . $a->thumbnail) }}">
+            <div class="inner-container">
+                <div class="logo-box">
+                    <a href="parasanganta/index.html">
+                        <img src="assets/images/logo/logo-parasanganta.svg" alt="" width="230">
+                    </a>
+                    <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
+                </div><!-- /.logo-box -->
+                <div class="main-nav__main-navigation">
+                    <ul class="main-nav__navigation-box">
+                        <li><a href="parasanganta/index.html">Beranda</a></li>
+                        <li><a href="parasanganta/#">Konten</a></li>
+                        <li><a href="parasanganta/informasi.html">Informasi</a></li>
+                        <li><a href="parasanganta/event.html">Event</a></li>
+                        <li><a href="parasanganta/tentang.html">Tentang</a></li>
+                    </ul><!-- /.main-nav__navigation-box -->
+                </div><!-- /.main-nav__main-navigation -->
+                <div class="main-nav__right">
+                    <a href="#" class="search-popup__toggler"><i class="muzex-icon-search"></i></a>
+                    <!-- <a class="sidemenu-icon side-content__toggler" href="#"><i class="muzex-icon-menu"></i></a> -->
+                </div><!-- /.main-nav__right -->
+            </div><!-- /.inner-container -->
+        </div><!-- /.container -->
+    </nav><!-- /.main-nav-one -->
+
+    <section class="page-header" style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg);background-size: cover;background-position: center;">
+        <div class="container">
+            <h2>BANGUNAN</h2>
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
+
+    <section class="event-details">
+        <div class="container">
+            <div class="event-details__top">
+                <p class="d-none">Wednesday, Dec 18, 2019</p>
+                <h3>{{$artikel->judul_indo}}</h3>
+                
+            </div><!-- /.event-details__top -->
+            <div class="row high-gutter">
+                <div class="col-lg-8 mb-4">
+                    <div class="event-details__main">
+                        <div class="event-details__image d-none">
+                            <img src="assets/images/event/event-d-1-1.jpg" alt="">
+                        </div><!-- /.event-details__image -->
+                        <div class="event-details__content">
+                           {!!$artikel->konten_indo!!}
+                        </div><!-- /.event-details__content -->
+                    </div><!-- /.event-details__main -->
+                </div><!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="event-details__booking">
+                        <img src="{{ asset(get_asset_path($artikel->getTable(), $artikel->thumbnail)) }}" class="event-details__img mb-2" alt="...">
+                        <div class="event-details__booking__wrap">
+                            <ul class="event-details__booking-info list-unstyled">
+                                <li>
+                                    <span>Nama:</span>
+                                    {{$artikel->judul_indo}}
+                                </li>
+                                <li>
+                                    <span>Kategori:</span>
+                                    Bangunan Cagar Budaya
+                                </li>
+                                <li>
+                                    <span>Letak:</span>
+                                    Jl. Ujung Pandang No. 1
+                                </li>
+                                <li>
+                                    <span>Kelurahan</span>
+                                    Bulogading
+                                </li>
+                                <li>
+                                    <span>Kecamatan</span>
+                                    Ujung Pandang
+                                </li>
+                            </ul><!-- /.event-details__booking-info list-unstyled -->
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <img src="assets/images/resources/qrcode.png" width="40%" alt="">
+                                </div>
                             </div>
-                            <div class="col-7 center-v">
-                              <h3 class="judul-berita-aside" id="jdlKegiatan" name="jdlKegiatan">{{ $a->judul_indo }}</h3>
-                              <p class="tgl-berita-aside" id="tglKegiatan" name="tglKegiatan">{{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }} </p>
-                            </div>
-                          </div>
-                          <a href="{{ route('article_detail', $a->slug) }}" class="stretched-link"></a>
+                            <!-- /.thm-btn event-details__book-btn -->
                         </div>
-                      </div>
-                    </div>
-                    @endforeach
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <header>
-                    <h2 class="sub-judul">Konten Terbaru</h2>
-                  </header>
-                  <div class="row">
-                    @foreach( $artikelTerbaru as $a )
-                    <div class="col-12 mb-2">
-                      <div class="card no-border no-background">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-5">
-                              <img class="kegiatan-img " id="imgKegiatan" name="imgKegiatan" src="{{ asset('storage/assets/artikel/thumbnail/' . $a->thumbnail) }}">
-                            </div>
-                            <div class="col-7 center-v">
-                              <h3 class="judul-berita-aside" id="jdlKegiatan" name="jdlKegiatan">{{ $a->judul_indo }}</h3>
-                              <p class="tgl-berita-aside" id="tglKegiatan" name="tglKegiatan">{{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}</p>
-                            </div>
-                          </div>
-                          <a href="{{ route('article_detail', $a->slug) }}" class="stretched-link"></a>
+                    </div><!-- /.event-details__booking -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-12 mt-5 event-details__content">
+                    <h3>Galeri</h3>
+                    <div class="grid-gallery mt-4">
+                @for( $i = 0; $i < count(unserialize($foto->slider_foto)); $i++ )
+
+                        <div class="item-gallery">
+                          <img src="{{ asset('storage/assets/foto/slider_foto/' . unserialize($foto->slider_foto)[$i]) }}" />
                         </div>
-                      </div>
+                    @endfor
+                        <div class="placeholder"></div>
                     </div>
-                    @endforeach
-                  </div>
+                    <h3 class="mt-5">Peta</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="google-map__contact" allowfullscreen></iframe> 
                 </div>
-              </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.event-details -->
+
+    <section class="cta-one" style="background-image: url(assets/images/shapes/cta-bg-1-1.jpg);">
+        <div class="container text-center">
+            <h3>Download Informasi Lengkap</h3>
+            <p>
+                Download Informasi lengkap mengenai cagar budaya ini dalam bentuk PDF
+            </p>
+            <div class="cta-one__btn-block ">
+                <button class="thm-btn cta-one__btn-two btn-pill" data-toggle="modal" data-target="#downloadPDF">Download PDF</button><!-- /.thm-btn cta-one__btn-two -->
             </div>
-          </div>
+            <!-- /.cta-one__btn-block -->
         </div>
-      </section>
-      <!---------------------------------------------------->
-      <section class="container mt-5">
-        <header class="row justify-content-center mb-2">
-          <div class="col-md-6">
-            <h2 class="sub-judul aside-judul">Konten Terkait</h2>
-          </div>
-          <div class="col-md-6 center-v text-end">
-          </div>
-        </header>
-        <section class="row justify-content-center">
-          @foreach( $artikelTerkait as $a )
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card no-border no-background card-body">
-              <img src="{{ asset('storage/assets/artikel/thumbnail/' . $a->thumbnail) }}" class="card-img-top mb-4 img-thumbnail" alt="...">
-              <h3 class="card-title judul-artikel">{{ $a->judul_indo }}</h3>
-              {{-- <p class="card-text des-artikel minimize">{!! Str::limit($a->konten_indo, 50, $end='...') !!}</p> --}}
-              <p class="penulis-artikel">{{ $a->penulis != 'admin' ? $a->kontributor_relasi->nama : 'admin' }}</p>
-              <p class="tgl-artikel">{{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}</p>
-              <a href="{{ route('article_detail', $a->slug) }}" class="stretched-link"></a>
-            </div>
-          </div>
-          @endforeach
-        </section>
-      </section>
-    </div>
-  </main>
-@endsection
-
-@section('js')
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="http://platform.twitter.com/widgets.js"></script>
-<script>
-$(document).ready(function() {
-  if ($(window).width() <= 1000) {
-    $(".navbar").addClass("bg-nav");
-    $(".navbar").removeClass("bg-trans");
-  }
-});
-$(window).scroll(function() {
-
-  if ($(window).width() >= 1000) {
-    var scroll = $(window).scrollTop();
-    //>=, not <=
-    if (scroll >= 50) {
-      //clearHeader, not clearheader - caps H
-      $(".navbar").addClass("bg-nav");
-      $(".navbar").removeClass("bg-trans");
-    } else {
-      $(".navbar").addClass("bg-trans");
-      $(".navbar").removeClass("bg-nav");
-    }
-  } else {
-    $(".navbar").addClass("bg-nav");
-    $(".navbar").removeClass("bg-trans");
-  }
-
-}); //missing );
-</script>
-<script>
-$(function() {
-
-  var minimized_elements = $('p.minimize');
-
-  minimized_elements.each(function() {
-    var t = $(this).text();
-    if (t.length < 90) return;
-
-    $(this).html(
-      t.slice(0, 90) + '<span>...' +
-      '<span style="display:none;">' + t.slice(90, t.length)
-    );
-
-  });
-
-});
-</script>
-<script>
-$(document).ready(function() {
-      $("iframe").attr("allowfullscreen", "allowfullscreen");
-    });
-</script>
-<script>
-  $('.menu-toggle').click(function(){
-     $(".nav2").toggleClass("mobile-nav");
-     $(".nav2").removeClass("temp-pos");
-     $(this).toggleClass("is-active");
-  });
-</script>
+        <!-- /.container -->
+    </section>
 @endsection

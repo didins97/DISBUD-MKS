@@ -41,6 +41,21 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\RedirectController;
 
+//parasanganta
+
+use App\Http\Controllers\BendaController;
+use App\Http\Controllers\BangunanController;
+use App\Http\Controllers\StrukturController;
+use App\Http\Controllers\SitusController;
+use App\Http\Controllers\KawasanController;
+use App\Http\Controllers\Kegiatan1Controller;
+
+
+
+
+
+
+
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CaptchaServiceController;
 
@@ -175,6 +190,22 @@ Route::get('/tentang-jalur', [JalurController::class, 'index'])->name('tentangja
 Route::get('/tentang-jejak', [JejakController::class, 'index'])->name('tentangjejak');
 Route::get('/tentang-masa-depan', [MasaDepanController::class, 'index'])->name('tentangmasadepan');
 Route::get('/funfact/{rempahName}', [RempahController::class, 'show'])->name('rempah_detail');
+
+//parasanganta
+Route::get('/tentang-benda', [BendaController::class, 'index'])->name('tentangbenda');
+Route::get('/tentang-bangunan', [BangunanController::class, 'index'])->name('tentangbangunan');
+Route::get('/tentang-struktur', [StrukturController::class, 'index'])->name('tentangstruktur');
+Route::get('/tentang-situs', [SitusController::class, 'index'])->name('tentangsitus');
+Route::get('/tentang-kawasan', [KawasanController::class, 'index'])->name('tentangkawasan');
+Route::get('/tentang-kegiatan', [Kegiatan1Controller::class, 'index'])->name('tentangkegiatan');
+// Route::get('/artikel/{slug}', [ArtikelController::class, 'show'])->name('article_detail');
+
+
+
+
+
+
+
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'login_post'])->name('login_post');
