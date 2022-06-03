@@ -17,7 +17,7 @@ jobs:
         host: ${{ secrets.HOST }}
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
-        script: 'cd /var/www/disbub.upanastudio.com/ && chmod +x deploy.sh && ./deploy.sh'
+        script: 'cd /var/www/disbud.upanastudio.com/ && chmod +x deploy.sh && ./deploy.sh'
 
     - name: Send telegram notification
       if: always()
