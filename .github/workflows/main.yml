@@ -1,0 +1,27 @@
+name:  Dishub Apps on Branch Prod
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        username: ${{ secrets.HOST_USERNAME }}
+        host: ${{ secrets.HOST }}
+        key: ${{ secrets.SSH_KEY }}
+        port: ${{ secrets.PORT }}
+        script: 'cd /var/www/disbub.upanastudio.com/ && chmod +x deploy.sh && ./deploy.sh'
+
+    - name: Send telegram notification
+      if: always()
+      uses: haishanh/actions-telegram-notification@v1
+      with:
+        notification-token: ${{ secrets.NOTIFICATION_TOKEN }}
+        job-status: ${{ job.status }}
