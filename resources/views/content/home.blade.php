@@ -22,9 +22,19 @@
                 <div class="main-nav__main-navigation">
                     <ul class="main-nav__navigation-box">
                         <li><a href="parasanganta/index.html">Beranda</a></li>
-                        <li><a href="parasanganta/#">Konten</a></li>
-                        <li><a href="parasanganta/informasi.html">Informasi</a></li>
-                        <li><a href="parasanganta/event.html">Event</a></li>
+                        <li class="dropdown">
+                            <a href="#">Konten</a>
+                            <ul>
+                                <li><a href="{{route('tentangbenda')}}">Benda</a></li>
+                                <li><a href="{{route('tentangbangunan')}}">Bangunan</a></li>
+                                <li><a href="{{route('tentangstruktur')}}">Struktur</a></li>
+                                <li><a href="{{route('tentangsitus')}}">Situs</a></li>
+                                <li><a href="{{route('tentangkawasan')}}">Kawasan</a></li>
+                                <li><a href="{{route('tentangkegiatan')}}">Kegiatan</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="parasanganta/artikel-list.html">Artikel</a></li>
+                        <li><a href="parasanganta/event-list.html">Event</a></li>
                         <li><a href="parasanganta/tentang.html">Tentang</a></li>
                     </ul><!-- /.main-nav__navigation-box -->
                 </div><!-- /.main-nav__main-navigation -->
