@@ -14,14 +14,14 @@
         <div class="container">
             <div class="inner-container">
                 <div class="logo-box">
-                    <a href="parasanganta/index.html">
+                    <a href="/">
                         <img src="assets/images/logo/logo-parasanganta2.svg" alt="" width="230">
                     </a>
                     <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
                 </div><!-- /.logo-box -->
                 <div class="main-nav__main-navigation">
                     <ul class="main-nav__navigation-box">
-                        <li><a href="parasanganta/index.html">Beranda</a></li>
+                        <li><a href="/">Beranda</a></li>
                         <li class="dropdown">
                             <a href="#">Konten</a>
                             <ul>
@@ -33,7 +33,7 @@
                                 <li><a href="{{route('tentangkegiatan')}}">Kegiatan</a></li>
                             </ul>
                         </li>
-                        <li><a href="parasanganta/artikel-list.html">Artikel</a></li>
+                        <li><a href="{{route('articles')}}">Artikel</a></li>
                         <li><a href="parasanganta/event-list.html">Event</a></li>
                         <li><a href="parasanganta/tentang.html">Tentang</a></li>
                     </ul><!-- /.main-nav__navigation-box -->
@@ -49,12 +49,10 @@
 
     <!-- banner section -->
     <section class="banner-section banner-section__home-two banner-section__home-three">
-        <div class="banner-carousel thm__owl-carousel owl-theme owl-carousel"
-            data-options='{"loop": true, "items": 1, "margin": 0, "dots": false, "nav": true, "animateOut": "fadeOut", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 6000, "autoplayHoverPause": false}'>
+        <div class="banner-carousel thm__owl-carousel owl-theme owl-carousel" data-options='{"loop": true, "items": 1, "margin": 0, "dots": false, "nav": true, "animateOut": "fadeOut", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 6000, "autoplayHoverPause": false}'>
             <!-- Slide Item -->
             <div class="slide-item">
-                <div class="image-layer lazy-image"
-                    style="background-image: url('assets/images/blog/museum-kota.jpg');"></div>
+                <div class="image-layer lazy-image" style="background-image: url('assets/images/blog/museum-kota.jpg');"></div>
                 <div class="container">
                     <div class="content-box text-left">
                         <h3 id="tglArtikel">20 November 2022</h3>
@@ -67,8 +65,7 @@
             </div>
             <!-- Slide Item -->
             <div class="slide-item">
-                <div class="image-layer lazy-image"
-                    style="background-image: url('assets/images/blog/museum-kota-2.jpg');"></div>
+                <div class="image-layer lazy-image" style="background-image: url('assets/images/blog/museum-kota-2.jpg');"></div>
                 <div class="container">
                     <div class="content-box text-left">
                         <h3 id="tglArtikel">20 November 2022</h3>
@@ -81,8 +78,7 @@
             </div>
             <!-- Slide Item -->
             <div class="slide-item">
-                <div class="image-layer lazy-image"
-                    style="background-image: url('assets/images/blog/museum-kota-3.jpg');"></div>
+                <div class="image-layer lazy-image" style="background-image: url('assets/images/blog/museum-kota-3.jpg');"></div>
                 <div class="container">
                     <div class="content-box text-left">
                         <h3 id="tglArtikel">20 November 2022</h3>
@@ -200,8 +196,8 @@
             </div>
             <div class="row">
                 @foreach($artikel as $a)
-                    
-               
+
+
                 <div class="col-lg-4">
                     <div class="blog-one__single">
                         <div class="blog-one__image">
@@ -223,8 +219,8 @@
                     </div>
                 </div>
                 @endforeach
-                
-              
+
+
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section>

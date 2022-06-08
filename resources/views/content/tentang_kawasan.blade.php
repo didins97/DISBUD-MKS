@@ -1,4 +1,3 @@
-
 @extends('layout.app')
 
 @section('content')
@@ -14,15 +13,25 @@
         <div class="container">
             <div class="inner-container">
                 <div class="logo-box">
-                    <a href="parasanganta/index.html">
+                    <a href="/">
                         <img src="assets/images/logo/logo-parasanganta.svg" alt="" width="230">
                     </a>
                     <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
                 </div><!-- /.logo-box -->
                 <div class="main-nav__main-navigation">
                     <ul class="main-nav__navigation-box">
-                        <li><a href="parasanganta/index.html">Beranda</a></li>
-                        <li><a href="parasanganta/#">Konten</a></li>
+                        <li><a href="/">Beranda</a></li>
+                        <li class="dropdown">
+                            <a href="#">Konten</a>
+                            <ul>
+                                <li><a href="{{route('tentangbenda')}}">Benda</a></li>
+                                <li><a href="{{route('tentangbangunan')}}">Bangunan</a></li>
+                                <li><a href="{{route('tentangstruktur')}}">Struktur</a></li>
+                                <li><a href="{{route('tentangsitus')}}">Situs</a></li>
+                                <li><a href="{{route('tentangkawasan')}}">Kawasan</a></li>
+                                <li><a href="{{route('tentangkegiatan')}}">Kegiatan</a></li>
+                            </ul>
+                        </li>
                         <li><a href="parasanganta/informasi.html">Informasi</a></li>
                         <li><a href="parasanganta/event.html">Event</a></li>
                         <li><a href="parasanganta/tentang.html">Tentang</a></li>
@@ -36,8 +45,7 @@
         </div><!-- /.container -->
     </nav><!-- /.main-nav-one -->
 
-    <section class="page-header"
-        style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg); background-size: cover; background-position: center;">
+    <section class="page-header" style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg); background-size: cover; background-position: center;">
         <div class="container">
             <h2>Kawasan</h2>
         </div><!-- /.container -->
@@ -48,8 +56,7 @@
                 <p>Gallery</p>
                 <h3>Daftar <br> Kawasan</h3>
             </div><!-- /.block-title-two -->
-            <div class="collection-two__carousel shadowed__carousel thm__owl-carousel owl-carousel owl-theme"
-                data-options='{
+            <div class="collection-two__carousel shadowed__carousel thm__owl-carousel owl-carousel owl-theme" data-options='{
                     "loop": true, "margin": 0, "autoplay": true, "autoplayTimeout": 5000, "autoplayHoverPause": true, "items": 5, "smartSpeed": 700, "dots": false, "nav": true, "responsive": {
                         "1920": { "items": 5},
                         "1440": { "items": 4},
@@ -62,8 +69,8 @@
                     }
                 }'>
                 @foreach($artikel as $a)
-                    
-                
+
+
                 <div class="item">
                     <div class="collection-two__single">
                         <div class="collection-two__image">
@@ -73,20 +80,20 @@
                             <h3>{{$a->judul_indo}}</h3>
                             <p>1885</p>
                             {{-- <a href="./parasanganta/konten-detail.html" class="stretched-link"></a> --}}
-                          <a href="{{ route('photo_detail', $a->slug) }}" class="stretched-link"></a>
+                            <a href="{{ route('photo_detail', $a->slug) }}" class="stretched-link"></a>
 
                         </div><!-- /.collection-two__content -->
                     </div><!-- /.collection-two__single -->
                 </div><!-- /.item -->
 
                 @endforeach
-               
-                
-                
-              
+
+
+
+
 
             </div><!-- /.collection-two__carousel shadowed__carousel thm__owl-carousel owl-carousel owl-theme -->
         </div><!-- /.container-fluid -->
     </section><!-- /.collection-two -->
 
-@endsection
+    @endsection

@@ -12,24 +12,12 @@
                     <div class="footer-widget footer-widget__links">
                         <h3 class="footer-widget__title">Konten</h3><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li>
-                                <a href="#">Benda</a>
-                            </li>
-                            <li>
-                                <a href="#">Bangunan</a>
-                            </li>
-                            <li>
-                                <a href="#">Struktur</a>
-                            </li>
-                            <li>
-                                <a href="#">Situs</a>
-                            </li>
-                            <li>
-                                <a href="#">Kawasan</a>
-                            </li>
-                            <li>
-                                <a href="#">Kegiatan</a>
-                            </li>
+                            <li><a href="{{route('tentangbenda')}}">Benda</a></li>
+                            <li><a href="{{route('tentangbangunan')}}">Bangunan</a></li>
+                            <li><a href="{{route('tentangstruktur')}}">Struktur</a></li>
+                            <li><a href="{{route('tentangsitus')}}">Situs</a></li>
+                            <li><a href="{{route('tentangkawasan')}}">Kawasan</a></li>
+                            <li><a href="{{route('tentangkegiatan')}}">Kegiatan</a></li>
                         </ul><!-- /.footer-widget__links-list -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-2 -->

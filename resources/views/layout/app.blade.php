@@ -14,9 +14,7 @@
     <link rel="manifest" href="{{asset('assets/images/favicon/site.webmanifest')}}">
 
     <!-- Fonts URL -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Karla:400,700%7CPlayfair+Display:400,500,600,700,800,900%7CWork+Sans:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700%7CPlayfair+Display:400,500,600,700,800,900%7CWork+Sans:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
 
     <!-- Plugins CSS -->
@@ -41,10 +39,10 @@
 </head>
 
 <body>
-   
-        @yield('content')
-        @include('partials.footer')
-       {{-- Footer --}}
+
+    @yield('content')
+    @include('partials.footer')
+    {{-- Footer --}}
     </div><!-- /.page-wrapper -->
 
     <div class="side-menu__block">
@@ -58,7 +56,7 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
 
-            <a href="index.html" class="side-menu__logo"><img src="assets/images/logo/logo-parasanganta2.svg" alt="" width="170"></a>
+            <a href="/" class="side-menu__logo"><img src="assets/images/logo/logo-parasanganta2.svg" alt="" width="170"></a>
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
@@ -89,10 +87,10 @@
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
     <!-- Template JS -->
-   
+
     @include('partials.js')
 
-    
+
 </body>
 
 </html>
