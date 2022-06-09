@@ -17,7 +17,7 @@ class AuthController extends Controller
 
     public function login()
     {
-        return view('content.auth.login');
+        return view('auth.login');
     }
 
     public function login_post(Request $request)
@@ -27,8 +27,8 @@ class AuthController extends Controller
             'password' => 'required',
             'captcha' => 'required|captcha'
         ]);
-       
-        
+
+
         $credentials = $request->only('email', 'password');
         if (auth()->attempt($credentials)) {
             if( !auth()->user()->is_active ) {
@@ -40,7 +40,7 @@ class AuthController extends Controller
             }
             return redirect()->route('admin.home');
         }
-  
+
         return redirect()->route('login')->withErrors(['errors' => 'email or password wrong!!']);
 
     }
@@ -58,10 +58,10 @@ class AuthController extends Controller
             'contributor' => 'required',
             'password' => 'required|min:6',
         ]);
-           
+
         $data = $request->all();
         $check = $this->create($data);
-         
+
         return redirect()->route('admin.home');
     }
 
@@ -73,12 +73,12 @@ class AuthController extends Controller
         'contributor' => $data['contributor'],
         'password' => Hash::make($data['password'])
       ]);
-    }  
+    }
 
     public function logout()
     {
         auth()->logout();
-        
+
         return redirect('/login');
     }
 }

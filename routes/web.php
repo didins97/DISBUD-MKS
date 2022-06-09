@@ -24,7 +24,6 @@ use App\Http\Controllers\Admin\HomeController as HomeControllerAdmin;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArtikelController;
-use App\Http\Controllers\FotoController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\PublikasiController;
@@ -42,13 +41,6 @@ use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\RedirectController;
 
 //parasanganta
-
-use App\Http\Controllers\BendaController;
-use App\Http\Controllers\BangunanController;
-use App\Http\Controllers\StrukturController;
-use App\Http\Controllers\SitusController;
-use App\Http\Controllers\KawasanController;
-use App\Http\Controllers\Kegiatan1Controller;
 
 
 
@@ -145,7 +137,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
     Route::get('/informasi/kegiatan/delete/{kerjasamaId}', [KegiatanControllerAdmin::class, 'delete'])->name('admin.kegiatan.delete');
 
     Route::get('/artikel-kontributor', [KontributorArtikelControllerAdmin::class, 'index'])->name('admin.contributor_article.index');
-    
+
     Route::group(['middleware' => 'superadmin', 'prefix' => '/user'], function() {
         Route::get('/', [UserControllerAdmin::class, 'index'])->name('admin.user.index');
         Route::get('/tambah', [UserControllerAdmin::class, 'add'])->name('admin.user.add');
@@ -164,23 +156,18 @@ Route::post('/kontributor/artikel/upload', [KontributorController::class, 'uploa
 
 
 // Route::middleware(['language'])->group(function() {
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/semua-artikel', [ArtikelController::class, 'index'])->name('articles');
 Route::get('/semua-foto', [FotoController::class, 'index'])->name('photos');
 Route::get('/semua-video', [VideoController::class, 'index'])->name('videos');
 Route::get('/semua-audio', [AudioController::class, 'index'])->name('audios');
 Route::get('/semua-publikasi', [PublikasiController::class, 'index'])->name('publications');
 Route::get('/semua-kegiatan', [KegiatanController::class, 'index'])->name('events');
 
-Route::get('/artikel/{slug}', [ArtikelController::class, 'show'])->name('article_detail');
-Route::get('/foto/{slug}', [FotoController::class, 'show'])->name('photo_detail');
 Route::get('/video/{slug}', [VideoController::class, 'show'])->name('video_detail');
 Route::get('/audio/{slug}', [AudioController::class, 'show'])->name('audio_detail');
 Route::get('/publikasi/{slug}', [PublikasiController::class, 'show'])->name('publication_detail');
 Route::get('/kegiatan/{slug}', [KegiatanController::class, 'show'])->name('event_detail');
 Route::get('/kerjasama/{slug}', [KerjasamaController::class, 'show'])->name('kerjasama_detail');
 
-Route::get('/cari', [SearchController::class, 'search'])->name('article_search');
 
 Route::get('/informasi', [InformasiController::class, 'index'])->name('informasi');
 Route::get('/semua-kerjasama', [KerjasamaController::class, 'index'])->name('kerjasama');
@@ -191,13 +178,21 @@ Route::get('/tentang-jejak', [JejakController::class, 'index'])->name('tentangje
 Route::get('/tentang-masa-depan', [MasaDepanController::class, 'index'])->name('tentangmasadepan');
 Route::get('/funfact/{rempahName}', [RempahController::class, 'show'])->name('rempah_detail');
 
+
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
+
 //parasanganta
-Route::get('/tentang-benda', [BendaController::class, 'index'])->name('tentangbenda');
-Route::get('/tentang-bangunan', [BangunanController::class, 'index'])->name('tentangbangunan');
-Route::get('/tentang-struktur', [StrukturController::class, 'index'])->name('tentangstruktur');
-Route::get('/tentang-situs', [SitusController::class, 'index'])->name('tentangsitus');
-Route::get('/tentang-kawasan', [KawasanController::class, 'index'])->name('tentangkawasan');
-Route::get('/tentang-kegiatan', [Kegiatan1Controller::class, 'index'])->name('tentangkegiatan');
+Route::get('/parasanganta/artikel/{slug}', [App\Http\Controllers\Parasanganta\ArtikelController::class, 'show'])->name('article_detail');
+Route::get('/parasanganta/foto/{slug}', [App\Http\Controllers\Parasanganta\FotoController::class, 'show'])->name('photo_detail');
+Route::get('/parasanganta/semua-artikel', [App\Http\Controllers\Parasanganta\ArtikelController::class, 'index'])->name('articles');
+Route::get('/parasanganta/cari', [App\Http\Controllers\Parasanganta\SearchController::class, 'search'])->name('article_search');
+Route::get('/parasanganta/tentang-benda', [App\Http\Controllers\Parasanganta\BendaController::class, 'index'])->name('tentangbenda');
+Route::get('/parasanganta/tentang-bangunan', [App\Http\Controllers\Parasanganta\BangunanController::class, 'index'])->name('tentangbangunan');
+Route::get('/parasanganta/tentang-struktur', [App\Http\Controllers\Parasanganta\StrukturController::class, 'index'])->name('tentangstruktur');
+Route::get('/parasanganta/tentang-situs', [App\Http\Controllers\Parasanganta\SitusController::class, 'index'])->name('tentangsitus');
+Route::get('/parasanganta/tentang-kawasan', [App\Http\Controllers\Parasanganta\KawasanController::class, 'index'])->name('tentangkawasan');
+Route::get('/parasanganta/tentang-kegiatan', [App\Http\Controllers\Parasanganta\Kegiatan1Controller::class, 'index'])->name('tentangkegiatan');
+Route::get('/parasanganta', [App\Http\Controllers\Parasanganta\HomeController::class, 'index'])->name('parasanganta');
 // Route::get('/artikel/{slug}', [ArtikelController::class, 'show'])->name('article_detail');
 
 
