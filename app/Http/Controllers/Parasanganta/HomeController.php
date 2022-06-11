@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Parasanganta;
 
 use App\Http\Controllers\Controller;
 
-use App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
@@ -32,13 +30,13 @@ class HomeController extends Controller
         $semua_kegiatan = Kegiatan::where('status', 'publikasi')->where('slider_utama', 1);
         $semua_kerjasama = Kerjasama::where('status', 'publikasi')->where('slider_utama', 1);
 
-
+        
         if( request()->get('search') != null ) {
             $artikel = Artikel::where('status', 'publikasi')->where('judul_indo', 'LIKE', request()->get('search'))->orderBy('published_at', 'desc');
         } else {
             $artikel = Artikel::where('status', 'publikasi')->orderBy('published_at', 'desc');
         }
-
+        
         $kegiatan = Kegiatan::where('status', 'publikasi')->orderBy('published_at', 'desc');
         $video = Video::where('status', 'publikasi')->orderBy('published_at', 'desc');
 
@@ -59,7 +57,7 @@ class HomeController extends Controller
             $slider = $semua_artikel->mergeRecursive($semua_publikasi)->mergeRecursive($semua_video)->mergeRecursive($semua_audio)->mergeRecursive($semua_foto)->mergeRecursive($semua_kegiatan)->mergeRecursive($semua_kerjasama);
 
             return view('content_english.home', compact('artikel', 'kegiatan', 'video', 'slider'));
-        }
+        } 
         $semua_artikel = $semua_artikel->get();
         $semua_audio = $semua_audio->get();
         $semua_foto = $semua_foto->get();
@@ -75,7 +73,9 @@ class HomeController extends Controller
         $kegiatan = $kegiatan->where('published_at', '<=', Carbon::now())->take(3)->get();
         $video = $video->where('published_at', '<=', Carbon::now())->take(6)->get();
 
-        return view('parasanganta.content.home', compact('artikel', 'kegiatan', 'video', 'slider'));
+        // return view('content.home', compact('artikel', 'kegiatan', 'video', 'slider'));
+        return view('parasanganta.content.home', compact('artikel','kegiatan'));
+
     }
 
 

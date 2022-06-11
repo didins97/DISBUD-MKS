@@ -21,7 +21,7 @@ class KegiatanController extends Controller
     {
         $kegiatan = Kegiatan::orderBy('created_at', 'desc')->get();
 
-        return view('admin.informasi.kegiatan.index', compact('kegiatan'));
+        return view('admin.content.kegiatan.index', compact('kegiatan'));
     }
 
     public function add() 
@@ -31,7 +31,7 @@ class KegiatanController extends Controller
         $kategori_show = KategoriShow::where('id', '!=', 4)->where('id', '!=', 5)->get();
         $kontributor = Kontributor::all();
 
-        return view('admin.informasi.kegiatan.add', compact('rempahs', 'lokasi', 'kategori_show', 'kontributor'));
+        return view('admin.content.kegiatan.add', compact('rempahs', 'lokasi', 'kategori_show', 'kontributor'));
     }
 
     public function store(Request $request)
@@ -40,7 +40,7 @@ class KegiatanController extends Controller
             'judul_indo' => 'required',
             'konten_indo' => 'required',
             'thumbnail' => 'required|max:10000|mimes:png,jpg,jpeg',
-            'end_date' => 'required'
+            
         ]);
 
         // UPLOAD THUMBNAIL
@@ -61,11 +61,11 @@ class KegiatanController extends Controller
 
         
         // SET END DATE
-        $end_date = explode('-', $request->end_date);
-        $tanggal = $end_date[2];
-        $bulan = $end_date[1];
-        $tahun = $end_date[0];
-        $end_date_timestamp = Carbon::create($tahun, $bulan, $tanggal, 0)->toDateTimeString();
+        // $end_date = explode('-', $request->end_date);
+        // $tanggal = $end_date[2];
+        // $bulan = $end_date[1];
+        // $tahun = $end_date[0];
+        // $end_date_timestamp = Carbon::create($tahun, $bulan, $tanggal, 0)->toDateTimeString();
 
         $kegiatan = Kegiatan::create([
             'judul_indo' => $request->judul_indo,
@@ -77,7 +77,7 @@ class KegiatanController extends Controller
             'meta_english' => $request->meta_english,
             'keywords_english' => $request->keywords_english, 
             'thumbnail' => $filename_thumbnail,
-            'end_date' => $end_date_timestamp,
+            // 'end_date' => $end_date_timestamp,
             'slug_english' => $slug_english,
             'id_lokasi' => $request->id_lokasi,
             'penulis' => ($request->contributor != null && $request->id_kontributor != null) ? 'kontributor umum/pamong budaya' : 'admin',
@@ -86,6 +86,9 @@ class KegiatanController extends Controller
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'contributor' => $request->contributor_type,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
+            'time_event'=> $request->time_event,
+            'date_event'=>$request->date_event,
+            'venue'=>$request->venue,
             'published_at' => $request->publish_date . " " . $request->publish_time
         ]);
 
@@ -109,7 +112,7 @@ class KegiatanController extends Controller
         $kategori_show = KategoriShow::where('id', '!=', 4)->where('id', '!=', 5)->get();
         $kontributor = Kontributor::all();
 
-        return view('admin.informasi.kegiatan.edit', compact('kegiatan', 'rempahs', 'lokasi', 'kategori_show', 'kontributor'));
+        return view('admin.content.kegiatan.edit', compact('kegiatan', 'rempahs', 'lokasi', 'kategori_show', 'kontributor'));
     }
 
     public function update(Request $request, $kegiatanId)
@@ -150,11 +153,11 @@ class KegiatanController extends Controller
         }
 
         // SET END DATE
-        $end_date = explode('-', $request->end_date);
-        $tanggal = $end_date[2];
-        $bulan = $end_date[1];
-        $tahun = $end_date[0];
-        $end_date_timestamp = Carbon::create($tahun, $bulan, $tanggal, 0)->toDateTimeString();
+        // $end_date = explode('-', $request->end_date);
+        // $tanggal = $end_date[2];
+        // $bulan = $end_date[1];
+        // $tahun = $end_date[0];
+        // $end_date_timestamp = Carbon::create($tahun, $bulan, $tanggal, 0)->toDateTimeString();
 
         $kegiatan->update([
             'judul_indo' => $request->judul_indo,
@@ -166,7 +169,7 @@ class KegiatanController extends Controller
             'meta_english' => $request->meta_english,
             'keywords_english' => $request->keywords_english, 
             'thumbnail' => $filename_thumbnail,
-            'end_date' => $end_date_timestamp,
+            // 'end_date' => $end_date_timestamp,
             'slug_english' => $slug_english == null ? $kegiatan->slug_english : $slug_english,
             'id_lokasi' => $request->id_lokasi,
             'penulis' => ($request->contributor != null && $request->id_kontributor != null) ? 'kontributor umum/pamong budaya' : 'admin',

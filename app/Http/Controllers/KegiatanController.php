@@ -68,7 +68,7 @@ class KegiatanController extends Controller
                 'data' => $events
             ]);
         } else {
-            return view('content.kegiatan', compact('kegiatan'));
+            return view('parasanganta.content.kegiatan', compact('kegiatan'));
         }
 
     }
@@ -89,6 +89,6 @@ class KegiatanController extends Controller
         if( $lg == 'en' )
             return view('content_english.kegiatan_detail', compact('kegiatan', 'kegiatanSaatIni'));
 
-        return view('content.kegiatan_detail', compact('kegiatan', 'kegiatanSaatIni'));
+        return view('parasanganta.content.kegiatan_detail', compact('kegiatan', 'kegiatanSaatIni'));
     }
 }

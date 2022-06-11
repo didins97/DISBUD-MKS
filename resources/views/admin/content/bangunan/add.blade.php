@@ -1,15 +1,15 @@
 @extends('admin.layout.app')
 
 @section('title')
-  ADMIN - Jalur Rempah
+  ADMIN - DisBudPar
 @endsection
 
 @section('topbar-title')
-    Konten - Foto
+    Tambah - Bangunan
 @endsection
 
 @section('content')
-      <form method="post" action="{{ route('admin.photo.store') }}" enctype="multipart/form-data">
+      <form method="post" action="{{ route('admin.bangunan.store') }}" enctype="multipart/form-data">
         @csrf
         <!-- Begin Page Content -->
         <div class="container-fluid" id="contentWrapper">
@@ -28,27 +28,53 @@
                   </div>
                   <div class="card-body">
                       <div class="mb-3">
-                        <label for="judulArtikelBahasa" class="form-label">Judul</label>
-                        <input required value="{{ old('judul_indo') }}" type="text" name="judul_indo" class="form-control" id="judulArtikelBahasa" placeholder="masukkan judul artikel">
+                        <label for="judulArtikelBahasa" class="form-label">Nama</label>
+                        <input required value="{{ old('nama') }}" type="text" name="nama" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama bangunan">
                       </div>
                       <div class="mb-3">
-                        <label for="isiArtikelBahasa" class="form-label">Isi Konten</label>
-                        <textarea required class="form-control editor" name="konten_indo" id="editor" rows="8">{{ old('konten_indo') }}</textarea>
+                        <label for="isiArtikelBahasa" class="form-label">Konten</label>
+                        <textarea required class="form-control editor" name="konten" id="editor" rows="8">{{ old('konten') }}</textarea>
                       </div>
                       <div class="mb-3">
+                        <label for="isiArtikelBahasa" class="form-label">Letak</label>
+                        <textarea required class="form-control editor" name="letak" id="editor" rows="8">{{ old('letak') }}</textarea>
+                      </div>
+                      <div class="mb-3">
+                        <label for="judulArtikelBahasa" class="form-label">kelurahan</label>
+                        <input required value="{{ old('kelurahan') }}" type="text" name="kelurahan" class="form-control" id="judulArtikelBahasa" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="judulArtikelBahasa" class="form-label">kecamatan</label>
+                        <input required value="{{ old('kecamatan') }}" type="text" name="kecamatan" class="form-control" id="judulArtikelBahasa" >
+                      </div>
+
+                      <div class="card-body">
+                        <div class="row">
+                          <div class='col-lg-6'>
+                            <label  class="form-label">longitude</label>
+                            <input  name="longitude"  type="number" step="any" class="form-control" >
+                          </div>
+                          <div class='col-lg-6'>
+                            <label  class="form-label">latitude</label>
+                            <input  name="latitude"  type="number" step="any" class="form-control" >
+                          </div>
+                        </div>
+                      </div>
+
+                      {{-- <div class="mb-3">
                         <label for="metaDesID" class="form-label">Meta Description</label>
-                        <textarea name="meta_indo" class="form-control" id="metaDesID" rows="2" maxlength="160" placeholder="masukkan meta description">{{ old('meta_indo') }}</textarea>
+                        <textarea name="meta" class="form-control" id="metaDesID" rows="2" maxlength="160" placeholder="masukkan meta description">{{ old('meta_indo') }}</textarea>
                         <little>maks 160 karakter</little>
                       </div>
                       <div class="mb-3">
                         <label for="keywordsID" class="form-label">Keywords</label>
-                        <input name="keywords_indo" value="{{ old('keywords_indo') }}" id="keywordsID" type="text" class="form-control tagin">
+                        <input name="keywords" value="{{ old('keywords') }}" id="keywordsID" type="text" class="form-control tagin">
                         <little>gunakan tombol "," (koma) untuk memisahkan keyword</little>
-                      </div>
+                      </div> --}}
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12 mb-3">
+              {{-- <div class="col-lg-12 mb-3">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">English</h2>
@@ -74,7 +100,7 @@
                       </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
               <div class="col-lg-12 mb-3">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
@@ -104,7 +130,7 @@
                   <div class="card-header py-3">
                     <div class="row">
                       <div class="col-6">
-                        <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Slider</h2>
+                        <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Galleries</h2>
                       </div>
                       <div class="col-6 text-end">
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanduan">
@@ -122,16 +148,16 @@
                         <div class="col-sm-7">
                           <div class="row">
                             <div class="col-12 mb-2">
-                              <input required class="form-control" name="slider_foto[]" id="uploadThumbnail" type="file" data-preview=".sliderPreview" accept="image/png, image/jpeg">
+                              <input required class="form-control" name="galleries_foto[]" id="uploadThumbnail" type="file" data-preview=".sliderPreview" accept="image/png, image/jpeg">
                             </div>
                             <div class="col-12 mb-2">
-                              <textarea name="caption_slider_foto[]" required maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini"></textarea>
+                              <textarea name="caption_galleries_foto[]" required maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini"></textarea>
                               <little><sup>*</sup> maksimsal 100 karakter</little>
                             </div>
-                            <div class="col-12 mb-2">
+                            {{-- <div class="col-12 mb-2">
                               <textarea name="caption_slider_foto_english[]" maxlength="100" class="form-control" id="captionFotoEn" rows="2" placeholder="insert caption here"></textarea>
                               <little><sup>*</sup>english caption, max 100 character</little>
-                            </div>
+                            </div> --}}
                           </div>
                         </div>
                         <div class="col-sm-1">
@@ -149,14 +175,14 @@
                   </div>
                 </div>
               </div>
-              //sampai sini
-              <div class="col-lg-12 mb-3">
+              
+              {{-- <div class="col-lg-12 mb-3">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Tag Artikel</h2>
                   </div>
-                  <div class="card-body">
-                      <div class="mb-3">
+                  <div class="card-body">                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                       <div class="mb-3">
                         <label for="lokasiArtikel" class="form-label">Lokasi</label>
                         <select id="pilihLokasi" name="id_lokasi" class="form-select select2-style" name="id_lokasi" aria-label="Default select example">
                           <option value="" selected>Pilih Lokasi</option>
@@ -164,8 +190,8 @@
                             <option value="{{ $l->id }}">{{ $l->nama_lokasi }}</option>
                           @endforeach
                         </select>
-                      </div>
-                      <div class="mb-3">
+                      </div> 
+                       <div class="mb-3">
                         <label for="isiArtikelEnglish" class="form-label">Jenis Rempah</label>
                         <div class="px-3 row">
                           @foreach( $rempahs as $r )
@@ -179,7 +205,7 @@
                           </div>
                           @endforeach
                         </div>
-                      </div>
+                      </div> 
                       <div class="mb-3">
                         <label for="isiArtikelEnglish" class="form-label">Kategori</label>
                         <div class="px-3 row">
@@ -216,7 +242,7 @@
                       </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
               
              </div>
              <div id="fotoSlider" class="col-lg-12 mb-3" style="display: none;">
@@ -261,9 +287,9 @@
                    <label for="namaKontributor" class="form-label">Nama Kontributor</label>
                    <select id="namaKontributor" name="id_kontributor" class="form-select select2-style" aria-label="Default select example">
                      <option value="" selected>Pilih Kontributor</option>
-                     @foreach( $kontributor as $k ) 
+                     {{-- @foreach( $kontributor as $k ) 
                        <option value="{{ $k->id }}">{{ $k->nama }}</option>
-                     @endforeach
+                     @endforeach --}}
                    </select>
                  </div>
                </div>
@@ -337,16 +363,13 @@
                 <div class="col-sm-7">
                   <div class="row">
                     <div class="col-12 mb-2">
-                      <input required class="form-control" name="slider_foto[]" id="uploadThumbnail" type="file" data-preview=".sliderPreview` + i + `" accept="image/png, image/jpeg">
+                      <input required class="form-control" name="galleries_foto[]" id="uploadThumbnail" type="file" data-preview=".sliderPreview` + i + `" accept="image/png, image/jpeg">
                     </div>
                     <div class="col-12 mb-2">
-                      <textarea name="caption_slider_foto[]"  required maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini" name="captionFoto` + i + `"></textarea>
+                      <textarea name="caption_galleries_foto[]"  required maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini" name="captionFoto` + i + `"></textarea>
                       <little><sup>*</sup> maksimsal 100 karakter</little>
                     </div>
-                    <div class="col-12 mb-2">
-                      <textarea name="caption_slider_foto_english[]" maxlength="100" class="form-control" id="captionFotoEn" rows="2" placeholder="insert caption here"></textarea>
-                      <little><sup>*</sup>english caption, max 100 character</little>
-                    </div>
+                   
                   </div>
                 </div>
                 <div class="col-sm-1">

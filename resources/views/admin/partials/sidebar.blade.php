@@ -21,15 +21,22 @@
       </a>
       <div id="collapseTwo" class="collapse  {{ Request::segment(3) == 'artikel' || Request::segment(3) == 'foto' || Request::segment(3) == 'video' || Request::segment(3) == 'publikasi' || Request::segment(3) == 'audio' ? 'show' : '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
         <div class="bg-submenu-nav py-2 collapse-inner rounded">
-          <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.article.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Artikel</a>
+          {{-- <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.article.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Artikel</a>
           <a class="collapse-item {{ Request::segment(3) == 'foto' ? 'active' : '' }}" href="{{ route('admin.photo.index') }}"><i class="fas fa-fw fa-image mr-1"></i>Konten BudPar</a>
           <a class="collapse-item {{ Request::segment(3) == 'video' ? 'active' : '' }}" href="{{ route('admin.video.index') }}"><i class="fas fa-fw fa-video mr-1"></i>Video</a>
           <a class="collapse-item {{ Request::segment(3) == 'publikasi' ? 'active' : '' }}" href="{{ route('admin.publication.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i>Publikasi</a>
-          <a class="collapse-item {{ Request::segment(3) == 'audio' ? 'active' : '' }}" href="{{ route('admin.audio.index') }}"><i class="fas fa-fw fa-volume-up mr-1"></i>Audio</a>
+          <a class="collapse-item {{ Request::segment(3) == 'audio' ? 'active' : '' }}" href="{{ route('admin.audio.index') }}"><i class="fas fa-fw fa-volume-up mr-1"></i>Audio</a> --}}
+
+           <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.benda.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Benda</a>
+          <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.bangunan.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Bangunan</a>
+          <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.struktur.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Struktur</a>
+          <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.situs.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Situs</a>
+          <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.kawasan.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Kawasan</a>
+          <a class="collapse-item {{ Request::segment(3) == 'artikel' ? 'active' : '' }}" href="{{ route('admin.kegiatan1.index') }}"><i class="fas fa-fw fa-newspaper mr-1"></i> Kegiatan</a>
         </div>
       </div>
     </li>
-    <li class="nav-item {{ Request::segment(3) == 'kegiatan' || Request::segment(3) == 'kerjasama' ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ Request::segment(3) == 'kegiatan' || Request::segment(3) == 'kerjasama' ? 'active' : '' }}">
       <a class="nav-link {{ Request::segment(3) == 'kegiatan' || Request::segment(3) == 'kerjasama' ? '' : 'collapsed' }}" href="#" data-toggle="collapse" data-target="#collapseTwoa" aria-expanded="false" aria-controls="collapseTwoa">
         <i class="fas fa-fw fa-info"></i>
         <span>Informasi</span>
@@ -40,16 +47,26 @@
           <a class="collapse-item {{ Request::segment(3) == 'kerjasama' ? 'active' : '' }}" href="{{ route('admin.kerjasama.index') }}"><i class="fas fa-fw fa-image mr-1"></i>Kerja sama</a>
         </div>
       </div>
-    </li>
+    </li> --}}
     <!-- Divider -->
     <li class="nav-item {{ Request::segment(2) == 'artikel-kontributor' ? 'active' : '' }}">
       <a class="nav-link" href="{{ route('admin.contributor_article.index') }}">
         <i class="fas fa-fw fa-edit"></i>
-        <span>Kiriman Kontributor</span></a>
+        <span>La'bu</span></a>
+    </li>
+    <li class="nav-item {{ Request::segment(2) == 'artikel-kontributor' ? 'active' : '' }}">
+      <a class="nav-link" href="{{ route('admin.article.index') }}">
+        <i class="fas fa-fw fa-edit"></i>
+        <span>Artikel</span></a>
+    </li>
+    <li class="nav-item {{ Request::segment(2) == 'artikel-kontributor' ? 'active' : '' }}">
+      <a class="nav-link" href="{{ route('admin.kegiatan.index') }}">
+        <i class="fas fa-fw fa-edit"></i>
+        <span>Event</span></a>
     </li>
     <hr class="sidebar-divider">
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item {{ Request::segment(3) == 'rempah' || Request::segment(3) == 'kontributor' ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ Request::segment(3) == 'rempah' || Request::segment(3) == 'kontributor' ? 'active' : '' }}">
       <a class="nav-link {{ Request::segment(3) == 'rempah' || Request::segment(3) == 'kontributor' ? '' : 'collapsed' }}" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="false" aria-controls="masterData">
         <i class="fas fa-fw fa-database"></i>
         <span>Master Data</span>
@@ -60,18 +77,18 @@
           <a class="collapse-item {{ Request::segment(3) == 'kontributor' ? 'active' : '' }}" href="{{ route('admin.contributor.index') }}"><i class="fas fa-fw fa-edit mr-1"></i>Kontributor</a>
         </div>
       </div>
-    </li>
+    </li> --}}
     @if( auth()->user()->role == 'super admin' )
     <li class="nav-item {{ Request::segment(2) == 'user' ? 'active' : '' }}">
       <a class="nav-link" href="{{ route('admin.user.index') }}">
         <i class="fas fa-fw fa-user-circle"></i>
-        <span>User</span></a>
+        <span>User Management</span></a>
     </li>
     @endif
     <li class="nav-item {{ Request::segment(2) == 'pengaturan' ? 'active' : '' }}" >
       <a class="nav-link" href="{{ route('admin.setting.index') }}">
         <i class="fas fa-fw fa-cog"></i>
-        <span>Pengaturan</span></a>
+        <span>Pengaturan Profil</span></a>
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

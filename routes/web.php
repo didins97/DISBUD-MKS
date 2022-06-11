@@ -41,6 +41,13 @@ use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\RedirectController;
 
 //parasanganta
+use App\Http\Controllers\Admin\BendaControllerAdmin;
+use App\Http\Controllers\Admin\BangunanControllerAdmin;
+use App\Http\Controllers\Admin\StrukturControllerAdmin;
+use App\Http\Controllers\Admin\SitusControllerAdmin;
+use App\Http\Controllers\Admin\KawasanControllerAdmin;
+use App\Http\Controllers\Admin\Kegiatan1ControllerAdmin;
+// use App\Http\Controllers\Admin\ArtikelControllerAdmin;
 
 
 
@@ -69,6 +76,57 @@ Route::any('en/{allsegments}', function($first, $rest = '') {
 
 Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
     Route::get('/', [HomeControllerAdmin::class, 'index'])->name('admin.home');
+
+      //parasanganta
+      Route::get('/parasanganta/benda', [BendaControllerAdmin::class, 'index'])->name('admin.benda.index');
+      Route::get('/parasanganta/benda/tambah', [BendaControllerAdmin::class, 'add'])->name('admin.benda.add');
+      Route::post('/parasanganta/benda/tambah', [BendaControllerAdmin::class, 'store'])->name('admin.benda.store');
+      Route::get('/parasanganta/benda/edit/{photoId}', [BendaControllerAdmin::class, 'edit'])->name('admin.benda.edit');
+      Route::post('/parasanganta/benda/update/{photoId}', [BendaControllerAdmin::class, 'update'])->name('admin.benda.update');
+      Route::get('/parasanganta/benda/delete/{bendaId}', [BendaControllerAdmin::class, 'delete'])->name('admin.benda.delete');
+
+      Route::get('/parasanganta/situs', [SitusControllerAdmin::class, 'index'])->name('admin.situs.index');
+      Route::get('/parasanganta/situs/tambah', [SitusControllerAdmin::class, 'add'])->name('admin.situs.add');
+      Route::post('/parasanganta/situs/tambah', [SitusControllerAdmin::class, 'store'])->name('admin.situs.store');
+      Route::get('/parasanganta/situs/edit/{photoId}', [SitusControllerAdmin::class, 'edit'])->name('admin.situs.edit');
+      Route::post('/parasanganta/situs/update/{photoId}', [SitusControllerAdmin::class, 'update'])->name('admin.situs.update');
+      Route::get('/parasanganta/situs/delete/{situsId}', [SitusControllerAdmin::class, 'delete'])->name('admin.situs.delete');
+
+      Route::get('/parasanganta/bangunan', [BangunanControllerAdmin::class, 'index'])->name('admin.bangunan.index');
+      Route::get('/parasanganta/bangunan/tambah', [BangunanControllerAdmin::class, 'add'])->name('admin.bangunan.add');
+      Route::post('/parasanganta/bangunan/tambah', [BangunanControllerAdmin::class, 'store'])->name('admin.bangunan.store');
+      Route::get('/parasanganta/bangunan/edit/{photoId}', [BangunanControllerAdmin::class, 'edit'])->name('admin.bangunan.edit');
+      Route::post('/parasanganta/bangunan/update/{photoId}', [BangunanControllerAdmin::class, 'update'])->name('admin.bangunan.update');
+      Route::get('/parasanganta/bangunan/delete/{bangunanId}', [BangunanControllerAdmin::class, 'delete'])->name('admin.bangunan.delete');
+
+      Route::get('/parasanganta/kawasan', [kawasanControllerAdmin::class, 'index'])->name('admin.kawasan.index');
+      Route::get('/parasanganta/kawasan/tambah', [kawasanControllerAdmin::class, 'add'])->name('admin.kawasan.add');
+      Route::post('/parasanganta/kawasan/tambah', [kawasanControllerAdmin::class, 'store'])->name('admin.kawasan.store');
+      Route::get('/parasanganta/kawasan/edit/{photoId}', [kawasanControllerAdmin::class, 'edit'])->name('admin.kawasan.edit');
+      Route::post('/parasanganta/kawasan/update/{photoId}', [kawasanControllerAdmin::class, 'update'])->name('admin.kawasan.update');
+      Route::get('/parasanganta/kawasan/delete/{kawasanId}', [kawasanControllerAdmin::class, 'delete'])->name('admin.kawasan.delete');
+
+      Route::get('/parasanganta/struktur', [StrukturControllerAdmin::class, 'index'])->name('admin.struktur.index');
+      Route::get('/parasanganta/struktur/tambah', [StrukturControllerAdmin::class, 'add'])->name('admin.struktur.add');
+      Route::post('/parasanganta/struktur/tambah', [StrukturControllerAdmin::class, 'store'])->name('admin.struktur.store');
+      Route::get('/parasanganta/struktur/edit/{photoId}', [StrukturControllerAdmin::class, 'edit'])->name('admin.struktur.edit');
+      Route::post('/parasanganta/struktur/update/{photoId}', [StrukturControllerAdmin::class, 'update'])->name('admin.struktur.update');
+      Route::get('/parasanganta/struktur/delete/{strukturId}', [StrukturControllerAdmin::class, 'delete'])->name('admin.struktur.delete');
+
+      Route::get('/parasanganta/kegiatan1', [Kegiatan1ControllerAdmin::class, 'index'])->name('admin.kegiatan1.index');
+      Route::get('/parasanganta/kegiatan1/tambah', [Kegiatan1ControllerAdmin::class, 'add'])->name('admin.kegiatan1.add');
+      Route::post('/parasanganta/kegiatan1/tambah', [Kegiatan1ControllerAdmin::class, 'store'])->name('admin.kegiatan1.store');
+      Route::get('/parasanganta/kegiatan1/edit/{photoId}', [Kegiatan1ControllerAdmin::class, 'edit'])->name('admin.kegiatan1.edit');
+      Route::post('/parasanganta/kegiatan1/update/{photoId}', [Kegiatan1ControllerAdmin::class, 'update'])->name('admin.kegiatan1.update');
+      Route::get('/parasanganta/kegiatan1/delete/{kegiatan1Id}', [Kegiatan1ControllerAdmin::class, 'delete'])->name('admin.kegiatan1.delete');
+
+
+      // Route::get('/parasanganta/struktur', [StrukturControllerAdmin::class, 'index'])->name('admin.struktur.index');
+      // Route::get('/parasanganta/situs', [SitusControllerAdmin::class, 'index'])->name('admin.situs.index');
+      // Route::get('/parasanganta/kawasan', [KawasanControllerAdmin::class, 'index'])->name('admin.kawasan.index');
+      // Route::get('/parasanganta/kegiatan', [Kegiatan1ControllerAdmin::class, 'index'])->name('admin.kegiatan.index');
+
+
 
     Route::get('/konten/artikel', [ArtikelControllerAdmin::class, 'index'])->name('admin.article.index');
     Route::get('/konten/artikel/tambah', [ArtikelControllerAdmin::class, 'add'])->name('admin.article.add');
@@ -165,7 +223,7 @@ Route::get('/semua-kegiatan', [KegiatanController::class, 'index'])->name('event
 Route::get('/video/{slug}', [VideoController::class, 'show'])->name('video_detail');
 Route::get('/audio/{slug}', [AudioController::class, 'show'])->name('audio_detail');
 Route::get('/publikasi/{slug}', [PublikasiController::class, 'show'])->name('publication_detail');
-Route::get('/kegiatan/{slug}', [KegiatanController::class, 'show'])->name('event_detail');
+// Route::get('/kegiatan/{slug}', [KegiatanController::class, 'show'])->name('event_detail');
 Route::get('/kerjasama/{slug}', [KerjasamaController::class, 'show'])->name('kerjasama_detail');
 
 
@@ -179,10 +237,9 @@ Route::get('/tentang-masa-depan', [MasaDepanController::class, 'index'])->name('
 Route::get('/funfact/{rempahName}', [RempahController::class, 'show'])->name('rempah_detail');
 
 
-Route::get('/', [HomeController::class, 'index'])->name('welcome');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //parasanganta
-Route::get('/parasanganta/artikel/{slug}', [App\Http\Controllers\Parasanganta\ArtikelController::class, 'show'])->name('article_detail');
 Route::get('/parasanganta/foto/{slug}', [App\Http\Controllers\Parasanganta\FotoController::class, 'show'])->name('photo_detail');
 Route::get('/parasanganta/semua-artikel', [App\Http\Controllers\Parasanganta\ArtikelController::class, 'index'])->name('articles');
 Route::get('/parasanganta/cari', [App\Http\Controllers\Parasanganta\SearchController::class, 'search'])->name('article_search');
@@ -191,11 +248,32 @@ Route::get('/parasanganta/tentang-bangunan', [App\Http\Controllers\Parasanganta\
 Route::get('/parasanganta/tentang-struktur', [App\Http\Controllers\Parasanganta\StrukturController::class, 'index'])->name('tentangstruktur');
 Route::get('/parasanganta/tentang-situs', [App\Http\Controllers\Parasanganta\SitusController::class, 'index'])->name('tentangsitus');
 Route::get('/parasanganta/tentang-kawasan', [App\Http\Controllers\Parasanganta\KawasanController::class, 'index'])->name('tentangkawasan');
-Route::get('/parasanganta/tentang-kegiatan', [App\Http\Controllers\Parasanganta\Kegiatan1Controller::class, 'index'])->name('tentangkegiatan');
+Route::get('/parasanganta/tentang-kegiatan1', [App\Http\Controllers\Parasanganta\Kegiatan1Controller::class, 'index'])->name('tentangkegiatan1');
+Route::get('/parasanganta/tentang-kegiatan', [App\Http\Controllers\Parasanganta\KegiatanController::class, 'index'])->name('tentangkegiatan');
+
 Route::get('/parasanganta', [App\Http\Controllers\Parasanganta\HomeController::class, 'index'])->name('parasanganta');
+Route::get('/parasanganta/tentang', [App\Http\Controllers\Parasanganta\TentangController::class, 'index'])->name('tentang');
+
 // Route::get('/artikel/{slug}', [ArtikelController::class, 'show'])->name('article_detail');
 
+Route::get('/artikel/{slug}', [App\Http\Controllers\Parasanganta\ArtikelController::class, 'show'])->name('article_detail');
 
+Route::get('/tentang-benda/{slug}', [App\Http\Controllers\Parasanganta\BendaController::class, 'show'])->name('benda_detail');
+Route::get('/tentang-bangunan/{slug}', [App\Http\Controllers\Parasanganta\BangunanController::class, 'show'])->name('bangunan_detail');
+Route::get('/tentang-struktur/{slug}', [App\Http\Controllers\Parasanganta\StrukturController::class, 'show'])->name('struktur_detail');
+Route::get('/tentang-situs/{slug}', [App\Http\Controllers\Parasanganta\SitusController::class, 'show'])->name('situs_detail');
+Route::get('/tentang-kawasan/{slug}', [App\Http\Controllers\Parasanganta\KawasanController::class, 'show'])->name('kawasan_detail');
+Route::get('/tentang-kegiatan1/{slug}', [App\Http\Controllers\Parasanganta\Kegiatan1Controller::class, 'show'])->name('kegiatan1_detail');
+Route::get('/tentang-kegiatan/{slug}', [App\Http\Controllers\Parasanganta\KegiatanController::class, 'show'])->name('event_detail');
+
+
+// Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
+// Route::get('/tentang-benda', [BendaController::class, 'index'])->name('tentangbenda');
+// Route::get('/tentang-bangunan', [BangunanController::class, 'index'])->name('tentangbangunan');
+// Route::get('/tentang-struktur', [StrukturController::class, 'index'])->name('tentangstruktur');
+// Route::get('/tentang-situs', [SitusController::class, 'index'])->name('tentangsitus');
+// Route::get('/tentang-kawasan', [KawasanController::class, 'index'])->name('tentangkawasan');
+// Route::get('/tentang-kegiatan1', [Kegiatan1Controller::class, 'index'])->name('tentangkegiatan1');
 
 
 
