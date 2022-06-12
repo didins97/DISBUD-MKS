@@ -10,7 +10,7 @@
             <div class="inner-container">
                 <div class="logo-box">
                     <a href="parasanganta/index.html">
-                        <img src="assets/images/logo/logo-parasanganta.svg" alt="" width="230">
+                        <img src="{{asset('assets/images/logo/logo-parasanganta.svg')}}" alt="" width="230">
                     </a>
                     <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
                 </div><!-- /.logo-box -->
