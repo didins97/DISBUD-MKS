@@ -16,8 +16,8 @@ class KawasanController extends Controller
 {
     public function index(){
         
-        $bangunan = Kawasan::where('status', 'publikasi')->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
-
+        $bangunan = Kawasan::where('status', 'publikasi')->orderBy('published_at', 'desc');
+        // ->where('published_at', '<=', Carbon::now())
         
 
         $foto = $bangunan->paginate(9);

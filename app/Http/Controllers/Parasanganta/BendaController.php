@@ -21,8 +21,8 @@ class BendaController extends Controller
 
     public function index(){
         
-        $bangunan = Benda::where('status', 'publikasi')->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
-
+        $bangunan = Benda::where('status', 'publikasi')->orderBy('published_at', 'desc');
+        // ->where('published_at', '<=', Carbon::now())
         
 
         $foto = $bangunan->paginate(9);

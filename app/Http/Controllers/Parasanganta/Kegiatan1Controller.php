@@ -16,8 +16,8 @@ class Kegiatan1Controller extends Controller
 {
     public function index(){
         
-        $bangunan = Kegiatan1::where('status', 'publikasi')->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
-
+        $bangunan = Kegiatan1::where('status', 'publikasi')->orderBy('published_at', 'desc');
+        // ->where('published_at', '<=', Carbon::now())
         
 
         $foto = $bangunan->paginate(9);

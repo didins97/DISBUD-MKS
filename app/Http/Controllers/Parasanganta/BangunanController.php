@@ -19,8 +19,8 @@ class BangunanController extends Controller
 {
     public function index(){
         // $bangunan = Bangunan::where('status', 'publikasi')->get();
-        $bangunan = Bangunan::where('status', 'publikasi')->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
-
+        $bangunan = Bangunan::where('status', 'publikasi')->orderBy('published_at', 'desc');
+        // ->where('published_at', '<=', Carbon::now())
         
 
         $foto = $bangunan->paginate(9);

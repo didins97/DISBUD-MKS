@@ -15,8 +15,8 @@ class SitusController extends Controller
 {
     public function index(){
         
-        $bangunan = Situs::where('status', 'publikasi')->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
-
+        $bangunan = Situs::where('status', 'publikasi')->orderBy('published_at', 'desc');
+        // ->where('published_at', '<=', Carbon::now())
         
 
         $foto = $bangunan->paginate(9);
