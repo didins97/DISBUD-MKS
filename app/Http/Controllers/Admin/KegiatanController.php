@@ -169,6 +169,7 @@ class KegiatanController extends Controller
             'meta_english' => $request->meta_english,
             'keywords_english' => $request->keywords_english, 
             'thumbnail' => $filename_thumbnail,
+            'venue'=>$request->venue,
             // 'end_date' => $end_date_timestamp,
             'slug_english' => $slug_english == null ? $kegiatan->slug_english : $slug_english,
             'id_lokasi' => $request->id_lokasi,
