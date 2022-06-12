@@ -1,40 +1,9 @@
-@extends('parasanganta.layout.app')
+@extends('layout.app')
 
 @section('content')
 
 
-<div class="preloader">
-    <div class="lds-ripple">
-        <div></div>
-        <div></div>
-    </div>
-</div><!-- /.preloader -->
-<div class="page-wrapper">
-    <nav class="main-nav-one stricky main-nav-one__home-two">
-        <div class="container">
-            <div class="inner-container">
-                <div class="logo-box">
-                    <a href="parasanganta/index.html">
-                        <img src="assets/images/logo/logo-parasanganta.svg" alt="" width="230">
-                    </a>
-                    <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
-                </div><!-- /.logo-box -->
-                <div class="main-nav__main-navigation">
-                    <ul class="main-nav__navigation-box">
-                        <li><a href="parasanganta/index.html">Beranda</a></li>
-                        <li><a href="parasanganta/#">Konten</a></li>
-                        <li><a href="parasanganta/informasi.html">Informasi</a></li>
-                        <li><a href="parasanganta/event.html">Event</a></li>
-                        <li><a href="parasanganta/tentang.html">Tentang</a></li>
-                    </ul><!-- /.main-nav__navigation-box -->
-                </div><!-- /.main-nav__main-navigation -->
-                <div class="main-nav__right">
-                    <a href="#" class="search-popup__toggler"><i class="muzex-icon-search"></i></a>
-                    <!-- <a class="sidemenu-icon side-content__toggler" href="#"><i class="muzex-icon-menu"></i></a> -->
-                </div><!-- /.main-nav__right -->
-            </div><!-- /.inner-container -->
-        </div><!-- /.container -->
-    </nav><!-- /.main-nav-one -->
+@include('partials.header')
 
     <section class="page-header"
         style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg); background-size: cover; background-position: center;">
@@ -64,16 +33,16 @@
                                 <li><a href="#">03 Comments</a></li>
                             </ul>
                             <h3><a href="news-details.html">{{ $a->judul_indo }}</a></h3>
-                            <p>{!!$a->konten_indo!!}</p>
-                            <a href="news-details.html" class="blog-one__link">Selengkapnya</a>
+                            <p>{!! Str::limit($a->konten_indo, 100) !!}</p>
+                            <a href="{{route('article_detail',$a->slug)}}" class="blog-one__link">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 @endforeach
-
-
+               
+               
             </div><!-- /.row -->
-
+            
             <div class="text-center d-flex justify-content-center">
                 <div class="post-pagination mt-10">
                     <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
@@ -86,3 +55,5 @@
         </div>
     </section>
     @endsection
+
+    

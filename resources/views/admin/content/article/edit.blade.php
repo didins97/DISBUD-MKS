@@ -1,11 +1,11 @@
 @extends('admin.layout.app')
 
 @section('title')
-    ADMIN - Jalur Rempah
+    ADMIN - DisBudPar
 @endsection
 
 @section('topbar-title')
-    Konten - Artikel
+    Edit - Artikel
 @endsection
 
 @section('content')
@@ -22,9 +22,9 @@
                   {{ $errors->first() }} 
                 </div>
               @endif
-              <div class="card-header py-3">
+              {{-- <div class="card-header py-3">
                 <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Bahasa</h2>
-              </div>
+              </div> --}}
               <div class="card-body">
                   <div class="mb-3">
                     <label for="judulArtikelBahasa" class="form-label" >Judul</label>
@@ -47,7 +47,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-12 mb-3">
+          {{-- <div class="col-lg-12 mb-3">
             <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">English</h2>
@@ -73,7 +73,7 @@
                   </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="col-lg-12 mb-3">
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -98,7 +98,9 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-12 mb-3">
+
+
+          {{-- <div class="col-lg-12 mb-3">
             <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Tag Artikel</h2>
@@ -193,11 +195,13 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
+                  </div>  
               </div>
             </div>
-          </div>
+          </div> --}}
+
+
+
           <div id="fotoSlider" class="col-lg-12 mb-3" style="display: {{ $artikel->slider_file != null ? 'initial' : 'none' }};">
             <div class="card shadow mb-4">
               <div class="card-header py-3">

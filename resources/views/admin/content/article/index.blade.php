@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 
 @section('title')
-  ADMIN - Jalur Rempah
+  ADMIN - DisBudPar
 @endsection
 
 @section('topbar-title')

@@ -1,11 +1,11 @@
 @extends('admin.layout.app')
 
 @section('title')
-  ADMIN - Jalur Rempah
+  ADMIN - DisBudPar
 @endsection
 
 @section('topbar-title')
-    Konten - Foto
+    Konten - Struktur
 @endsection
 
 @section('content')
@@ -21,7 +21,7 @@
                         <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">List Foto</h2>
                       </div>
                       <div class="col-6 text-end">
-                        <a href="{{ route('admin.photo.add') }}" class="btn btn-primary">
+                        <a href="{{ route('admin.struktur.add') }}" class="btn btn-primary">
                           <i class="fa fa-plus mr-1"></i> Tambah
                         </a>
                       </div>
@@ -42,12 +42,12 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach( $foto as $f )
+                        @foreach( $bangunan as $f )
                         <tr>
                           <td>#</td>
                           <td>{{ $f->created_at->isoFormat('DD/MM/YYYY'); }}</td>
                           <td>{{ \Carbon\Carbon::parse($f->published_at)->isoFormat('DD/MM/YYYY') }}</td>
-                          <td>{{ $f->judul_indo }}</td>
+                          <td>{{ $f->nama }}</td>
                           <td>{{ $f->penulis != 'admin' ? $f->kontributor_relasi->nama : 'admin' }}</td>
                           <td>
                             <span class="badge rounded-pill py-1 px-3 {{ $f->slider_utama ? 'bg-success' : 'bg-secondary' }}">{{ $f->slider_utama ? 'Aktif' : 'Tidak Aktif' }}</span>
@@ -93,7 +93,7 @@
       }).then((result) => {
         if (result.isConfirmed) {
           let id = $(this).attr("data-id");
-          window.location.href = `/admin/konten/foto/delete/${id}`
+          window.location.href = `/admin/parasanganta/struktur/delete/${id}`
           Swal.fire(
             'Deleted!',
             'Your file has been deleted.',

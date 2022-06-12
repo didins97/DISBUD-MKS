@@ -1,11 +1,11 @@
 @extends('admin.layout.app')
 
 @section('title')
-    ADMIN - Jalur Rempah
+    ADMIN - DisBudPar
 @endsection
 
 @section('topbar-title')
-    Konten - Artikel
+    Tambah - Artikel
 @endsection
 
 @section('content')
@@ -47,7 +47,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12 mb-3">
+              {{-- <div class="col-lg-12 mb-3">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">English</h2>
@@ -73,7 +73,7 @@
                       </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
               <div class="col-lg-12 mb-3">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
@@ -107,7 +107,7 @@
                     <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Tag Artikel</h2>
                   </div>
                   <div class="card-body">
-                      <div class="mb-3">
+                      {{-- <div class="mb-3">
                         <label for="lokasiArtikel" class="form-label">Lokasi</label>
                         <select id="pilihLokasi" class="form-select select2-style" name="id_lokasi" aria-label="Default select example">
                           <option value="" selected>Pilih Lokasi</option>
@@ -115,8 +115,8 @@
                             <option value="{{ $l->id }}">{{ $l->nama_lokasi }}</option>
                           @endforeach
                         </select>
-                      </div>
-                      <div class="mb-3">
+                      </div> --}}
+                      {{-- <div class="mb-3">
                         <label for="isiArtikelEnglish" class="form-label">Jenis Rempah</label>
                         <div class="px-3 row">
                           @foreach( $rempahs as $r )
@@ -130,8 +130,8 @@
                           </div>
                           @endforeach
                         </div>
-                      </div>
-                      <div class="mb-3">
+                      </div> --}}
+                      {{-- <div class="mb-3">
                         <label for="isiArtikelEnglish" class="form-label">Kategori</label>
                         <div class="px-3 row">
                           <div class="col-lg-4">
@@ -145,7 +145,7 @@
                             @endforeach
                           </div>
                         </div>
-                      </div>
+                      </div> --}}
                       <!-- <div class="mb-3">
                         <label for="isiArtikelEnglish" class="form-label">Pengaturan</label>
                         <div class="px-3 row">
@@ -169,12 +169,12 @@
                         <label for="isiArtikelEnglish" class="form-label">Pengaturan</label>
                         <div class="px-3 row">
                           <div class="col-lg-4">
-                            <div class="form-check">
+                            {{-- <div class="form-check">
                               <input class="form-check-input" type="checkbox" value="contributor" id="peng-kontributor" name="contributor">
                               <label class="form-check-label" for="peng-kontributor">
                                 Kontributor Umum/Pamong
                               </label>
-                            </div>
+                            </div> --}}
                             <div class="form-check">
                               <input class="form-check-input" type="checkbox" name="slider_utama" value="slider_utama" id="peng-slider">
                               <label class="form-check-label" for="peng-slider">
@@ -187,7 +187,7 @@
                   </div>
                 </div>
               </div>
-              <div id="fotoSlider" class="col-lg-12 mb-3" style="display: none;">
+              {{-- <div id="fotoSlider" class="col-lg-12 mb-3" style="display: none;">
                  <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Foto Slider</h2>
@@ -210,8 +210,8 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div id="kontributor" class="col-lg-12 mb-3" style="display: none;">
+              </div> --}}
+              {{-- <div id="kontributor" class="col-lg-12 mb-3" style="display: none;">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Kontributor</h2>
@@ -236,7 +236,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
               <div class="col-lg-12 mb-3">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">

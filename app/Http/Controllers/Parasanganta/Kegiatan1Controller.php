@@ -4,47 +4,70 @@ namespace App\Http\Controllers\Parasanganta;
 
 use App\Http\Controllers\Controller;
 
-use App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\Models\KategoriShow;
+use App\Models\Kegiatan1;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
+
+
 
 
 class Kegiatan1Controller extends Controller
 {
     public function index(){
-        $kategori = KategoriShow::where('isi', 'Kegiatan')->first();
-        $artikel = $kategori->artikel->filter(function($item) {
-            return $item->status == 'publikasi' && $item->published_at <= \Carbon\Carbon::now();
-        });
-        $foto = $kategori->foto->filter(function($item) {
-            return $item->status == 'publikasi' && $item->published_at <= \Carbon\Carbon::now();
-        });
-        $audio = $kategori->audio->filter(function($item) {
-            return $item->status == 'publikasi' && $item->published_at <= \Carbon\Carbon::now();
-        });
-        $video = $kategori->video->filter(function($item) {
-            return $item->status == 'publikasi' && $item->published_at <= \Carbon\Carbon::now();
-        });
-        $publikasi = $kategori->publikasi->filter(function($item) {
-            return $item->status == 'publikasi' && $item->published_at <= \Carbon\Carbon::now();
-        });
-        $kerjasama = $kategori->kerjasama->filter(function($item) {
-            return $item->status == 'publikasi' && $item->published_at <= \Carbon\Carbon::now();
-        });
-        $kegiatan = $kategori->kegiatan->filter(function($item) {
-            return $item->status == 'publikasi' && $item->published_at <= \Carbon\Carbon::now();
-        });
-        $artikel = $artikel->mergeRecursive($foto)->mergeRecursive($audio)->mergeRecursive($video)->mergeRecursive($publikasi)->mergeRecursive($kerjasama)->mergeRecursive($kegiatan);
+        
+        $bangunan = Kegiatan1::where('status', 'publikasi')->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
 
-        // $artikel = ( $kategori != null )
-        // ? $this->paginate($artikel, 9)
-        // : [];
+        
 
-        // $artikel->setPath('/tentang-benda');
+        $foto = $bangunan->paginate(9);
 
-        return view('parasanganta.content.tentang_kegiatan', compact('artikel'));
+        // if( Paginator::resolveCurrentPage() != 1 ) {
+        //     $fotos = [];
+        //     $i = 0;
+        //     foreach( $foto as $a ) {
+        //         $fotos[$i]['nama'] = Session::get('lg') == 'en' ? $a->judul_english : $a->judul_indo;
+        //         $fotos[$i]['thumbnail'] = $a->thumbnail;
+        //         $j = 0;
+        //         foreach( $a->kategori_show as $ks ) {
+        //             $fotos[$i]['kategori_show'][$j] = $ks->isi;
+        //             $j++;
+        //         }
+        //         $fotos[$i]['konten'] = Session::get('lg') == 'en' ? \Str::limit($a->konten_english, 50, $end='...') : \Str::limit($a->konten_indo, 50, $end='...');
+        //         $fotos[$i]['slug'] = $a->slug;
+        //         $fotos[$i]['penulis'] = $a->penulis != 'admin' ? $a->kontributor_relasi->nama : 'admin';
+        //         $fotos[$i]['published_at'] = \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y');
+        //         $i++;
+        //     }
+        //     return response()->json([
+        //         'status' => 'success', 
+        //         'data' => $fotos
+        //     ]);
+        // } else {
+        //     return view('content.tentang_bangunan', compact('foto'));
+        // }
 
+           return view('parasanganta.content.tentang_kegiatan1', compact('foto'));
 
     }
+
+    public function show($slug)
+    {
+        $lg = Session::get('lg');
+
+        $foto = Kegiatan1::where('slug', $slug)->firstOrFail();
+
+        // check draft
+        if( $foto->status == 'draft' && !isset(auth()->user()->id) ) {
+            abort(404);
+        }
+        
+        if( $lg == 'en' )
+            return view('content_english.photo_detail', compact('foto'));
+
+        return view('parasanganta.content.kegiatan1_detail', compact('foto'));
+    }
+
+
+    
 }
