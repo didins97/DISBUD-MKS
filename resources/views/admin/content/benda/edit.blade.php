@@ -52,11 +52,11 @@
                         <div class="row">
                           <div class='col-lg-6'>
                             <label  class="form-label">longitude</label>
-                            <input  name="longitude"  type="number" step="any" class="form-control" value="{{$foto->longitude}}" >
+                            <input  name="longitude"  type="text" class="form-control" value="{{$foto->longitude}}" >
                           </div>
                           <div class='col-lg-6'>
                             <label  class="form-label">latitude</label>
-                            <input  name="latitude"  type="number" step="any" class="form-control" value="{{$foto->latitude}}">
+                            <input  name="latitude"  type="text" class="form-control" value="{{$foto->latitude}}">
                           </div>
                         </div>
                       </div>
