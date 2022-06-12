@@ -18,7 +18,7 @@
                   <div class="card-header py-3">
                     <div class="row">
                       <div class="col-6">
-                        <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">List Foto</h2>
+                        <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">List Bangunan</h2>
                       </div>
                       <div class="col-6 text-end">
                         <a href="{{ route('admin.bangunan.add') }}" class="btn btn-primary">

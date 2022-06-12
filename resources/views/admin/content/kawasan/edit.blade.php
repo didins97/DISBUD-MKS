@@ -24,7 +24,7 @@
                     </div>
                   @endif
                   <div class="card-header py-3">
-                    <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Bahasa</h2>
+                    <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Edit Kawasan</h2>
                   </div>
                   <div class="card-body">
                       <div class="mb-3">

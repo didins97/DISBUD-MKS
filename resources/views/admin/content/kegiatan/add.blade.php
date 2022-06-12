@@ -5,7 +5,7 @@
 @endsection
 
 @section('topbar-title')
-    Kegiatan
+    Event
 @endsection
 
 @section('content')

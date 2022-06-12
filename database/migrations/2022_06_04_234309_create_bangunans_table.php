@@ -17,8 +17,8 @@ class CreateBangunansTable extends Migration
             $table->id();
             $table->string('nama');
             $table->longText('konten');
-            $table->float('longitude')->nullable();
-            $table->float('latitude')->nullable();
+            $table->string('longitude')->nullable();
+            $table->string('latitude')->nullable();
             $table->string('kelurahan')->nullable();
             $table->string('kecamatan')->nullable();
             $table->text('meta')->nullable();
