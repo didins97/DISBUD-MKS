@@ -59,7 +59,7 @@
                             <a href="{{ route('photo_detail', $f->slug) }}" class="btn btn-sm btn-outline-primary mb-1">
                               View
                             </a>
-                            <a href="{{ route('admin.photo.edit', $f->id) }}" class="btn btn-sm btn-outline-info mb-1">
+                            <a href="{{ route('admin.struktur.edit', $f->id) }}" class="btn btn-sm btn-outline-info mb-1">
                               Edit
                             </a>
                             <button class="btn btn-sm btn-outline-danger btn-hapus mb-1" data-id="{{ $f->id }}">
