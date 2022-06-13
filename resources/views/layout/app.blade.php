@@ -79,7 +79,7 @@
             <div class="cursor-follower"></div>
         </div><!-- /.search-popup__overlay -->
         <div class="search-popup__inner">
-            <form action="#" class="search-popup__form">
+            <form action="{{route('article_search')}}" class="search-popup__form">
                 <input type="text" name="search" placeholder="Type here to Search....">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>

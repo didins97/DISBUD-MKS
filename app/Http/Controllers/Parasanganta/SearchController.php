@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Parasanganta;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use Illuminate\Pagination\paginator;
@@ -12,9 +14,15 @@ use App\Models\Artikel;
 use App\Models\Foto;
 use App\Models\Video;
 use App\Models\Audio;
+use App\Models\Bangunan;
+use App\Models\Benda;
+use App\Models\Kawasan;
 use App\Models\Publikasi;
 use App\Models\Kegiatan;
+use App\Models\Kegiatan1;
 use App\Models\Kerjasama;
+use App\Models\Situs;
+use App\Models\Struktur;
 
 class SearchController extends Controller
 {
@@ -30,23 +38,33 @@ class SearchController extends Controller
         })->when($lg == 'english', function($query) use ($lg, $search) {
             $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
         })->get();
-        $foto = Foto::when($search_condition, function($query) use ($search, $lg) {
-            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
+        $benda = Benda::when($search_condition, function($query) use ($search, $lg) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('nama'  , 'LIKE', '%'.$search . '%');
         })->when($lg == 'english', function($query) use ($lg, $search) {
             $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
         })->get();
-        $audio = Audio::when($search_condition, function($query) use ($search, $lg) {
-            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
+        $bangunan = Bangunan::when($search_condition, function($query) use ($search, $lg) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('nama'  , 'LIKE', '%'.$search . '%');
         })->when($lg == 'english', function($query) use ($lg, $search) {
             $query->where('judul_english', '!=', null);
         })->get();
-        $video = Video::when($search_condition, function($query) use ($search, $lg) {
-            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
+        $situs = Situs::when($search_condition, function($query) use ($search, $lg) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('nama' , 'LIKE', '%'.$search . '%');
         })->when($lg == 'english', function($query) use ($lg, $search) {
             $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
         })->get();
-        $publikasi = Publikasi::when($search_condition, function($query) use ($search, $lg) {
-            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
+        $kawasan = Kawasan::when($search_condition, function($query) use ($search, $lg) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('nama' , 'LIKE', '%'.$search . '%');
+        })->when($lg == 'english', function($query) use ($lg, $search) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
+        })->get();
+        $struktur = Struktur::when($search_condition, function($query) use ($search, $lg) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('nama'  , 'LIKE', '%'.$search . '%');
+        })->when($lg == 'english', function($query) use ($lg, $search) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
+        })->get();
+        $kegiatan1 = Kegiatan1::when($search_condition, function($query) use ($search, $lg) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('nama'  , 'LIKE', '%'.$search . '%');
         })->when($lg == 'english', function($query) use ($lg, $search) {
             $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
         })->get();
@@ -55,13 +73,8 @@ class SearchController extends Controller
         })->when($lg == 'english', function($query) use ($lg, $search) {
             $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
         })->get();
-        $kerjasama = Kerjasama::when($search_condition, function($query) use ($search, $lg) {
-            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
-        })->when($lg == 'english', function($query) use ($lg, $search) {
-            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
-        })->get();
 
-        $artikel = $this->paginate($artikel->mergeRecursive($publikasi)->mergeRecursive($kegiatan)->mergeRecursive($kerjasama)->mergeRecursive($foto)->mergeRecursive($audio)->mergeRecursive($video), 9);
+        $artikel = $this->paginate($artikel->mergeRecursive($kawasan)->mergeRecursive($struktur)->mergeRecursive($kegiatan1)->mergeRecursive($kegiatan)->mergeRecursive($benda)->mergeRecursive($bangunan)->mergeRecursive($situs), 9);
         $artikel->setPath('cari?search=' . $search);
 
 
@@ -69,7 +82,7 @@ class SearchController extends Controller
             return view('content_english.search_content', compact('artikel'));
     
 
-        return view('content.search_content', compact('artikel'));
+        return view('parasanganta.content.search_content', compact('artikel'));
     }
 
     private function paginate($items, $perPage = 15, $page = null, $options = [])
