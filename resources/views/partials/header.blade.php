@@ -9,16 +9,16 @@
         <div class="container">
             <div class="inner-container">
                 <div class="logo-box">
-                    <a href="{{ route('home') }}">
+                    <a href="{{ route('parasanganta') }}">
                         <img src="{{asset('assets/images/logo/logo-parasanganta.svg')}}" alt="" width="230">
                     </a>
-                    <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
+                    <a href="javascript:;" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
                 </div><!-- /.logo-box -->
                 <div class="main-nav__main-navigation">
                     <ul class="main-nav__navigation-box">
-                        <li><a href="{{route('home')}}">Beranda</a></li>
+                        <li><a href="{{route('parasanganta')}}">Beranda</a></li>
                         <li class="dropdown">
-                            <a href="#">Konten</a>
+                            <a href="javascript:;">Konten</a>
                             <ul>
                                 <li><a href="{{route('tentangbenda')}}">Benda</a></li>
                                 <li><a href="{{route('tentangbangunan')}}">Bangunan</a></li>

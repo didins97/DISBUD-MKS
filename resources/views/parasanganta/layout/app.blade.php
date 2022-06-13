@@ -56,7 +56,7 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
 
-            <a href="/" class="side-menu__logo"><img src="{{ asset('assets/images/logo/logo-parasanganta2.svg') }}" alt="" width="170"></a>
+            <a href="{{ route('parasanganta') }}" class="side-menu__logo"><img src="{{ asset('assets/images/logo/logo-parasanganta2.svg') }}" alt="" width="170"></a>
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
