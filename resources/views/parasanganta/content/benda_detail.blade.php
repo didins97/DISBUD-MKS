@@ -40,7 +40,7 @@
                                 </li>
                                 <li>
                                     <span>Kategori:</span>
-                                    {{$foto->kategori}}
+                                    Benda
                                 </li>
                                 <li>
                                     <span>Letak:</span>

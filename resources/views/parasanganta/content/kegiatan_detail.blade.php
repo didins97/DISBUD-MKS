@@ -18,7 +18,7 @@
                 <div class="col-lg-8">
                     <div class="blog-details__main">
                         <ul class="blog-one__meta list-unstyled">
-                            <li class="text-uppercase">Wednesday, Dec 18, 2019</li>
+                            <li class="text-uppercase">{{ \Carbon\Carbon::parse($kegiatan->published_at)->isoFormat('D MMMM Y'); }}</li>
                         </ul><!-- /.blog-one__meta list-unstyled -->
                         <h3>{{$kegiatan->judul_indo}}</h3>
                         <br>

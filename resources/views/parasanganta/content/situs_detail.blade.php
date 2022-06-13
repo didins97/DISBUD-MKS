@@ -40,7 +40,7 @@
                                 </li>
                                 <li>
                                     <span>Kategori:</span>
-                                    {{$foto->kategori}}
+                                    Situs
                                 </li>
                                 <li>
                                     <span>Letak:</span>
