@@ -60,7 +60,7 @@
                             </ul><!-- /.event-details__booking-info list-unstyled -->
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <img src="{{asset('assets/images/resources/qrcode.png')}}" width="40%" alt="">
+                                    {{QrCode::generate( url()->current() );}}
                                 </div>
                             </div>
                             <!-- /.thm-btn event-details__book-btn -->

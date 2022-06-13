@@ -9,7 +9,7 @@
         <div class="container">
             <div class="inner-container">
                 <div class="logo-box">
-                    <a href="parasanganta/index.html">
+                    <a href="{{ route('home') }}">
                         <img src="{{asset('assets/images/logo/logo-parasanganta.svg')}}" alt="" width="230">
                     </a>
                     <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>

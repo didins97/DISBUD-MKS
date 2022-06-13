@@ -50,7 +50,7 @@
         <div class="container">
             <div class="inner-container">
                 <div class="logo-box">
-                    <a href="parasanganta/index.html">
+                    <a href="{{ route('home') }}">
                         <img src="assets/images/logo/logo-parasanganta2.svg" alt="" width="230">
                     </a>
                     <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
@@ -298,7 +298,7 @@
             <div class="container">
                 <div class="inner-container">
                     <p>&copy; Copyright 2022 Dinas Kebudayaan Kota Makassar</p>
-                    <a href="index.html" class="site-footer__bottom-logo">
+                    <a href="{{ route('home') }}" class="site-footer__bottom-logo">
                         <img src="{{  asset('assets/images/resources/logo-makassar.png') }}" alt="" width="60">
                     </a>
                     <div class="site-footer__bottom-links">

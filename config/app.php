@@ -162,7 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        
+
         CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
 
         /*
@@ -181,6 +181,7 @@ return [
         Mews\Captcha\CaptchaServiceProvider::class,
 
         Intervention\Image\ImageServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class
 
     ],
 
@@ -237,6 +238,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
 
         'Image' => 'Intervention\Image\Facades\Image::class',
     ],

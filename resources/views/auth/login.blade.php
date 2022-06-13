@@ -21,7 +21,7 @@
           <img id="img-login" src="{{ asset('assets_old/img/hero/hero-6.jpg') }}">
         </div>
         <div class="col-lg-5 wrap-form-daftar center-v">
-          <a href="index.html">
+          <a href="{{ route('home') }}">
             <img class="logo-daftar mb-4" src="{{ asset('assets/images/card-hover/statue2.png') }}">
           </a>
           <h1>Login Admin</h1>

@@ -14,14 +14,14 @@
         <div class="container">
             <div class="inner-container">
                 <div class="logo-box">
-                    <a href="parasanganta/index.html">
+                    <a href="{{ route('parasanganta') }}">
                         <img src="assets/images/logo/logo-parasanganta2.svg" alt="" width="230">
                     </a>
                     <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
                 </div><!-- /.logo-box -->
                 <div class="main-nav__main-navigation">
                     <ul class="main-nav__navigation-box">
-                        <li><a href="{{route('home')}}">Beranda</a></li>
+                        <li><a href="{{route('parasanganta')}}">Beranda</a></li>
                         <li class="dropdown">
                             <a href="#">Konten</a>
                             <ul>
@@ -200,8 +200,8 @@
             </div>
             <div class="row">
                 @foreach($artikel as $a)
-                    
-               
+
+
                 <div class="col-lg-4">
                     <div class="blog-one__single">
                         <div class="blog-one__image">
@@ -223,8 +223,8 @@
                     </div>
                 </div>
                 @endforeach
-                
-              
+
+
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section>
