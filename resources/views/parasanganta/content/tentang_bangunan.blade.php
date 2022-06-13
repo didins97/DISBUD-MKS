@@ -43,7 +43,7 @@
                         </div><!-- /.collection-two__image -->
                         <div class="collection-two__content">
                             <h3>{{$a->nama}}</h3>
-                            <p>1885</p>
+                            <p> {{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}</p>
                             {{-- <a href="/artikel/{{$a->slug}}" class="stretched-link"></a> --}}
                           <a href="{{ route('bangunan_detail', $a->slug) }}" class="stretched-link"></a>
 

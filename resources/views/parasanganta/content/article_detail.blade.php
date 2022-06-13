@@ -25,9 +25,8 @@
                             <img src="{{ asset('storage/assets/artikel/thumbnail/' . $artikel->thumbnail) }}" class="img-fluid" alt="">
                         </div><!-- /.blog-details__image -->
                         <ul class="blog-one__meta list-unstyled">
-                            <li><a href="#" class="text-uppercase">Oleh <span class="text-bold">Ahmad
-                                        Irfandi</span></a></li>
-                            <li class="text-uppercase">7 April 2021</li>
+                            <li><a href="#" class="text-uppercase">Oleh <span class="text-bold">{{ $artikel->penulis != 'admin' ? $artikel->kontributor_relasi->nama : 'admin' }}</span></a></li>
+                            <li class="text-uppercase"> {{ \Carbon\Carbon::parse($artikel->published_at)->isoFormat('D MMMM Y'); }}</li>
                         </ul><!-- /.blog-one__meta list-unstyled -->
                         <h3>{{ $artikel->judul_indo }}</h3>
                         <br>
