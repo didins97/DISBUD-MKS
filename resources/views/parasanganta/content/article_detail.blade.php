@@ -10,7 +10,7 @@
 
 
     <section class="page-header"
-        style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg); background-size: cover; background-position: center;">
+        style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
         <div class="container">
             <h2>ARTIKEL</h2>
         </div><!-- /.container -->
@@ -65,10 +65,10 @@
                                     </div><!-- /.sidebar__post-content -->
                                 </div><!-- /.sidebar__post-single -->
                                 @endforeach
-                               
-                               
-                               
-                              
+
+
+
+
                             </div><!-- /.sidebar__post -->
                         </div><!-- /.sidebar__single -->
                     </div><!-- /.sidebar -->

@@ -7,7 +7,7 @@
 @include('partials.header')
 
 
-    <section class="page-header" style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg);background-size: cover;background-position: center;">
+    <section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }});background-size: cover;background-position: center;">
         <div class="container">
             <h2>BENDA</h2>
         </div><!-- /.container -->
@@ -18,7 +18,7 @@
             <div class="event-details__top">
                 <p class="d-none">Wednesday, Dec 18, 2019</p>
                 <h3>{{$foto->nama}}</h3>
-                
+
             </div><!-- /.event-details__top -->
             <div class="row high-gutter">
                 <div class="col-lg-8 mb-4">
@@ -47,7 +47,7 @@
                                 <li>
                                     <span>Letak:</span>
                                     {!!$foto->letak!!}
-                                    
+
                                 </li>
                                 <li>
                                     <span>Kelurahan</span>
@@ -79,13 +79,13 @@
                         <div class="placeholder"></div>
                     </div>
                     <h3 class="mt-5">Peta</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="google-map__contact" allowfullscreen></iframe> 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="google-map__contact" allowfullscreen></iframe>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.event-details -->
 
-    <section class="cta-one" style="background-image: url(assets/images/shapes/cta-bg-1-1.jpg);">
+    <section class="cta-one" style="background-image: url( {{ asset('assets/images/shapes/cta-bg-1-1.jpg') }});">
         <div class="container text-center">
             <h3>Download Informasi Lengkap</h3>
             <p>

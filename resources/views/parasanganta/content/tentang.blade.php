@@ -7,7 +7,7 @@
 
 
     <section class="page-header"
-        style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg); background-size: cover; background-position: center;">
+        style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
         <div class="container">
             <h2>TENTANG</h2>
         </div><!-- /.container -->
@@ -75,7 +75,7 @@
         </div><!-- /.container -->
     </section><!-- /.about-one -->
 
-    <section class="cta-one" style="background-image: url(assets/images/shapes/cta-bg-1-1.jpg);">
+    <section class="cta-one" style="background-image: url( {{ asset('assets/images/shapes/cta-bg-1-1.jpg') }});">
         <div class="container text-center">
             <h3>Peraturan & Regulasi</h3>
             <p>
