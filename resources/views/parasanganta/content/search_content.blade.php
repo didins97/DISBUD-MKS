@@ -17,7 +17,7 @@
         <img src="assets/images/backgrounds/huruf-lontara-satuan-2.svg" alt="" class="bg-lontara-two">
         <div class="container">
             <div class="block-title mb-5">
-                <p class="text-regular keyword-search">keyword “cagar budaya”</p>
+                <p class="text-regular keyword-search">keyword “{{$search}}”</p>
             </div><!-- /.block-title -->
            
             <div class="block-title mb-4">
@@ -36,7 +36,7 @@
                                 <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
                                 <div class="blog-one__date">
                                     <i class="far fa-calendar-alt"></i>
-                                    20 Nov 2022
+                                    {{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}
                                 </div>
                             </div>
                             <div class="blog-one__content">
@@ -58,7 +58,7 @@
                                 <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
                                 <div class="blog-one__date">
                                     <i class="far fa-calendar-alt"></i>
-                                    20 Nov 2022
+                                    {{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}
                                 </div>
                             </div>
                             <div class="blog-one__content">

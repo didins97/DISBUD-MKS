@@ -89,7 +89,7 @@ class SearchController extends Controller
             return view('content_english.search_content', compact('artikel'));
     
 
-        return view('parasanganta.content.search_content', compact('artikel'));
+        return view('parasanganta.content.search_content', compact('artikel','search'));
     }
 
     private function paginate($items, $perPage = 15, $page = null, $options = [])
