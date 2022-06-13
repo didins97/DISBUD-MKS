@@ -40,13 +40,15 @@
                         </p><!-- /.blog-details__tags -->
                         
                     </div><!-- /.blog-details__main -->
-
+                    <div class="mt-5">
+                        @php
+                            $konten_name = 'article';
+                            $konten = $artikel;
+                            @endphp
+                        @include('parasanganta.partials.social-share')
+                    </div>
                 </div><!-- /.col-lg-8 -->
-                @php
-                    $konten_name = 'article';
-                    $konten = $artikel;
-                    @endphp
-                @include('parasanganta.partials.social-share')
+        
                 <div class="col-lg-4">
                     <div class="sidebar radius-medium">
                         <div class="sidebar__single">
