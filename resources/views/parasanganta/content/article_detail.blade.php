@@ -38,12 +38,11 @@
                             </a><a href="#" class="text-medium">Cagar
                                 Budaya</a>
                         </p><!-- /.blog-details__tags -->
-                        <p class="blog-details__share">
-                            <span>Share:</span>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </p><!-- /.blog-details__share -->
+                        @php
+                            $konten_name = 'article';
+                            $konten = $artikel;
+                        @endphp
+                        @include('parasanganta.partials.social-share')
                     </div><!-- /.blog-details__main -->
 
                 </div><!-- /.col-lg-8 -->
