@@ -53,5 +53,6 @@
         </div><!-- /.container -->
         <img src="assets/images/backgrounds/huruf-lontara-satuan-3.svg" alt="" class="bg-lontara-four">
     </section><!-- /.blog-one blog-grid-page -->
+  
 
     @endsection
