@@ -238,6 +238,9 @@ Route::get('/funfact/{rempahName}', [RempahController::class, 'show'])->name('re
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/privacy-policy', function() {
+    return view('privacy_policy');
+})->name('privacy-policy');
 
 //parasanganta
 Route::get('/parasanganta/tentang', [App\Http\Controllers\Parasanganta\TentangController::class, 'index'])->name('tentang');

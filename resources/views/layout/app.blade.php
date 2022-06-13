@@ -37,11 +37,13 @@
     <link rel="stylesheet" href="{{asset('assets/css/parasanganta-style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css">
+
 
 </head>
 
 <body>
-   
+
         @yield('content')
         @include('partials.footer')
        {{-- Footer --}}
@@ -58,7 +60,7 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
 
-            <a href="index.html" class="side-menu__logo"><img src="assets/images/logo/logo-parasanganta2.svg" alt="" width="170"></a>
+            <a href="{{ route('home') }}" class="side-menu__logo"><img src="assets/images/logo/logo-parasanganta2.svg" alt="" width="170"></a>
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
@@ -89,10 +91,10 @@
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
     <!-- Template JS -->
-   
+
     @include('partials.js')
 
-    
+
 </body>
 
 </html>

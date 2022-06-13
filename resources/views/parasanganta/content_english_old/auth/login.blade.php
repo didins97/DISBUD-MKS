@@ -21,7 +21,7 @@
           <img id="img-login" src="assets/img/hero/hero-6.jpg">
         </div>
         <div class="col-lg-5 wrap-form-daftar center-v">
-          <a href="index.html">
+          <a href="{{ route('home') }}">
             <img class="logo-daftar mb-4" src="assets/img/logo-footer.png">
           </a>
           <h1>Login Jalur Rempah</h1>
@@ -32,10 +32,10 @@
               <p class="des-form-daftar">Fill the username & password below. Fill captcha for authenticate you are not a robot.</p>
               @if (count($errors) > 0)
                 <div class="alert alert-danger" role="alert">
-                  {{ $errors->first() }} 
+                  {{ $errors->first() }}
                 </div>
               @endif
-              
+
               <form method="post" action="{{ route('login_post') }}">
                 @csrf
                 <div class="input-group mb-4">

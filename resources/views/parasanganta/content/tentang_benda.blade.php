@@ -7,7 +7,7 @@
 
 
     <section class="page-header"
-        style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg); background-size: cover; background-position: center;">
+        style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
         <div class="container">
             <h2>BENDA</h2>
         </div><!-- /.container -->
@@ -32,13 +32,13 @@
                     }
                 }'>
                 @foreach($foto as $a)
-                    
-                
+
+
                 <div class="item">
                     <div class="collection-two__single">
                         <div class="collection-two__image">
                             <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
-                            
+
                         </div><!-- /.collection-two__image -->
                         <div class="collection-two__content">
                             <h3>{{$a->nama}}</h3>
@@ -52,10 +52,10 @@
                 </div><!-- /.item -->
 
                 @endforeach
-               
-                
-                
-              
+
+
+
+
 
             </div><!-- /.collection-two__carousel shadowed__carousel thm__owl-carousel owl-carousel owl-theme -->
         </div><!-- /.container-fluid -->

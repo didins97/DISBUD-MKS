@@ -46,9 +46,9 @@
                 <div class="col-lg-3">
                     <div class="footer-widget footer-widget__open-hrs">
                         <h3 class="footer-widget__title">Media Sosial</h3><!-- /.footer-widget__title -->
-                        <a class="sosmed-icon" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="sosmed-icon" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="sosmed-icon" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="sosmed-icon" target="_blank" href="https://instagram.com/disbudmakassar?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+                        <a class="sosmed-icon" target="_blank" href="https://www.facebook.com/disbud.makassar"><i class="fab fa-facebook"></i></a>
+                        <a class="sosmed-icon" target="_blank" href="#"><i class="fab fa-twitter"></i></a>
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="inner-container">
                 <p>&copy; Copyright 2022 Dinas Kebudayaan Kota Makassar</p>
-                <a href="index.html" class="site-footer__bottom-logo">
+                <a href="{{ route('home') }}" class="site-footer__bottom-logo">
                     <img src="{{asset('assets/images/resources/logo-makassar.png')}}" alt="" width="60">
                 </a>
                 <div class="site-footer__bottom-links">

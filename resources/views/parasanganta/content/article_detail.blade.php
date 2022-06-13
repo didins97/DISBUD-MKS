@@ -10,7 +10,7 @@
 
 
     <section class="page-header"
-        style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg); background-size: cover; background-position: center;">
+        style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
         <div class="container">
             <h2>ARTIKEL</h2>
         </div><!-- /.container -->
@@ -38,15 +38,17 @@
                             </a><a href="#" class="text-medium">Cagar
                                 Budaya</a>
                         </p><!-- /.blog-details__tags -->
-                        <p class="blog-details__share">
-                            <span>Share:</span>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </p><!-- /.blog-details__share -->
+                        
                     </div><!-- /.blog-details__main -->
-
+                    <div class="mt-5">
+                        @php
+                            $konten_name = 'article';
+                            $konten = $artikel;
+                            @endphp
+                        @include('parasanganta.partials.social-share')
+                    </div>
                 </div><!-- /.col-lg-8 -->
+        
                 <div class="col-lg-4">
                     <div class="sidebar radius-medium">
                         <div class="sidebar__single">
@@ -65,10 +67,10 @@
                                     </div><!-- /.sidebar__post-content -->
                                 </div><!-- /.sidebar__post-single -->
                                 @endforeach
-                               
-                               
-                               
-                              
+
+
+
+
                             </div><!-- /.sidebar__post -->
                         </div><!-- /.sidebar__single -->
                     </div><!-- /.sidebar -->

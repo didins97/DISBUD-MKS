@@ -6,7 +6,7 @@
 @include('partials.header')
 
     <section class="page-header"
-        style="background-image: url(assets/images/backgrounds/musium-kota-makassar.jpg); background-size: cover; background-position: center;">
+        style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
         <div class="container">
             <h2>ARTIKEL</h2>
         </div><!-- /.container -->
@@ -32,17 +32,17 @@
                                 <li><a href="#">{{ $a->penulis != 'admin' ? $a->kontributor_relasi->nama : 'admin' }}</a></li>
                                 <li><a href="#">03 Comments</a></li>
                             </ul>
-                            <h3><a href="news-details.html">{{ $a->judul_indo }}</a></h3>
+                            <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->judul_indo }}</a></h3>
                             <p>{!! Str::limit($a->konten_indo, 100) !!}</p>
                             <a href="{{route('article_detail',$a->slug)}}" class="blog-one__link">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 @endforeach
-               
-               
+
+
             </div><!-- /.row -->
-            
+
             <div class="text-center d-flex justify-content-center">
                 <div class="post-pagination mt-10">
                     <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
@@ -56,4 +56,3 @@
     </section>
     @endsection
 
-    

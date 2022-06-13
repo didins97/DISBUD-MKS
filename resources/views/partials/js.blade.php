@@ -18,3 +18,7 @@
 
     <!-- Custom Scripts -->
     <script src="{{asset('assets/js/theme.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.umd.min.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById('galleries'));
+    </script>

@@ -159,7 +159,7 @@
 
 .event-one__image-inner>img {
   height: 159px;
-  weight: 159px;
+  width: 159px;
   object-fit: cover;
 }
 
@@ -274,6 +274,12 @@
   border-color: transparent;
 }
 
+.list-group-item{
+  border: none;
+  padding: 0.5rem 0.5rem;
+}
+
+
 /* === EVENT === */
 .events {
   grid-template-columns: repeat(3, 1fr);
@@ -355,5 +361,21 @@
   .event-details {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .logo-box img {
+    width: 165px !important;
+  }
+
+  body > div.page-wrapper > section.event-one > img{
+    display: none;
+  }
+
+  .footer-widget__about img{
+    height: 50px !important;
+  }
+
+  .list-group-item{
+    padding: 0.5rem 0.75rem;
   }
 }
