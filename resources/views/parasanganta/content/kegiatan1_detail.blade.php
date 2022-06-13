@@ -67,12 +67,12 @@
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-12 mt-5 event-details__content">
                     <h3>Galeri</h3>
-                    <div class="grid-gallery mt-4">
+                    <div class="grid-gallery mt-4" id="galleries">
                 @for( $i = 0; $i < count(unserialize($foto->galleries)); $i++ )
 
-                        <div class="item-gallery">
+                         <a href="{{ asset('storage/assets/foto/galleries/' . unserialize($foto->galleries)[$i]) }}" class="item-gallery">
                           <img src="{{ asset('storage/assets/foto/galleries/' . unserialize($foto->galleries)[$i]) }}" />
-                        </div>
+                        </a>
                     @endfor
                         <div class="placeholder"></div>
                     </div>
