@@ -1,4 +1,4 @@
-<div class="col-lg-12 mt-5">
+<div class="col mt-5">
   <div id="share" class="mt-4">
       <h4>Bagikan:</h4>
       <br>

@@ -38,14 +38,15 @@
                             </a><a href="#" class="text-medium">Cagar
                                 Budaya</a>
                         </p><!-- /.blog-details__tags -->
-                        @php
-                            $konten_name = 'article';
-                            $konten = $artikel;
-                        @endphp
-                        @include('parasanganta.partials.social-share')
+                        
                     </div><!-- /.blog-details__main -->
 
                 </div><!-- /.col-lg-8 -->
+                @php
+                    $konten_name = 'article';
+                    $konten = $artikel;
+                    @endphp
+                @include('parasanganta.partials.social-share')
                 <div class="col-lg-4">
                     <div class="sidebar radius-medium">
                         <div class="sidebar__single">
