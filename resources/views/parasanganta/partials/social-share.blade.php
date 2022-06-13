@@ -1,6 +1,5 @@
 <div id="share" class="mt-4">
-  <h4>Bagikan:</h4>
-  <br>
+  <h4 class="mb-3">Bagikan:</h4>
   <ul class="list-group list-group-horizontal">
     <li class="list-group-item">
       <a target="_blank" href="https://wa.me/?text={{ route( $konten_name .'_detail', $konten->slug) }}">

@@ -274,7 +274,10 @@
   border-color: transparent;
 }
 
-
+.list-group-item{
+  border: none;
+  padding: 0.5rem 0.5rem;
+}
 
 
 /* === EVENT === */
@@ -370,5 +373,9 @@
 
   .footer-widget__about img{
     height: 50px !important;
+  }
+
+  .list-group-item{
+    padding: 0.5rem 0.75rem;
   }
 }
