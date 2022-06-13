@@ -23,6 +23,7 @@ use App\Models\Kegiatan1;
 use App\Models\Kerjasama;
 use App\Models\Situs;
 use App\Models\Struktur;
+use CreateFotoKategoriShow;
 
 class SearchController extends Controller
 {
@@ -74,7 +75,13 @@ class SearchController extends Controller
             $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
         })->get();
 
-        $artikel = $this->paginate($artikel->mergeRecursive($kawasan)->mergeRecursive($struktur)->mergeRecursive($kegiatan1)->mergeRecursive($kegiatan)->mergeRecursive($benda)->mergeRecursive($bangunan)->mergeRecursive($situs), 9);
+        $foto = Foto::when($search_condition, function($query) use ($search, $lg) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
+        })->when($lg == 'english', function($query) use ($lg, $search) {
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
+        })->get();
+
+        $artikel = $this->paginate($artikel->mergeRecursive($kawasan)->mergeRecursive($struktur)->mergeRecursive($kegiatan1)->mergeRecursive($kegiatan)->mergeRecursive($benda)->mergeRecursive($bangunan)->mergeRecursive($situs)->mergeRecursive($foto), 9);
         $artikel->setPath('cari?search=' . $search);
 
 
