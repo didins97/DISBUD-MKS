@@ -192,9 +192,7 @@
                 <div class="more-post__block">
                     <a class="more-post__link" href="{{route('articles')}}">
                         All Post
-                        <span class="curved-circle">View More &nbsp;&emsp;View More &nbsp;&emsp;View More View More
-                            View More &nbsp;&emsp;View &nbsp;&emsp; </span>
-
+                        <span class="curved-circle">View More &nbsp;&emsp;View More &nbsp;&emsp;View More View More View More &nbsp;&emsp;View &nbsp;&emsp; </span>
                     </a>
                 </div>
             </div>
