@@ -23,9 +23,7 @@
             <div class="row high-gutter">
                 <div class="col-lg-8 mb-4">
                     <div class="event-details__main">
-                        <div class="event-details__image d-none">
-                            <img src="{{asset('assets/images/event/event-d-1-1.jpg')}}" alt="">
-                        </div><!-- /.event-details__image -->
+
                         <div class="event-details__content">
                            {!!$foto->konten!!}
                         </div><!-- /.event-details__content -->
