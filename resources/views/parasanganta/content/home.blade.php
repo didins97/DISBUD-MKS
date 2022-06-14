@@ -216,7 +216,7 @@
     </section>
 
     <section class="event-one">
-        <img src="assets/images/resources/badik.png" alt="" class="event-one__moc" width="250px">
+        <img src="assets/images/resources/badik.png" alt="" class="event-one__moc" width="200px">
         <div class="container">
             <div class="block-title-two text-center">
                 <span class="block-title-two__line"></span>
