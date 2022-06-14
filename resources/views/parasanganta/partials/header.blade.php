@@ -40,7 +40,7 @@
                             90111
                         </p>
                         <p>(0411) 449817</p>
-                        <p><a href="mailto:example@muzex.com">disbudmakassar@gmail.com</a></p>
+                        <p><a href="mailto:disbudmakassar@gmail.com">disbudmakassar@gmail.com</a></p>
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-3 -->
                 <div class="col-lg-3">

@@ -60,7 +60,7 @@
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
-            <p class="side-menu__block__copy">(c) 2022 <a href="#">DISBUD Kota Makassar</a> - All rights reserved.</p>
+            <p class="side-menu__block__copy">(c) 2022 <a href="#">Dinas Kebudayaan Kota Makassar</a></p>
             <div class="side-menu__social d-none">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-google-plus"></i></a>
@@ -78,7 +78,7 @@
         </div><!-- /.search-popup__overlay -->
         <div class="search-popup__inner">
             <form action="#" class="search-popup__form">
-                <input type="text" name="search" placeholder="Type here to Search....">
+                <input type="text" name="search" placeholder="Tulis yang ingin kamu cari....">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div><!-- /.search-popup__inner -->

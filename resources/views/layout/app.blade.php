@@ -14,9 +14,7 @@
     <link rel="manifest" href="{{asset('assets/images/favicon/site.webmanifest')}}">
 
     <!-- Fonts URL -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Karla:400,700%7CPlayfair+Display:400,500,600,700,800,900%7CWork+Sans:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700%7CPlayfair+Display:400,500,600,700,800,900%7CWork+Sans:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
 
     <!-- Plugins CSS -->
@@ -44,9 +42,9 @@
 
 <body>
 
-        @yield('content')
-        @include('partials.footer')
-       {{-- Footer --}}
+    @yield('content')
+    @include('partials.footer')
+    {{-- Footer --}}
     </div><!-- /.page-wrapper -->
 
     <div class="side-menu__block">
@@ -64,7 +62,7 @@
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
-            <p class="side-menu__block__copy">(c) 2022 <a href="#">DISBUD Kota Makassar</a> - All rights reserved.</p>
+            <p class="side-menu__block__copy">(c) 2022 <a href="#">Dinas Kebudayaan Kota Makassar</a></p>
             <div class="side-menu__social d-none">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-google-plus"></i></a>
@@ -82,7 +80,7 @@
         </div><!-- /.search-popup__overlay -->
         <div class="search-popup__inner">
             <form action="{{route('article_search')}}" class="search-popup__form">
-                <input type="text" name="search" placeholder="Type here to Search....">
+                <input type="text" name="search" placeholder="Tulis yang ingin kamu cari....">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div><!-- /.search-popup__inner -->
