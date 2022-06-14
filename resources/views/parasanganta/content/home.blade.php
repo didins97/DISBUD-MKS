@@ -49,47 +49,17 @@
 
     <!-- banner section -->
     <section class="banner-section banner-section__home-two banner-section__home-three">
-        <div class="banner-carousel thm__owl-carousel owl-theme owl-carousel"
-            data-options='{"loop": true, "items": 1, "margin": 0, "dots": false, "nav": true, "animateOut": "fadeOut", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 6000, "autoplayHoverPause": false}'>
+        <div class="banner-carousel thm__owl-carousel owl-theme owl-carousel" data-options='{"loop": true, "items": 1, "margin": 0, "dots": false, "nav": true, "animateOut": "fadeOut", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 6000, "autoplayHoverPause": false}'>
             <!-- Slide Item -->
             <div class="slide-item">
-                <div class="image-layer lazy-image"
-                    style="background-image: url('assets/images/blog/museum-kota.jpg');"></div>
+                <div class="image-layer lazy-image" style="background-image: url('assets/images/backgrounds/museumsss.jpg');"></div>
                 <div class="container">
                     <div class="content-box text-left">
-                        <h3 id="tglArtikel">20 November 2022</h3>
-                        <h2 id="judulArtikel">One of the Finest Collections of <br> Egyptian Art.</h2>
-                        <div class="btn-box">
+                        <h3 id="tglArtikel">SIMCABUD</h3>
+                        <h2 id="judulArtikel">Sistem Informasi Cagar Budaya<br> Kota Makassar</h2>
+                        <!-- <div class="btn-box">
                             <a href="{{route('tentang')}}" class="thm-btn btn-pill btn-style-one">Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide Item -->
-            <div class="slide-item">
-                <div class="image-layer lazy-image"
-                    style="background-image: url('assets/images/blog/museum-kota-2.jpg');"></div>
-                <div class="container">
-                    <div class="content-box text-left">
-                        <h3 id="tglArtikel">20 November 2022</h3>
-                        <h2 id="judulArtikel">The World’s Leading Museum <br />of Contemporary Art</h2>
-                        <div class="btn-box">
-                            <a href="{{route('tentang')}}" class="thm-btn btn-pill btn-style-one">Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide Item -->
-            <div class="slide-item">
-                <div class="image-layer lazy-image"
-                    style="background-image: url('assets/images/blog/museum-kota-3.jpg');"></div>
-                <div class="container">
-                    <div class="content-box text-left">
-                        <h3 id="tglArtikel">20 November 2022</h3>
-                        <h2 id="judulArtikel">World’s Leading Museum of History <br> Over 2.3 k Collection</h2>
-                        <div class="btn-box">
-                            <a href="{{route('tentang')}}" class="thm-btn btn-pill btn-style-one">Selengkapnya</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
