@@ -23,7 +23,7 @@
                     <div class="about-four__content">
                         <div class="block-title">
                             <p>Tentang Disbud</p>
-                            <h3 class="text-regular">Dinas Kebudayaan Makassar</h3>
+                            <h3 class="">Dinas Kebudayaan Makassar</h3>
                         </div><!-- /.block-title -->
                         <div class="about-four__highlite-text">
                             <p>Welcome to the World’s Leading Museum of Modern Art. It includes works of art created
@@ -44,7 +44,7 @@
         <img src="assets/images/about/about-2.png" class="history-one__sculp" alt="">
         <div class="container mt-20">
             <div class="block-title">
-                <h3 class="text-regular">Tentang Cagar Budaya</h3>
+                <h3 class="">Tentang Cagar Budaya</h3>
             </div><!-- /.block-title -->
 
             <div class="row">

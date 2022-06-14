@@ -306,9 +306,11 @@
   background-color: rgba(0, 0, 0, 0.0);
 } */
 
-.block-title-two h3{
+.block-title-two h3,
+.block-title h3{
   font-family: "Poppins", sans-serif;
 }
+
 
 
 
