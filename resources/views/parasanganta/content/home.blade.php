@@ -81,69 +81,87 @@
                         <div class="col-md-4 mb-4">
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
+                                    <div class="layer-mask"></div>
                                     <img src="assets/images/img/benda.jpg" alt="">
+                                    <div class="row collection-two__image__info">
+                                        <div class="col-12 text-center">
+                                            <h3>Benda</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="collection-two__content">
-                                    <h3>Benda</h3>
-                                    <a href="{{route('tentangbenda')}}" class="stretched-link"></a>
-                                </div>
+                                <a href="{{route('tentangbenda')}}" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
+                                    <div class="layer-mask"></div>
                                     <img src="assets/images/img/bangunan.jpg" alt="">
+                                    <div class="row collection-two__image__info">
+                                        <div class="col-12 text-center">
+                                            <h3>Bangunan</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="collection-two__content">
-                                    <h3>Bangunan</h3>
-                                    <a href="{{route('tentangbangunan')}}" class="stretched-link"></a>
-                                </div>
+                                <a href="{{route('tentangbangunan')}}" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
+                                    <div class="layer-mask"></div>
                                     <img src="assets/images/img/struktur.jpg" alt="">
+                                    <div class="row collection-two__image__info">
+                                        <div class="col-12 text-center">
+                                            <h3>Struktur</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="collection-two__content">
-                                    <h3>Struktur</h3>
-                                    <a href="{{route('tentangstruktur')}}" class="stretched-link"></a>
-                                </div>
+                                <a href="{{route('tentangstruktur')}}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-10">
+                    <div class="row mt-3">
                         <div class="col-md-4 mb-4">
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
+                                    <div class="layer-mask"></div>
                                     <img src="assets/images/img/situs.jpeg" alt="">
+                                    <div class="row collection-two__image__info">
+                                        <div class="col-12 text-center">
+                                            <h3>Situs</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="collection-two__content">
-                                    <h3>Situs</h3>
-                                    <a href="{{route('tentangsitus')}}" class="stretched-link"></a>
-                                </div>
+                                <a href="{{route('tentangsitus')}}" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
+                                    <div class="layer-mask"></div>
                                     <img src="assets/images/img/kawasan.jpg" alt="">
+                                    <div class="row collection-two__image__info">
+                                        <div class="col-12 text-center">
+                                            <h3>Kawasan</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="collection-two__content">
-                                    <h3>Kawasan</h3>
-                                    <a href="{{route('tentangkawasan')}}" class="stretched-link"></a>
-                                </div>
+                                <a href="{{route('tentangkawasan')}}" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
+                                    <div class="layer-mask"></div>
                                     <img src="assets/images/img/kegiatan.jpg" alt="">
+                                    <div class="row collection-two__image__info">
+                                        <div class="col-12 text-center">
+                                            <h3>Kegiatan</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="collection-two__content">
-                                    <h3>Kegiatan</h3>
-                                    <a href="{{route('tentangkegiatan1')}}" class="stretched-link"></a>
-                                </div>
+                                <a href="{{route('tentangkegiatan1')}}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>

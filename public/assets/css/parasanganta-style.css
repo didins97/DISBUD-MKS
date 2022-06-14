@@ -279,6 +279,34 @@
   padding: 0.5rem 0.5rem;
 }
 
+.layer-mask {
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.collection-two__image{
+  position: relative;
+}
+.collection-two__image__info{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14.5px; 
+  font-size: 1.4rem;
+  color: #fff;
+  width: 100%;
+
+}
+
+/* .collection-two__single:hover>.layer-mask{
+  background-color: rgba(0, 0, 0, 0.0);
+} */
+
+
 
 /* === EVENT === */
 .events {
