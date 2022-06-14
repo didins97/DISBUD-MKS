@@ -24,17 +24,25 @@
                     </div>
                   @endif
                   <div class="card-header py-3">
-                    <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Tambah Bangunan</h2>
+                    <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Tambah Benda</h2>
                   </div>
                   <div class="card-body">
-                      <div class="mb-3">
-                        <label for="judulArtikelBahasa" class="form-label">Nama</label>
-                        <input required value="{{ old('nama') }}" type="text" name="nama" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama benda">
-                      </div>
-                      <div class="mb-3">
-                        <label for="isiArtikelBahasa" class="form-label">Konten</label>
-                        <textarea required class="form-control editor" name="konten" id="editor" rows="8">{{ old('konten') }}</textarea>
-                      </div>
+                    <div class="mb-3">
+                      <label for="judulArtikelBahasa" class="form-label">Nama</label>
+                      <input required value="{{ old('nama') }}" type="text" name="nama" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama benda">
+                    </div>
+                    <div class="mb-3">
+                      <label for="judulArtikelBahasa" class="form-label">Nama Lain</label>
+                      <input  value="{{ old('nama_lain') }}" type="text" name="nama_lain" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama lain">
+                    </div>
+                    <div class="mb-3">
+                      <label for="isiArtikelBahasa" class="form-label">Konten</label>
+                      <textarea required class="form-control editor" name="konten" id="editor" rows="8">{{ old('konten') }}</textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="judulArtikelBahasa" class="form-label">Tahun dibuat</label>
+                      <input  value="{{ old('tahun') }}" type="text" name="tahun" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama tahun dibuat">
+                    </div>
                       <div class="mb-3">
                         <label for="isiArtikelBahasa" class="form-label">Letak</label>
                         <textarea required class="form-control editor" name="letak" id="editor" rows="8">{{ old('letak') }}</textarea>

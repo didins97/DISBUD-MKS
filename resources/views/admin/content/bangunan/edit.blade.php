@@ -32,8 +32,16 @@
                         <input required value="{{$foto->nama }}" type="text" name="nama" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama bangunan">
                       </div>
                       <div class="mb-3">
+                        <label for="judulArtikelBahasa" class="form-label">Nama Lain</label>
+                        <input required value="{{$foto->nama_lain }}" type="text" name="nama_lain" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama bangunan">
+                      </div>
+                      <div class="mb-3">
                         <label for="isiArtikelBahasa" class="form-label">Konten</label>
                         <textarea required class="form-control editor" name="konten" id="editor" rows="8">{{$foto->konten}}</textarea>
+                      </div>
+                      <div class="mb-3">
+                        <label for="judulArtikelBahasa" class="form-label">Tahun Dibuat</label>
+                        <input required value="{{$foto->tahun }}" type="text" name="tahun" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama bangunan">
                       </div>
                       <div class="mb-3">
                         <label for="isiArtikelBahasa" class="form-label">Letak</label>

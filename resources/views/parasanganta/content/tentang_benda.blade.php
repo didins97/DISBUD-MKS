@@ -42,7 +42,7 @@
                         </div><!-- /.collection-two__image -->
                         <div class="collection-two__content">
                             <h3>{{$a->nama}}</h3>
-                            <p> {{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}</p>
+                            <p>{{$a->tahun}}</p>
                             {{-- <a href="./parasanganta/konten-detail.html" class="stretched-link"></a> --}}
                             <a href="{{ route('benda_detail', $a->slug) }}" class="stretched-link"></a>
 

@@ -36,7 +36,7 @@
                             <ul class="event-details__booking-info list-unstyled">
                                 <li>
                                     <span>Nama:</span>
-                                    {{$foto->nama}}
+                                    {{$foto->nama_lain}}
                                 </li>
                                 <li>
                                     <span>Kategori:</span>
