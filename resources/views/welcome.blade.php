@@ -34,12 +34,12 @@
                         </svg>
                     </div>
                     <div class="canvas_img-wrapper">
-                        <img class="canvas_img" src="{{ asset('assets/images/card-hover/desa-juhu.jpg') }}" alt="">
+                        <img class="canvas_img canvas_img_full" src="{{ asset('assets/images/card-hover/desa-juhu.jpg') }}" alt="">
                     </div>
                     <div class="canvas_copy canvas_copy--left">
                         <span class="canvas_copy_subtitle">WEBSITE</span>
                         <strong class="canvas_copy_title">PARASANGANTA</strong>
-                        <span class="canvas_copy_details">Sistem Informasi Cagar Budaya</span>
+                        <span class="canvas_copy_details fw-bold">Sistem Informasi Cagar Budaya</span>
                     </div>
                 </a>
             </div>
@@ -61,12 +61,12 @@
                         </svg>
                     </div>
                     <div class="canvas_img-wrapper">
-                        <img class="canvas_img" src="{{ asset('assets/images/card-hover/tari-kipas.jpg') }}" alt="">
+                        <img class="canvas_img canvas_img_full" src="{{ asset('assets/images/card-hover/tari-kipas.jpg') }}" alt="">
                     </div>
                     <div class="canvas_copy">
                         <span class="canvas_copy_subtitle">WEBSITE</span>
                         <strong class="canvas_copy_title">LA'BU</strong>
-                        <span class="canvas_copy_details">Laman Budaya</span>
+                        <span class="canvas_copy_details fw-bold">Laman Budaya</span>
                     </div>
                 </a>
             </div>
