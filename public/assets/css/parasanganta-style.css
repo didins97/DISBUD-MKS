@@ -92,7 +92,12 @@
   border-radius: 20px 20px 0px 0px;
   background-color: #f5f7fa;
   height: 270px;
+  
+}
+
+.blog-one__image img{
   object-fit: cover;
+  height: 100%
 }
 
 .blog-one__content {
