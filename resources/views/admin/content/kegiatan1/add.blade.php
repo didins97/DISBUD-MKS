@@ -43,6 +43,10 @@
                       <label for="judulArtikelBahasa" class="form-label">Tahun dibuat</label>
                       <input  value="{{ old('tahun') }}" type="text" name="tahun" class="form-control" id="judulArtikelBahasa" placeholder="masukkan tahun dibuat">
                     </div>
+                    <div class="mb-3">
+                      <label for="isiArtikelBahasa" class="form-label">Letak</label>
+                      <textarea required class="form-control " name="letak" id="editor" rows="8">{{ old('letak') }}</textarea>
+                    </div>
                       <div class="mb-3">
                         <label for="judulArtikelBahasa" class="form-label">kelurahan</label>
                         <input required value="{{ old('kelurahan') }}" type="text" name="kelurahan" class="form-control" id="judulArtikelBahasa" >
@@ -156,7 +160,7 @@
                             </div>
                             <div class="col-12 mb-2">
                               <textarea name="caption_galleries_foto[]" required maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini"></textarea>
-                              <little><sup>*</sup> maksimsal 100 karakter</little>
+                              <little><sup>*</sup> maksimal 100 karakter</little>
                             </div>
                             {{-- <div class="col-12 mb-2">
                               <textarea name="caption_slider_foto_english[]" maxlength="100" class="form-control" id="captionFotoEn" rows="2" placeholder="insert caption here"></textarea>

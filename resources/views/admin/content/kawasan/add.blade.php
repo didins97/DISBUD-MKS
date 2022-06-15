@@ -45,7 +45,7 @@
                     </div>
                       <div class="mb-3">
                         <label for="isiArtikelBahasa" class="form-label">Letak</label>
-                        <textarea required class="form-control editor" name="letak" id="editor" rows="8">{{ old('letak') }}</textarea>
+                        <textarea required class="form-control" name="letak" id="editor" rows="8">{{ old('letak') }}</textarea>
                       </div>
                       <div class="mb-3">
                         <label for="judulArtikelBahasa" class="form-label">kelurahan</label>
