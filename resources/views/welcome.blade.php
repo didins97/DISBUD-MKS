@@ -61,7 +61,7 @@
                         </svg>
                     </div>
                     <div class="canvas_img-wrapper">
-                        <img class="canvas_img" src="{{ asset('assets/images/card-hover/labu.png') }}" alt="">
+                        <img class="canvas_img" src="{{ asset('assets/images/card-hover/tari-kipas.jpg') }}" alt="">
                     </div>
                     <div class="canvas_copy">
                         <span class="canvas_copy_subtitle">WEBSITE</span>
