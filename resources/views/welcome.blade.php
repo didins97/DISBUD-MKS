@@ -28,7 +28,7 @@
                     <div class="canvas_copy canvas_copy--left">
                         <span class="canvas_copy_subtitle">WEBSITE</span>
                         <strong class="canvas_copy_title">PARASANGANTA</strong>
-                        <span class="canvas_copy_details">Tempat Lahir Kita</span>
+                        <span class="canvas_copy_details">Sistem Informasi Cagar Budaya</span>
                     </div>
                 </a>
             </div>
