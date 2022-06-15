@@ -316,6 +316,21 @@
 }
 
 
+ul li{
+  color: #252930;
+}
+
+.about-one p{
+  color: #252930;
+}
+
+.about-four__image>img{
+  border-radius: 15px;
+}
+
+.history-one__image>img{
+  border-radius: 15px;
+}
 
 
 /* === EVENT === */
