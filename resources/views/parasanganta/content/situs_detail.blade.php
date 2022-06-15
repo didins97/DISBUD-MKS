@@ -35,7 +35,7 @@
                         <div class="event-details__booking__wrap">
                             <ul class="event-details__booking-info list-unstyled">
                                 <li>
-                                    <span>Nama:</span>
+                                    <span>Nama Lain:</span>
                                     {{$foto->nama_lain}}
                                 </li>
                                 <li>
