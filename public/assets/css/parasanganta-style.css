@@ -154,7 +154,7 @@
 }
 
 .event-one::before {
-  background-image: url("../images/backgrounds/bg-event.png");
+  background-image: url("../images/backgrounds/bg-event.webp");
 }
 
 .event-one__image-inner>img {
@@ -357,7 +357,7 @@ ul li{
 
 /* === ABOUT === */
 .about-four::before {
-  background-image: url(../images/backgrounds/bg-event.png);
+  background-image: url(../images/backgrounds/bg-event.webp);
   background-size: 100%;
   background-position: center bottom;
 }

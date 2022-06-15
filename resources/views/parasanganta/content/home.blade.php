@@ -82,7 +82,7 @@
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
                                     <div class="layer-mask"></div>
-                                    <img src="assets/images/img/benda.jpg" alt="">
+                                    <img src="assets/images/img/benda.webp" alt="">
                                     <div class="row collection-two__image__info">
                                         <div class="col-12 text-center">
                                             <h3>Benda</h3>
@@ -96,7 +96,7 @@
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
                                     <div class="layer-mask"></div>
-                                    <img src="assets/images/img/bangunan.jpg" alt="">
+                                    <img src="assets/images/img/bangunan.webp" alt="">
                                     <div class="row collection-two__image__info">
                                         <div class="col-12 text-center">
                                             <h3>Bangunan</h3>
@@ -110,7 +110,7 @@
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
                                     <div class="layer-mask"></div>
-                                    <img src="assets/images/img/struktur.jpg" alt="">
+                                    <img src="assets/images/img/struktur.webp" alt="">
                                     <div class="row collection-two__image__info">
                                         <div class="col-12 text-center">
                                             <h3>Struktur</h3>
@@ -140,7 +140,7 @@
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
                                     <div class="layer-mask"></div>
-                                    <img src="assets/images/img/kawasan.jpg" alt="">
+                                    <img src="assets/images/img/kawasan.webp" alt="">
                                     <div class="row collection-two__image__info">
                                         <div class="col-12 text-center">
                                             <h3>Kawasan</h3>
@@ -154,7 +154,7 @@
                             <div class="collection-two__single">
                                 <div class="collection-two__image">
                                     <div class="layer-mask"></div>
-                                    <img src="assets/images/img/kegiatan.jpg" alt="">
+                                    <img src="assets/images/img/kegiatan.webp" alt="">
                                     <div class="row collection-two__image__info">
                                         <div class="col-12 text-center">
                                             <h3>Kegiatan</h3>
