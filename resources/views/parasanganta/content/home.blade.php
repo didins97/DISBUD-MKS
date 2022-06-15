@@ -68,7 +68,7 @@
     <!-- end banner section -->
 
     <section class="collection-two collection-two__home-three">
-        <img class="collection-two__bg" src="assets/images/backgrounds/huruf-lontara2.png" alt="">
+        <img class="collection-two__bg" src="assets/images/backgrounds/huruf-lontara2.webp" alt="">
         <div class="container">
             <div class="block-title-two text-center">
                 <div class="block-title-two__line"></div><!-- /.block-title-two__line -->
