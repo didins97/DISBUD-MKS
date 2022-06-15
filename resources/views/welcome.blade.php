@@ -34,7 +34,7 @@
                         </svg>
                     </div>
                     <div class="canvas_img-wrapper">
-                        <img class="canvas_img" src="{{ asset('assets/images/card-hover/desa-juhu.png') }}" alt="">
+                        <img class="canvas_img" src="{{ asset('assets/images/card-hover/desa-juhu.jpg') }}" alt="">
                     </div>
                     <div class="canvas_copy canvas_copy--left">
                         <span class="canvas_copy_subtitle">WEBSITE</span>
