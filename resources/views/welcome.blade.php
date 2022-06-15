@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <base href="../">
     <meta charset="UTF-8">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/card-hover.css') }}">
 
 </head>
+
 <body>
     <div class="canvas-wrapper">
         <div class="row">
@@ -18,12 +20,21 @@
                 <a href="{{ route('parasanganta') }}" class="canvas">
                     <div class="canvas_border">
                         <svg>
-                            <defs><linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(253,137,68);stop-opacity:1"></stop><stop offset="100%" style="stop-color:rgb(153,75,23);stop-opacity:1"></stop></linearGradient><linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D34F48"></stop><stop offset="100%" stop-color="#772522"></stop></linearGradient></defs>
+                            <defs>
+                                <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgb(253,137,68);stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:rgb(153,75,23);stop-opacity:1"></stop>
+                                </linearGradient>
+                                <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#D34F48"></stop>
+                                    <stop offset="100%" stop-color="#772522"></stop>
+                                </linearGradient>
+                            </defs>
                             <rect id="rect-grad" class="rect-gradient" fill="none" stroke="url(#grad-orange)" stroke-linecap="square" stroke-width="4" stroke-miterlimit="30" width="100%" height="100%"></rect>
                         </svg>
                     </div>
                     <div class="canvas_img-wrapper">
-                        <img class="canvas_img" src="{{ asset('assets/images/card-hover/statue2.png') }}" alt="">
+                        <img class="canvas_img" src="{{ asset('assets/images/card-hover/desa-juhu.png') }}" alt="">
                     </div>
                     <div class="canvas_copy canvas_copy--left">
                         <span class="canvas_copy_subtitle">WEBSITE</span>
@@ -33,10 +44,19 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="#"" class="canvas">
+                <a href="#"" class=" canvas">
                     <div class="canvas_border">
                         <svg>
-                            <defs><linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(253,137,68);stop-opacity:1"></stop><stop offset="100%" style="stop-color:rgb(153,75,23);stop-opacity:1"></stop></linearGradient><linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D34F48"></stop><stop offset="100%" stop-color="#772522"></stop></linearGradient></defs>
+                            <defs>
+                                <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgb(253,137,68);stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:rgb(153,75,23);stop-opacity:1"></stop>
+                                </linearGradient>
+                                <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#D34F48"></stop>
+                                    <stop offset="100%" stop-color="#772522"></stop>
+                                </linearGradient>
+                            </defs>
                             <rect id="rect-grad" class="rect-gradient" fill="none" stroke="url(#grad-orange)" stroke-linecap="square" stroke-width="4" stroke-miterlimit="30" width="100%" height="100%"></rect>
                         </svg>
                     </div>
@@ -57,4 +77,5 @@
 </body>
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </html>
