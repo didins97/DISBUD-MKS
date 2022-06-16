@@ -125,7 +125,7 @@
                 informasi seputar cagar budaya lainnya
             </p>
             <div class="cta-one__btn-block">
-                <a href="#" class="thm-btn cta-one__btn-two btn-pill">Download</a>
+                <a target="_blank" href="https://jdih.kemdikbud.go.id/arsip/UU_Tahun2010_Nomor11.pdf" class="thm-btn cta-one__btn-two btn-pill">Download</a>
                 <!-- /.thm-btn cta-one__btn-two -->
             </div>
             <!-- /.cta-one__btn-block -->

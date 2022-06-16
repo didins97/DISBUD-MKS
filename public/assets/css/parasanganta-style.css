@@ -405,6 +405,10 @@ ul li{
   background-color: #F5F7FA;
 }
 
+.about-four{
+  padding-top: 100px;
+}
+
 @media only screen and (max-width: 600px) {
   .collection-two__content {
     bottom: 25px;
