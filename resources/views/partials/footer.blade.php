@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-widget footer-widget__about">
-                        <img src="{{asset('assets/images/logo/logo-disbud.png')}}" alt="" height="90">
+                        <img src="{{asset('assets/images/logo/logo-disbud.webp')}}" alt="" height="90">
                         <p class="less-line">Dinas Kebudayaan <br> Pemerintah Kota Makassar</p>
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-4 -->
@@ -59,7 +59,7 @@
             <div class="inner-container">
                 <p>&copy; Copyright 2022 Dinas Kebudayaan Kota Makassar</p>
                 <a href="{{ route('home') }}" class="site-footer__bottom-logo">
-                    <img src="{{asset('assets/images/resources/logo-makassar.png')}}" alt="" width="60">
+                    <img src="{{asset('assets/images/resources/logo-makassar.webp')}}" alt="" width="60">
                 </a>
                 <div class="site-footer__bottom-links">
                     <!-- <a href="#">Terms & conditions</a> -->

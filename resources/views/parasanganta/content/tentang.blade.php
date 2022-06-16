@@ -22,24 +22,28 @@
                     <div class="about-four__content">
                         <div class="block-title">
                             <p>Tentang Disbud</p>
-                            <h3 class="text-regular">Dinas Kebudayaan Makassar</h3>
-                        </div><!-- /.block-title -->
-                        <div class="about-four__highlite-text">
-                            <p>Welcome to the World’s Leading Museum of Modern Art. It includes works of art created
-                                during the period stretching from about 1860 to the 1970s.</p>
-                        </div><!-- /.about-four__highlite-text -->
-                        <p>Man face fruit divided seasons herb from herb moveth whose. Dominion gathered winged
-                            morning, man won’t had fly beginning. Winged have saying behold morning greater void
-                            shall created whose blessed herb light fruitful open void without itself whales.</p>
-                        <p>Good every beginning had one two gathered from living place seasons them divide fourth
-                            them. </p>
+                            <h3 class="">Dinas Kebudayaan Makassar</h3>
+                        </div>
+                        <!-- <div class="about-four__highlite-text">
+                            <p>Dinas Kebudayaan Kota Makassar merupakan salah satu Perangkat Daerah yang menyelenggarakan urusan pemerintahan dalam bidang kebudayaan. Kedudukan dinas tersebut merupakan unsur pelaksana urusan pemerintahan yang menyelenggarakan bidang kebudayaan yang diatur dalam Peraturan Daerah Kota Makassar Nomor 08 Tahun 2016 tentang Pembentukan dan Susunan Perangkat Daerah Kota Makassar..</p>
+                        </div> -->
+                        <p>Dinas Kebudayaan Kota Makassar merupakan salah satu Perangkat Daerah yang menyelenggarakan urusan pemerintahan dalam bidang kebudayaan. Kedudukan dinas tersebut merupakan unsur pelaksana urusan pemerintahan yang menyelenggarakan bidang kebudayaan yang diatur dalam Peraturan Daerah Kota Makassar Nomor 08 Tahun 2016 tentang Pembentukan dan Susunan Perangkat Daerah Kota Makassar.</p>
+                        <p>Perangkat Daerah Dinas Kebudayaan Kota Makassar mempunyai tugas pokok yaitu membantu Walikota melaksanakan urusan pemerintahan bidang kebudayaan yang menjadi kewenangan daerah dan tugas pembantuan yang ditugaskan kepada daerah. Untuk melaksanakan tugas pokok sebagaimana dimaksud, Dinas Kebudayaan mempunyai fungsi sebagai berikut:.</p>
+                        <p>
+                            <ul>
+                                <li>Perumusan kebijakan penyelenggaraan Urusan Pemerintahan bidang kebudayaan;</li>
+                                <li>Pelaksanaan kebijakan Urusan Pemerintahan bidang kebudayaan;</li>
+                                <li>Pelaksanaan evaluasi dan pelaporan Urusan Pemerintahan bidang kebudayaan;</li>
+                                <li>Pelaksanaan administrasi dinas Urusan Pemerintahan bidang kebudayaan;</li>
+                            </ul>
+                        </p>
                     </div><!-- /.about-four__content -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.about-four -->
 
-    <section class="history-one relative bg-gray mt-20">
+    <section class="history-one relative bg-gray">
         <img src="assets/images/backgrounds/huruf-lontara-satuan-4.svg" alt="" class="bg-lontara-five">
         <img src="assets/images/backgrounds/huruf-lontara-satuan-5.svg" alt="" class="bg-lontara-six">
         <div class="container">
@@ -54,12 +58,10 @@
                     <div class="col-lg-6 d-flex">
                         <div class="history-one__content my-auto">
                             <div class="history-one__top block-title">
-                                <p>VISI</p>
-                                <h3>The Archive Gallery</h3>
+                                <!-- <p class="fw-bold">VISI</p> -->
+                                <h3>VISI KAMI</h3>
                             </div><!-- /.history-one__top block-title -->
-                            <p>Pommy ipsum therewith nutter well chuffed apple and pears wedding tackle balderdash
-                                toad in
-                                the whole one feels that wind up Union Jack doolally bloke.</p>
+                            <p class="mt-3" style="color: #252930">Terwujudnya Kota Makassar yang Berbudaya.</p>
                         </div><!-- /.history-one__content -->
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
@@ -74,12 +76,18 @@
                     <div class="col-lg-6 d-flex">
                         <div class="history-one__content my-auto">
                             <div class="history-one__top block-title">
-                                <p>MISI</p>
-                                <h3>Moving in New Home</h3>
+                                <!-- <p class="fw-bold">MISI</p> -->
+                                <h3>MISI KAMI</h3>
                             </div><!-- /.history-one__top block-title -->
-                            <p>Pommy ipsum therewith nutter well chuffed apple and pears wedding tackle balderdash
-                                toad in
-                                the whole one feels that wind up Union Jack doolally bloke.</p>
+                            <p>
+                                <ul>
+                                    <li>Peningkatan kapasitas kelembagaan Dinas Kebudayaan Kota Makassar</li>
+                                    <li>Mewujudkan pelestarian nilai-nilai sejarah tradisi dan cagar budaya</li>
+                                    <li>Mewujudkan sarana dan prasarana yang handal dan mendukung pembangunan dan pelestarian budaya</li>
+                                    <li>Mewujudkan museum kota sebagai museum representative di kenal masyarakat dunia dan menjadi salah satu pusat budaya Kota Makassar</li>
+                                    <li>Mewujudkan dinas kebudayaan makassar yang dinamis yang dapat dibanggakan oleh masyarakat dan dunia melalui internalisasi dan penguatan diplomasi budaya serta meningkatkan pelestarian warisan budaya dan mempertahankan unsur budaya</li>
+                                </ul>
+                            </p>
                         </div><!-- /.history-one__content -->
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
@@ -87,36 +95,23 @@
         </div><!-- /.container -->
     </section><!-- /.history-one -->
 
-    <section class="about-one about-one__membership relative mt-10">
-        <img src="assets/images/about/about-2.png" class="history-one__sculp" alt="">
-        <div class="container mt-20">
+    <section class="about-one about-one__membership relative mt-3">
+        <img src="assets/images/about/about-2.png" class="history-one__sculp" alt="" width="200px">
+        <div class="container">
             <div class="block-title">
-                <h3 class="text-regular">Tentang Cagar Budaya</h3>
+                <h3 class="">Tentang Cagar Budaya</h3>
             </div><!-- /.block-title -->
 
             <div class="row">
                 <div class="col-lg-4">
-                    <p class="about-one__highlighted-text">Become a member of the art & history museum, show your
-                        support,
-                        and receive a range of year-round membership benefits.</p>
+                    <p class="about-one__highlighted-text">Cagar Budaya adalah warisan budaya bersifat kebendaan berupa Benda Cagar Budaya</p>
                     <!-- /.about-one__highlighted-text -->
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <p>Man face fruit divided seasons herb from herb moveth whose. Dominion gathered winged
-                        morning, man
-                        won’t had fly beginning. Winged have saying behold morning greater void shall created whose
-                        blessed herb light fruitful open void without itself whales.Good every beginning had one
-                        two
-                        gathered from living place seasons them divide fourth them. </p>
+                    <p>Cagar Budaya adalah warisan budaya bersifat kebendaan berupa Benda Cagar Budaya, Bangunan Cagar Budaya, Struktur Cagar Budaya, Situs Cagar Budaya, dan Kawasan Cagar Budaya di darat dan/atau di air yang perlu dilestarikan keberadaannya karena memiliki nilai penting bagi sejarah, ilmu pengetahuan, pendidikan, agama, dan/atau kebudayaan melalui proses penetapan.</p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <p>So fish under The given own replenish. Greater land every very cattle replenish set unto. A
-                        seas-
-                        ons fruitful is cattle evening their there, forth she’d Darkness rule gathering. Midst it
-                        you’re
-                        gathered yielding without shall is beast.Life spirit firmament likeness fill moveth i
-                        appear
-                        good waters evening there image given his without meat, them.</p>
+                    <p>Sesuatu dapat dikatakan Cagar Budaya jika memiliki nilai penting bagi sejarah, ilmu pengetahuan, pendidikan, agama, dan/atau kebudayaan. Kata penghubung “dan/atau” bermakna tidak berlaku komulatif. Artinya kelima nilai penting tersebut boleh dimiliki seluruhnya atau salah satu oleh suatu Cagar Budaya. Penentuan nilai penting ini dilakukan berdasarkan kajian mendalam oleh Tim Ahli Cagar Budaya dibantu oleh lembaga yang berhubungan dengan kebudayaan.</p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
@@ -130,7 +125,7 @@
                 informasi seputar cagar budaya lainnya
             </p>
             <div class="cta-one__btn-block">
-                <a href="#" class="thm-btn cta-one__btn-two btn-pill">Download</a>
+                <a target="_blank" href="https://jdih.kemdikbud.go.id/arsip/UU_Tahun2010_Nomor11.pdf" class="thm-btn cta-one__btn-two btn-pill">Download</a>
                 <!-- /.thm-btn cta-one__btn-two -->
             </div>
             <!-- /.cta-one__btn-block -->

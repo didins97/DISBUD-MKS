@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-widget footer-widget__about">
-                        <img src="{{  asset('assets/images/logo/logo-disbud.png') }}" alt="" height="90">
+                        <img src="{{  asset('assets/images/logo/logo-disbud.webp') }}" alt="" height="90">
                         <p class="less-line">Dinas Kebudayaan <br> Pemerintah Kota Makassar</p>
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-4 -->
