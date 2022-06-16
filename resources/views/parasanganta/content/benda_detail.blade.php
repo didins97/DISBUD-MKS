@@ -57,8 +57,8 @@
                             </li>
                         </ul><!-- /.event-details__booking-info list-unstyled -->
                         <div class="row">
-                            <div class="col-12 text-center">
-                                {{QrCode::size(200)->generate( url()->current() );}}
+                            <div class="col-12 text-center px-4 py-4 bg-white">
+                                {{QrCode::size(175)->generate( url()->current() );}}
                             </div>
                         </div>
                         <!-- /.thm-btn event-details__book-btn -->

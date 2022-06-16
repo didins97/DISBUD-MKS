@@ -82,6 +82,10 @@
   background-color: #f5f7fa;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
 .blog-one__date {
   border-radius: 100px;
   top: 20px;
