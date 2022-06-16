@@ -37,8 +37,9 @@
 
                 @endforeach
             </div>
+            {{$kegiatan->links('partials.pagination')}}
 
-            <div class="text-center d-flex justify-content-center">
+            {{-- <div class="text-center d-flex justify-content-center">
                 <div class="post-pagination mt-10">
                     <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
                     <a href="#" class="page">1</a>
@@ -48,6 +49,6 @@
                 </div><!-- /.post-pagination -->
             </div><!-- /.text-center d-flex justify-content-center -->
         </div><!-- /.container -->
-    </section><!-- /.event-three -->
+    </section><!-- /.event-three --> --}}
 
     @endsection

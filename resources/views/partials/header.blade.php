@@ -29,7 +29,7 @@
                             </ul>
                         </li>
                         <li><a href="{{route('articles')}}">Artikel</a></li>
-                        <li><a href="{{route('events')}}">Event</a></li>
+                        <li><a href="{{route('tentangkegiatan')}}">Event</a></li>
                         <li><a href="{{route('tentang')}}">Tentang</a></li>
                     </ul><!-- /.main-nav__navigation-box -->
                 </div><!-- /.main-nav__main-navigation -->
