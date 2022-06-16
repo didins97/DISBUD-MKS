@@ -338,6 +338,24 @@
         background-position: bottom center;
     }
 
+    .pattern{
+        transform: scale(2);
+        right: 150px;
+    }
+
+.pattern2{
+    transform: scale(2);
+    bottom: -250px;
+}
+
+    .canvas{
+        margin-top: 50px;
+    }
+
+    .canvas-wrapper{
+        width: 100%;
+        margin-top: 12.5rem!important;
+    }
 }
 
 @media(max-width: 625px) {
