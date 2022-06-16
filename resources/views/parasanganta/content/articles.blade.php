@@ -38,20 +38,19 @@
                         </div>
                     </div>
                 </div>
+                
                 @endforeach
 
-
+               
             </div><!-- /.row -->
 
-            <div class="text-center d-flex justify-content-center">
-                <div class="post-pagination mt-10">
-                    <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
-                    <a href="#" class="page">1</a>
-                    <a href="#" class="page">2</a>
-                    <a href="#" class="page">3</a>
-                    <a href="#" class="page"><i class="fa fa-angle-right"></i></a>
-                </div><!-- /.post-pagination -->
-            </div><!-- /.text-center d-flex justify-content-center -->
+            {{$artikel->links('partials.pagination')}}
+            {{-- {{$artikel->links()}} --}}
+           
+
+
+
+            
         </div>
     </section>
     @endsection
