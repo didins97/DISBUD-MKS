@@ -43,7 +43,7 @@
         </div><!-- /.container -->
     </section><!-- /.about-four -->
 
-    <section class="history-one relative bg-gray mt-20">
+    <section class="history-one relative bg-gray">
         <img src="assets/images/backgrounds/huruf-lontara-satuan-4.svg" alt="" class="bg-lontara-five">
         <img src="assets/images/backgrounds/huruf-lontara-satuan-5.svg" alt="" class="bg-lontara-six">
         <div class="container">
