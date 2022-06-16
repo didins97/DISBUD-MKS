@@ -30,12 +30,12 @@
                         <p>Dinas Kebudayaan Kota Makassar merupakan salah satu Perangkat Daerah yang menyelenggarakan urusan pemerintahan dalam bidang kebudayaan. Kedudukan dinas tersebut merupakan unsur pelaksana urusan pemerintahan yang menyelenggarakan bidang kebudayaan yang diatur dalam Peraturan Daerah Kota Makassar Nomor 08 Tahun 2016 tentang Pembentukan dan Susunan Perangkat Daerah Kota Makassar.</p>
                         <p>Perangkat Daerah Dinas Kebudayaan Kota Makassar mempunyai tugas pokok yaitu membantu Walikota melaksanakan urusan pemerintahan bidang kebudayaan yang menjadi kewenangan daerah dan tugas pembantuan yang ditugaskan kepada daerah. Untuk melaksanakan tugas pokok sebagaimana dimaksud, Dinas Kebudayaan mempunyai fungsi sebagai berikut:.</p>
                         <p>
-                            <ul>
+                            <ol>
                                 <li>Perumusan kebijakan penyelenggaraan Urusan Pemerintahan bidang kebudayaan;</li>
                                 <li>Pelaksanaan kebijakan Urusan Pemerintahan bidang kebudayaan;</li>
                                 <li>Pelaksanaan evaluasi dan pelaporan Urusan Pemerintahan bidang kebudayaan;</li>
                                 <li>Pelaksanaan administrasi dinas Urusan Pemerintahan bidang kebudayaan;</li>
-                            </ul>
+                            </ol>
                         </p>
                     </div><!-- /.about-four__content -->
                 </div><!-- /.col-lg-6 -->
@@ -80,13 +80,13 @@
                                 <h3>MISI KAMI</h3>
                             </div><!-- /.history-one__top block-title -->
                             <p>
-                                <ul>
+                                <ol>
                                     <li>Peningkatan kapasitas kelembagaan Dinas Kebudayaan Kota Makassar</li>
                                     <li>Mewujudkan pelestarian nilai-nilai sejarah tradisi dan cagar budaya</li>
                                     <li>Mewujudkan sarana dan prasarana yang handal dan mendukung pembangunan dan pelestarian budaya</li>
                                     <li>Mewujudkan museum kota sebagai museum representative di kenal masyarakat dunia dan menjadi salah satu pusat budaya Kota Makassar</li>
                                     <li>Mewujudkan dinas kebudayaan makassar yang dinamis yang dapat dibanggakan oleh masyarakat dan dunia melalui internalisasi dan penguatan diplomasi budaya serta meningkatkan pelestarian warisan budaya dan mempertahankan unsur budaya</li>
-                                </ul>
+                                </ol>
                             </p>
                         </div><!-- /.history-one__content -->
                     </div><!-- /.col-lg-6 -->
