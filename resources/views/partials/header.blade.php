@@ -34,8 +34,8 @@
                     </ul><!-- /.main-nav__navigation-box -->
                 </div><!-- /.main-nav__main-navigation -->
                 <div class="main-nav__right">
-                    <a href="#" class="search-popup__toggler"><i class="muzex-icon-search"></i></a>
-                    <!-- <a class="sidemenu-icon side-content__toggler" href="#"><i class="muzex-icon-menu"></i></a> -->
+                    <a href="javascript:;" class="search-popup__toggler"><i class="muzex-icon-search"></i></a>
+                    <!-- <a class="sidemenu-icon side-content__toggler" href="javascript:;"><i class="muzex-icon-menu"></i></a> -->
                 </div><!-- /.main-nav__right -->
             </div><!-- /.inner-container -->
         </div><!-- /.container -->

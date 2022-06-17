@@ -15,7 +15,7 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
     <li class="nav-item  {{ Request::segment(3) == 'artikel' || Request::segment(3) == 'foto' || Request::segment(3) == 'video' || Request::segment(3) == 'publikasi' || Request::segment(3) == 'audio'  ? 'active' : '' }}">
-      <a class="nav-link  {{ Request::segment(3) == 'artikel' || Request::segment(3) == 'foto' || Request::segment(3) == 'video' || Request::segment(3) == 'publikasi' || Request::segment(3) == 'audio'  ? '' : 'collapsed' }}" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded=" {{ Request::segment(3) == 'artikel' || Request::segment(3) == 'foto' || Request::segment(3) == 'video' || Request::segment(3) == 'publikasi' || Request::segment(3) == 'audio' ? 'true' : 'false' }}" aria-controls="collapseTwo">
+      <a class="nav-link  {{ Request::segment(3) == 'artikel' || Request::segment(3) == 'foto' || Request::segment(3) == 'video' || Request::segment(3) == 'publikasi' || Request::segment(3) == 'audio'  ? '' : 'collapsed' }}" href="javascript:;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded=" {{ Request::segment(3) == 'artikel' || Request::segment(3) == 'foto' || Request::segment(3) == 'video' || Request::segment(3) == 'publikasi' || Request::segment(3) == 'audio' ? 'true' : 'false' }}" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-th-large"></i>
         <span>Konten</span>
       </a>
@@ -37,7 +37,7 @@
       </div>
     </li>
     {{-- <li class="nav-item {{ Request::segment(3) == 'kegiatan' || Request::segment(3) == 'kerjasama' ? 'active' : '' }}">
-      <a class="nav-link {{ Request::segment(3) == 'kegiatan' || Request::segment(3) == 'kerjasama' ? '' : 'collapsed' }}" href="#" data-toggle="collapse" data-target="#collapseTwoa" aria-expanded="false" aria-controls="collapseTwoa">
+      <a class="nav-link {{ Request::segment(3) == 'kegiatan' || Request::segment(3) == 'kerjasama' ? '' : 'collapsed' }}" href="javascript:;" data-toggle="collapse" data-target="#collapseTwoa" aria-expanded="false" aria-controls="collapseTwoa">
         <i class="fas fa-fw fa-info"></i>
         <span>Informasi</span>
       </a>
@@ -67,7 +67,7 @@
     <hr class="sidebar-divider">
     <!-- Nav Item - Pages Collapse Menu -->
     {{-- <li class="nav-item {{ Request::segment(3) == 'rempah' || Request::segment(3) == 'kontributor' ? 'active' : '' }}">
-      <a class="nav-link {{ Request::segment(3) == 'rempah' || Request::segment(3) == 'kontributor' ? '' : 'collapsed' }}" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="false" aria-controls="masterData">
+      <a class="nav-link {{ Request::segment(3) == 'rempah' || Request::segment(3) == 'kontributor' ? '' : 'collapsed' }}" href="javascript:;" data-toggle="collapse" data-target="#masterData" aria-expanded="false" aria-controls="masterData">
         <i class="fas fa-fw fa-database"></i>
         <span>Master Data</span>
       </a>

@@ -41,8 +41,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -63,8 +63,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -85,8 +85,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -107,8 +107,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -129,8 +129,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -151,8 +151,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -173,8 +173,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->judul_indo }}</a>
                                 </h3>
@@ -195,8 +195,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->nama }}</a>
                                 </h3>
@@ -217,8 +217,8 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
+                                    <li><a href="javascript:;">03 Comments</a></li>
                                 </ul>
                                 <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->judul_indo }}</a>
                                 </h3>

@@ -48,7 +48,7 @@
                         <h3 class="footer-widget__title">Media Sosial</h3><!-- /.footer-widget__title -->
                         <a class="sosmed-icon" target="_blank" href="https://instagram.com/disbudmakassar?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
                         <a class="sosmed-icon" target="_blank" href="https://www.facebook.com/disbud.makassar"><i class="fab fa-facebook"></i></a>
-                        <a class="sosmed-icon" target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="sosmed-icon" target="_blank" href="javascript:;"><i class="fab fa-twitter"></i></a>
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
@@ -62,8 +62,8 @@
                     <img src="{{asset('assets/images/resources/logo-makassar.webp')}}" alt="" width="60">
                 </a>
                 <div class="site-footer__bottom-links">
-                    <!-- <a href="#">Terms & conditions</a> -->
-                    <a href="#">Privacy policy & Terms of use</a>
+                    <!-- <a href="javascript:;">Terms & conditions</a> -->
+                    <a href="javascript:;">Privacy policy & Terms of use</a>
                 </div><!-- /.site-footer__bottom-links -->
             </div><!-- /.inner-container -->
         </div><!-- /.container -->

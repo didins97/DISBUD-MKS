@@ -45,7 +45,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="#"" class=" canvas">
+                <a href="javascript:;"" class=" canvas">
                     <div class="canvas_border">
                         <svg>
                             <defs>

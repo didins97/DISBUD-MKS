@@ -22,7 +22,7 @@
                             <img src="{{ asset('storage/assets/artikel/thumbnail/' . $artikel->thumbnail) }}" class="img-fluid" alt="">
                         </div><!-- /.blog-details__image -->
                         <ul class="blog-one__meta list-unstyled">
-                            <li><a href="#" class="text-uppercase">Oleh <span class="text-bold">{{ $artikel->penulis != 'admin' ? $artikel->kontributor_relasi->nama : 'admin' }}</span></a></li>
+                            <li><a href="javascript:;" class="text-uppercase">Oleh <span class="text-bold">{{ $artikel->penulis != 'admin' ? $artikel->kontributor_relasi->nama : 'admin' }}</span></a></li>
                             <li class="text-uppercase"> {{ \Carbon\Carbon::parse($artikel->published_at)->isoFormat('D MMMM Y'); }}</li>
                         </ul><!-- /.blog-one__meta list-unstyled -->
                         <h3>{{ $artikel->judul_indo }}</h3>
@@ -30,8 +30,8 @@
                         <p>{!!$artikel->konten_indo !!}</p>
 
                         <p class="blog-details__tags">
-                            <span class="text-medium">Keyword: </span><a href="#" class="text-medium">Bangunan,
-                            </a><a href="#" class="text-medium">Cagar
+                            <span class="text-medium">Keyword: </span><a href="javascript:;" class="text-medium">Bangunan,
+                            </a><a href="javascript:;" class="text-medium">Cagar
                                 Budaya</a>
                         </p><!-- /.blog-details__tags -->
 

@@ -86,7 +86,7 @@
                                             </div>
                                         </div>
                                         <div class="col-7 center-v">
-                                            <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi_english ?? '' }}</small></a>
+                                            <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi_english ?? '' }}</small></a>
                                             <h3 class="judul-artikel judul-artikel-tentang"><a href="{{ route('video_detail', $a->slug) }}" class="text-decoration-none clr-black">{{ $a->judul_english }}</a> </h3>
                                             <div class="wrap-tag-rempah">
                                                 @if( $a->rempahs != null )
@@ -135,7 +135,7 @@
                                             </div>
                                         </div>
                                         <div class="col-7 center-v">
-                                            <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi_english ?? '' }}</small></a>
+                                            <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi_english ?? '' }}</small></a>
                                             <h3 class="judul-artikel judul-artikel-tentang"><a href="{{ route('video_detail', $a->slug) }}" class="text-decoration-none clr-black">{{ $a->judul_english }}</a> </h3>
                                             <div class="wrap-tag-rempah">
                                                 @if( $a->rempahs != null )
@@ -169,7 +169,7 @@
                                                 <img class="tentang-thumbnail" src="{{ asset(get_asset_path($a->getTable(), $a->thumbnail)) }}" width="100%">
                                             </div>
                                             <div class="col-7 center-v">
-                                                <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi_english ?? '' }}</small></a>
+                                                <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi_english ?? '' }}</small></a>
                                                 <h3 class="judul-artikel judul-artikel-tentang"><a href="{{ route(generate_route_content($a->getTable()) . '_detail', $a->slug) }}" class="text-decoration-none clr-black">{{ $a->judul_english }}</a> </h3>
                                                 <div class="wrap-tag-rempah">
                                                     @if( $a->rempahs != null )
@@ -234,7 +234,7 @@
                                             <p class="des-card-info">The traces display the cultural interactions in the past</p>
                                         </div>
                                     </div>
-                                    <a href="#" class="stretched-link"></a>
+                                    <a href="javascript:;" class="stretched-link"></a>
                                 </div>
                             </div>
                             <div class="col-lg-4 mb-2">
@@ -1004,7 +1004,7 @@ const provinceLatLong = [{
                                 </div>
                             </div>
                             <div class="col-7 center-v">
-                                <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
+                                <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
                                 <h3 class="judul-artikel judul-artikel-tentang"><a href="video/${data.data[i].slug}" class="text-decoration-none clr-black">${data.data[i].judul}</a> </h3>
                                 <div class="wrap-tag-rempah">
                                     ${rempahs}
@@ -1039,7 +1039,7 @@ const provinceLatLong = [{
                                 </div>
                             </div>
                             <div class="col-7 center-v">
-                                <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
+                                <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
                                 <h3 class="judul-artikel judul-artikel-tentang"><a href="video/${data.data[i].slug}" class="text-decoration-none clr-black">${data.data[i].judul}</a> </h3>
                                 <div class="wrap-tag-rempah">
                                     ${rempahs}
@@ -1080,7 +1080,7 @@ const provinceLatLong = [{
                                 <img class="tentang-thumbnail" src="{{ asset('storage/assets/${asset}/thumbnail/${data.data[i].thumbnail}') }}" width="100%">
                             </div>
                             <div class="col-7 center-v">
-                                <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
+                                <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
                                 <h3 class="judul-artikel judul-artikel-tentang"><a href="${asset}/${data.data[i].slug}" class="text-decoration-none clr-black">${data.data[i].judul}</a> </h3>
                                 <div class="wrap-tag-rempah">
                                     ${rempahs}
