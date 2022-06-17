@@ -234,9 +234,7 @@
             </div><!-- /.row -->
 
 
-            <div class="text-center d-flex justify-content-center">
-                {!! $artikel->links('parasanganta.vendor.pagination.custom') !!}
-            </div>
+            {!! $artikel->links('parasanganta.vendor.pagination.custom') !!}
 
         </div><!-- /.container -->
 
