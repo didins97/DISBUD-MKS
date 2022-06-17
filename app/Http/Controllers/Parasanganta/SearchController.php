@@ -82,12 +82,12 @@ class SearchController extends Controller
         })->get();
 
         $artikel = $this->paginate($artikel->mergeRecursive($kawasan)->mergeRecursive($struktur)->mergeRecursive($kegiatan1)->mergeRecursive($kegiatan)->mergeRecursive($benda)->mergeRecursive($bangunan)->mergeRecursive($situs)->mergeRecursive($foto), 9);
-        $artikel->setPath('cari?search=' . $search);
+        $artikel->setPath('parasanganta/cari?search=' . $search);
 
 
         if( Session::get('lg') == 'en' )
             return view('content_english.search_content', compact('artikel'));
-    
+
 
         return view('parasanganta.content.search_content', compact('artikel','search'));
     }

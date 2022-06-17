@@ -19,15 +19,15 @@
             <div class="block-title mb-5">
                 <p class="text-regular keyword-search">keyword “{{$search}}”</p>
             </div><!-- /.block-title -->
-           
+
             <div class="block-title mb-4">
                 <h3 class="text-regular">Hasil</h3>
             </div><!-- /.block-title -->
-           
+
             <div class="row">
                 @foreach($artikel as $a)
                     @if($a->getTable()=='bangunans')
-                   
+
 
 
                     <div class="col-lg-4">
@@ -229,20 +229,14 @@
                     </div>
                     @endif
                 @endforeach
-               
-               
+
+
             </div><!-- /.row -->
-          
-           
+
+
             <div class="text-center d-flex justify-content-center">
-                <div class="post-pagination mt-5">
-                    <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
-                    <a href="#" class="page">1</a>
-                    <a href="#" class="page">2</a>
-                    <a href="#" class="page">3</a>
-                    <a href="#" class="page"><i class="fa fa-angle-right"></i></a>
-                </div><!-- /.post-pagination -->
-            </div><!-- /.text-center d-flex justify-content-center -->
+                {!! $artikel->links('parasanganta.vendor.pagination.custom') !!}
+            </div>
 
         </div><!-- /.container -->
 
