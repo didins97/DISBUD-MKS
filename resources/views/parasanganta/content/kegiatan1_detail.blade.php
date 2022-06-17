@@ -89,10 +89,10 @@
             $konten = $foto;
             @endphp
             @include('parasanganta.partials.social-share')
+            <div class="col-lg-12 mt-5 event-details__content">
+                <div class="fb-comments" data-href="{{ Request::url() }}" data-width="" data-numposts="5"></div>
+            </div>
         </div><!-- /.row -->
-        <div class="col-lg-12 mt-5">
-            <div class="fb-comments" data-href="{{ Request::url() }}" data-width="" data-numposts="5"></div>
-        </div>
     </div><!-- /.container -->
 </section><!-- /.event-details -->
 

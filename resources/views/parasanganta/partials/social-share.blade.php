@@ -1,4 +1,4 @@
-<div id="share" class="mt-4">
+<div id="share" class="col-lg-12 mt-5 event-details__content">
   <h4 class="mb-3" style="color: #474747">Bagikan:</h4>
   <ul class="list-group list-group-horizontal">
     <li class="list-group-item">
