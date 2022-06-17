@@ -91,6 +91,9 @@
                 @endphp
                 @include('parasanganta.partials.social-share')
             </div>
+            <div class="col-lg-12 mt-5">
+                <div class="fb-comments" data-href="{{ Request::url() }}" data-width="" data-numposts="5"></div>
+            </div>
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section><!-- /.event-details -->
