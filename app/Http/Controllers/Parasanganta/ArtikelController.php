@@ -48,32 +48,36 @@ class ArtikelController extends Controller
             }
         }
 
-        $artikel = $artikel->paginate(9);
+        $artikel = $artikel->paginate(3);
+        // dd($artikel);
 
-        if( Paginator::resolveCurrentPage() != 1 ) {
-            $artikels = [];
-            $i = 0;
-            foreach( $artikel as $a ) {
-                $artikels[$i]['judul'] = Session::get('lg') == 'en' ? $a->judul_english : $a->judul_indo;
-                $artikels[$i]['thumbnail'] = $a->thumbnail;
-                $j = 0;
-                foreach( $a->kategori_show as $ks ) {
-                    $artikels[$i]['kategori_show'][$j] = $ks->isi;
-                    $j++;
-                }
-                $artikels[$i]['konten'] = Session::get('lg') == 'en' ? \Str::limit($a->konten_english, 50, $end='...') : \Str::limit($a->konten_indo, 50, $end='...');
-                $artikels[$i]['slug'] = $a->slug;
-                $artikels[$i]['penulis'] = $a->penulis != 'admin' ? $a->kontributor_relasi->nama : 'admin';
-                $artikels[$i]['published_at'] = \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y');
-                $i++;
-            }
-            return response()->json([
-                'status' => 'success', 
-                'data' => $artikels
-            ]);
-        } else {
-            return view('parasanganta.content.articles', compact('artikel'));
-        }
+        // if( Paginator::resolveCurrentPage() != 1 ) {
+        //     $artikels = [];
+        //     $i = 0;
+        //     foreach( $artikel as $a ) {
+        //         $artikels[$i]['judul'] = Session::get('lg') == 'en' ? $a->judul_english : $a->judul_indo;
+        //         $artikels[$i]['thumbnail'] = $a->thumbnail;
+        //         $j = 0;
+        //         foreach( $a->kategori_show as $ks ) {
+        //             $artikels[$i]['kategori_show'][$j] = $ks->isi;
+        //             $j++;
+        //         }
+        //         $artikels[$i]['konten'] = Session::get('lg') == 'en' ? \Str::limit($a->konten_english, 50, $end='...') : \Str::limit($a->konten_indo, 50, $end='...');
+        //         $artikels[$i]['slug'] = $a->slug;
+        //         $artikels[$i]['penulis'] = $a->penulis != 'admin' ? $a->kontributor_relasi->nama : 'admin';
+        //         $artikels[$i]['published_at'] = \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y');
+        //         $i++;
+        //     }
+        //     return response()->json([
+        //         'status' => 'success', 
+        //         'data' => $artikels
+        //     ]);
+        // } else {
+        //     return view('parasanganta.content.articles', compact('artikel'));
+        // }
+
+        return view('parasanganta.content.articles', compact('artikel'));
+
     }
 
 

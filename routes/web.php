@@ -218,7 +218,7 @@ Route::get('/semua-foto', [FotoController::class, 'index'])->name('photos');
 Route::get('/semua-video', [VideoController::class, 'index'])->name('videos');
 Route::get('/semua-audio', [AudioController::class, 'index'])->name('audios');
 Route::get('/semua-publikasi', [PublikasiController::class, 'index'])->name('publications');
-Route::get('/semua-kegiatan', [KegiatanController::class, 'index'])->name('events');
+// Route::get('/semua-kegiatan', [KegiatanController::class, 'index'])->name('events');
 
 Route::get('/video/{slug}', [VideoController::class, 'show'])->name('video_detail');
 Route::get('/audio/{slug}', [AudioController::class, 'show'])->name('audio_detail');

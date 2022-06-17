@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot(Kernel $kernel)
-    {
+    {   
         Paginator::useBootstrap();
 
         // $kernel->prependMiddleware(RedirectToContent::class);
