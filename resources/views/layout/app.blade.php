@@ -41,6 +41,8 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="gT2cR5h4"></script>
 
     @yield('content')
     @include('partials.footer')

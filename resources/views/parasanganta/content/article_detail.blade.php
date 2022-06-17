@@ -6,9 +6,6 @@
 
 @include('partials.header')
 
-
-
-
     <section class="page-header"
         style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
         <div class="container">
@@ -37,7 +34,7 @@
                             </a><a href="#" class="text-medium">Cagar
                                 Budaya</a>
                         </p><!-- /.blog-details__tags -->
-                        
+
                     </div><!-- /.blog-details__main -->
                     <div class="mt-5">
                         @php
@@ -46,8 +43,12 @@
                             @endphp
                         @include('parasanganta.partials.social-share')
                     </div>
+
+                    <div class="mt-5">
+                        <div class="fb-comments" data-href="{{ Request::url() }}" data-width="" data-numposts="5"></div>
+                    </div>
                 </div><!-- /.col-lg-8 -->
-        
+
                 <div class="col-lg-4">
                     <div class="sidebar radius-medium">
                         <div class="sidebar__single">
