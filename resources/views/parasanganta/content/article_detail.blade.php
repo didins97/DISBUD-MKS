@@ -16,7 +16,7 @@
     <section class="blog-one blog-details-page relative">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <div class="blog-details__main">
                         <div class="blog-details__image">
                             <img src="{{ asset('storage/assets/artikel/thumbnail/' . $artikel->thumbnail) }}" class="img-fluid" alt="">
@@ -36,20 +36,9 @@
                         </p><!-- /.blog-details__tags -->
 
                     </div><!-- /.blog-details__main -->
-                    <div class="mt-5">
-                        @php
-                            $konten_name = 'article';
-                            $konten = $artikel;
-                            @endphp
-                        @include('parasanganta.partials.social-share')
-                    </div>
-
-                    <div class="mt-5">
-                        <div class="fb-comments" data-href="{{ Request::url() }}" data-width="" data-numposts="5"></div>
-                    </div>
                 </div><!-- /.col-lg-8 -->
 
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <div class="sidebar radius-medium">
                         <div class="sidebar__single">
                             <h3 class="sidebar__title">Artikel Terbaru</h3>
@@ -75,6 +64,15 @@
                         </div><!-- /.sidebar__single -->
                     </div><!-- /.sidebar -->
                 </div><!-- /.col-lg-4 -->
+                @php
+                $konten_name = 'article';
+                $konten = $artikel;
+                @endphp
+                @include('parasanganta.partials.social-share')
+                <div class="col-lg-12 mt-5">
+                    <div class="fb-comments" data-href="{{ Request::url() }}" data-width="" data-numposts="5"></div>
+                </div>
+
             </div><!-- /.row -->
         </div><!-- /.container -->
         <img src="assets/images/backgrounds/huruf-lontara-bg-1.svg" alt="" class="bg-lontara-three">
