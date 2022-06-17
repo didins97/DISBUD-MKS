@@ -371,6 +371,19 @@ ol li{
   min-height: 66px;
 }
 
+.konten-list-card{
+  border-radius: 20px;
+  height: 350px
+}
+
+.konten-list-card__info{
+  top: 75%;
+}
+
+.konten-list-card__info h3{
+  font-size: 1.65rem;
+}
+
 /* === ABOUT === */
 .about-four::before {
   background-image: url(../images/backgrounds/bg-event.webp);

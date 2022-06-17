@@ -13,51 +13,33 @@
         </div><!-- /.container -->
     </section><!-- /.page-header -->
     <section class="collection-two collection-two__collection-full-page">
-        <div class="container-fluid">
+        <div class="container">
             <div class="block-title-two text-center">
                 <p>Gallery</p>
                 <h3>Daftar <br> Bangunan Bersejarah</h3>
             </div><!-- /.block-title-two -->
-            <div class="collection-two__carousel shadowed__carousel thm__owl-carousel owl-carousel owl-theme"
-                data-options='{
-                    "loop": true, "margin": 0, "autoplay": true, "autoplayTimeout": 5000, "autoplayHoverPause": true, "items": 5, "smartSpeed": 700, "dots": false, "nav": true, "responsive": {
-                        "1920": { "items": 5},
-                        "1440": { "items": 4},
-                        "1199": { "items": 4},
-                        "991": { "items": 3},
-                        "767": { "items": 2},
-                        "575": { "items": 2},
-                        "480": { "items": 2},
-                        "0": { "items": 1}
-                    }
-                }'>
+            <div class="row">
                 @foreach($foto as $a)
 
-
-                <div class="item">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="collection-two__single">
-                        <div class="collection-two__image">
+                        <div class="collection-two__image konten-list-card">
+                            <div class="layer-mask"></div>
                             <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
-
-
-                        </div><!-- /.collection-two__image -->
-                        <div class="collection-two__content">
-                            <h3>{{$a->nama}}</h3>
-                            <p>{{$a->tahun}}</p>
-                            {{-- <a href="/artikel/{{$a->slug}}" class="stretched-link"></a> --}}
-                          <a href="{{ route('bangunan_detail', $a->slug) }}" class="stretched-link"></a>
-
-                        </div><!-- /.collection-two__content -->
-                    </div><!-- /.collection-two__single -->
-                </div><!-- /.item -->
+                            <div class="row collection-two__image__info konten-list-card__info">
+                                <div class="col-12 text-center">
+                                    <h3>{{$a->nama}}</h3>
+                                    <p>{{$a->tahun}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="{{ route('bangunan_detail', $a->slug) }}" class="stretched-link"></a>
+                    </div>
+                </div>
 
                 @endforeach
-
-
-
-
-
-            </div><!-- /.collection-two__carousel shadowed__carousel thm__owl-carousel owl-carousel owl-theme -->
+            </div>
+            
         </div><!-- /.container-fluid -->
     </section><!-- /.collection-two -->
 
