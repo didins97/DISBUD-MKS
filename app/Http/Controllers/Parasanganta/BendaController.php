@@ -25,7 +25,7 @@ class BendaController extends Controller
         // ->where('published_at', '<=', Carbon::now())
         
 
-        $foto = $bangunan->paginate(9);
+        $foto = $bangunan->paginate(6);
 
         // if( Paginator::resolveCurrentPage() != 1 ) {
         //     $fotos = [];

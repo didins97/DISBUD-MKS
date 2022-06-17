@@ -41,6 +41,8 @@
             </div>
             
         </div><!-- /.container-fluid -->
+    {{$foto->links('partials.pagination')}}
+
     </section><!-- /.collection-two -->
 
 @endsection

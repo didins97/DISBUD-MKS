@@ -48,7 +48,7 @@ class ArtikelController extends Controller
             }
         }
 
-        $artikel = $artikel->paginate(3);
+        $artikel = $artikel->paginate(6);
         // dd($artikel);
 
         // if( Paginator::resolveCurrentPage() != 1 ) {

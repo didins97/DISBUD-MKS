@@ -38,6 +38,8 @@
                 @endforeach
             </div><!-- /.collection-two__carousel shadowed__carousel thm__owl-carousel owl-carousel owl-theme -->
         </div><!-- /.container-fluid -->
+        {{$foto->links('partials.pagination')}}
+
     </section><!-- /.collection-two -->
 
 @endsection
