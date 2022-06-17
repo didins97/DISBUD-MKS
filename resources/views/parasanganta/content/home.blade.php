@@ -229,8 +229,7 @@
                     <div class="event-one__single">
                         <div class="event-one__image">
                             <div class="event-one__date">
-                                <span>31</span>
-                                Oct
+                                {{$k->date_event}}
                             </div>
                             <div class="event-one__image-box">
                                 <div class="event-one__image-inner">
