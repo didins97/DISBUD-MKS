@@ -14,6 +14,10 @@
     <div class="container">
         <div class="about-four__image wow fadeInRight mr-0" data-wow-duration="1500ms">
             <img src="assets/images/about/kadis.jpg" alt="">
+            <div class="team-one__content">
+                <h3>Ir. Andi Herfida Attas</h3>
+                <p>Kepala Dinas Kebudayaan Kota Makassar</p>
+            </div>
         </div><!-- /.about-four__image -->
         <div class="row">
             <div class="col-lg-6">
