@@ -277,6 +277,10 @@
     border-radius: 15px;
 }
 
+.post-pagination a {
+    border-radius: 15px;
+}
+
 .post-pagination .page:hover {
     background-color: #AAA081;
     color: white;
@@ -434,6 +438,7 @@ ol li {
 .about-four {
     padding-top: 100px;
 }
+
 
 @media only screen and (max-width: 600px) {
     .collection-two__content {
