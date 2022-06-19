@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css">
 
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{asset('assets/css/parasanganta-style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/la_bu-style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">

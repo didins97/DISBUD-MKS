@@ -22,3 +22,4 @@
     <script type="text/javascript">
         lightGallery(document.getElementById('galleries'));
     </script>
+

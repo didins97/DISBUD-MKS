@@ -35,7 +35,9 @@
         <div class="banner-carousel thm__owl-carousel owl-theme owl-carousel" data-options='{"loop": true, "items": 1, "margin": 0, "dots": false, "nav": true, "animateOut": "fadeOut", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 6000, "autoplayHoverPause": false}'>
             <!-- Slide Item -->
             <div class="slide-item">
-                <div class="image-layer lazy-image" style="background-image: url('assets/images/blog/blog-labu.png');"></div>
+                <div class="image-layer lazy-image" style="background-image: url('assets/images/blog/blog-labu.png');">
+                    <div class="layer-mask"></div>
+                </div>
                 <div class="container">
                     <div class="content-box text-center">
                         <h2 id="labu-judulArtikel">Laman Budaya</h2>
@@ -117,14 +119,13 @@
         <div class="container">
             <div class="blog-one__top">
                 <div class="block-title">
-                    <p>INFORMASI</p>
+                    <p class="text-regular">INFORMASI</p>
                     <h3>Artikel Terbaru</h3>
                 </div>
                 <div class="more-post__block">
                     <a class="more-post__link" href="#">
                         All Post
-                        <span class="curved-circle">View More &nbsp;&emsp;View More &nbsp;&emsp;View More View More
-                            View More &nbsp;&emsp;View &nbsp;&emsp; </span>
+                        <span class="curved-circle">View More &nbsp;&emsp;View More &nbsp;&emsp;View More View More View More &nbsp;&emsp;View &nbsp;&emsp; </span>
 
                     </a>
                 </div>

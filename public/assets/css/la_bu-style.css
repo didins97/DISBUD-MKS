@@ -57,7 +57,7 @@
     top: 2.45rem;
     width: 100vw;
     z-index: 0;
-    opacity: 0.1;
+    opacity: 0.05;
 }
 
 /* LIST KONTEN */
@@ -145,6 +145,16 @@
     right: -70px;
     z-index: -1;
 }
+
+.layer-mask {
+    background-color: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
 
 /*  ARTIKEL */
 .article_img {

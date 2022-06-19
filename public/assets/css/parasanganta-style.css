@@ -1,5 +1,49 @@
+.d-grid {
+  display: grid;
+}
+
 .main-nav-one__home-three {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-pill {
+  border-radius: 100px;
+}
+
+.radius-medium {
+  border-radius: 20px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-regular {
+  font-weight: 400 !important;
+}
+
+.text-medium {
+  font-weight: 500 !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.mt-10 {
+  margin-top: 5rem;
+}
+
+.mt-20 {
+  margin-top: 10.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 5rem;
+}
+
+.relative {
+  position: relative;
 }
 
 .collection-two__home-three .collection-two__content,
@@ -7,7 +51,7 @@
   border-radius: 10px;
 }
 
-.collection-two__content:hover>h3 {
+.collection-two__content:hover > h3 {
   color: #fff;
 }
 
@@ -34,6 +78,14 @@
   padding-top: 150px;
 }
 
+.bg-gray {
+  background-color: #f5f7fa;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
 .blog-one__date {
   border-radius: 100px;
   top: 20px;
@@ -44,7 +96,11 @@
   border-radius: 20px 20px 0px 0px;
   background-color: #f5f7fa;
   height: 270px;
+}
+
+.blog-one__image img {
   object-fit: cover;
+  height: 100%;
 }
 
 .blog-one__content {
@@ -80,7 +136,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  transform: scale(.85);
+  transform: scale(0.85);
 }
 
 .bg-lontara-five {
@@ -106,12 +162,12 @@
 }
 
 .event-one::before {
-  background-image: url("../images/backgrounds/bg-event.png");
+  background-image: url("../images/backgrounds/bg-event.webp");
 }
 
-.event-one__image-inner>img {
+.event-one__image-inner > img {
   height: 159px;
-  weight: 159px;
+  width: 159px;
   object-fit: cover;
 }
 
@@ -131,6 +187,19 @@
   line-height: 28px;
   margin-top: 15px;
   color: #848484;
+}
+
+.sosmed-icon {
+  color: #848484;
+  margin-right: 0.5rem;
+}
+
+.sosmed-icon:hover {
+  color: #252931;
+}
+
+.sosmed-icon > i {
+  font-size: 2.2rem;
 }
 
 .collection-two__home-three .collection-two__content {
@@ -174,7 +243,7 @@
 }
 
 .event-date {
-  font-size: .95rem !important;
+  font-size: 0.95rem !important;
 }
 
 /* gallery */
@@ -203,6 +272,83 @@
   flex-grow: 99999;
 }
 
+.post-pagination .page {
+  border-radius: 15px !important;
+}
+
+.post-pagination a {
+  border-radius: 15px !important;
+}
+
+.post-pagination .page:hover {
+  background-color: #aaa081;
+  color: white;
+  border-color: transparent;
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.5rem 0.5rem;
+}
+
+.layer-mask {
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.collection-two__image {
+  position: relative;
+}
+
+.collection-two__image__info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14.5px;
+  font-size: 1.4rem;
+  color: #fff;
+  width: 100%;
+}
+
+/* .collection-two__single:hover>.layer-mask{
+background-color: rgba(0, 0, 0, 0.0);
+} */
+
+.block-title-two h3,
+.block-title h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+.blog-details__main p {
+  color: #474747;
+}
+
+ul li,
+ol li {
+  color: #252930;
+}
+
+.about-one p {
+  color: #252930;
+}
+
+.about-four__image > img {
+  border-radius: 15px;
+}
+
+.history-one__image > img {
+  border-radius: 15px;
+}
+
+.event-three__image {
+  border-radius: 20px 20px 0px 0px;
+}
+
 /* === EVENT === */
 .events {
   grid-template-columns: repeat(3, 1fr);
@@ -214,6 +360,7 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 20px 50px 0px rgb(33 37 43 / 10%);
   margin-bottom: 40px;
+  border-radius: 0px 0px 20px 20px;
 }
 
 .event-three__content {
@@ -225,15 +372,32 @@
   min-height: 66px;
 }
 
+.konten-list-card {
+  border-radius: 20px;
+  height: 350px;
+}
+
+.konten-list-card__info {
+  top: 75%;
+}
+
+.konten-list-card__info h3 {
+  font-size: 1.65rem;
+}
+
 /* === ABOUT === */
 .about-four::before {
-  background-image: url(../images/backgrounds/bg-event.png);
+  background-image: url(../images/backgrounds/bg-event.webp);
   background-size: 100%;
   background-position: center bottom;
 }
 
 .about-four__image::before {
   background-image: url(../images/backgrounds/pattern-lontara\ 1.png);
+}
+
+.block-title p::before {
+  /* opacity: 0; */
 }
 
 .history-one__single::before {
@@ -248,8 +412,6 @@
   display: none;
 }
 
-.history-one__single:nth-child(odd) .history-one__image {}
-
 /* === SEACRH PAGE === */
 
 .block-title p.keyword-search::before {
@@ -257,8 +419,92 @@
   opacity: 1;
 }
 
+/* === PAGINATION === */
+.post-pagination a {
+  border-color: #aaa081;
+  font-weight: normal;
+  color: black;
+}
+
 .footer-gray {
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
+}
+
+.about-four {
+  padding-top: 100px;
+}
+
+/* labu style */
+.jumbotron__info {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.labu-konten-intro {
+  color: #202020;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.wrap-img-konten {
+  position: relative;
+}
+
+.wrap-img-konten:hover > .wrap-img-konten__img1,
+.wrap-img-konten:hover > .wrap-img-konten__img2 {
+  box-shadow: 0 0 30px #aaa081;
+}
+
+.wrap-img-konten__img1 {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: all 500ms ease;
+}
+
+.wrap-img-konten__img2 {
+  width: 100%;
+  height: 600px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: all 500ms ease;
+}
+
+.wrap-img-konten__info {
+  color: #202020;
+  font-size: 1.25rem;
+}
+
+.content-img-labu {
+  border-radius: 20px;
+}
+
+.content-img-labu__info {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #202020;
+}
+.content-img-labu img {
+  height: 275px;
+}
+
+.img-full{
+  border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog-one{
+  padding-top: 100px;
+}
+
+.sidebar__post-image>img{
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -269,11 +515,27 @@
   }
 
   .page-header h2 {
-    letter-spacing: 10px !important;
+    letter-spacing: 7px !important;
   }
 
   .event-details {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .logo-box img {
+    width: 165px !important;
+  }
+
+  body > div.page-wrapper > section.event-one > img {
+    display: none;
+  }
+
+  .footer-widget__about img {
+    height: 50px !important;
+  }
+
+  .list-group-item {
+    padding: 0.5rem 0.75rem;
   }
 }
