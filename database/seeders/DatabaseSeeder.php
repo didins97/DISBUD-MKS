@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             LokasiTableSeeder::class,
             KategoriShowTableSeeder::class,
+            UserSeeder::class
         ]);
     }
 }

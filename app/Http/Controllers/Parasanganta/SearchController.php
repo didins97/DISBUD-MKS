@@ -92,7 +92,7 @@ class SearchController extends Controller
         return view('parasanganta.content.search_content', compact('artikel','search'));
     }
 
-    private function paginate($items, $perPage = 15, $page = null, $options = [])
+    private function paginate($items, $perPage = 2, $page = null, $options = [])
     {
         $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
         $items = $items instanceof Collection ? $items : Collection::make($items);

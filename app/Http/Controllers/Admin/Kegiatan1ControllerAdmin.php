@@ -9,6 +9,8 @@ use App\Models\Kegiatan1;
 use Illuminate\Support\Facades\File; 
 
 use Alert;
+use Carbon\Carbon;
+
 
 class Kegiatan1ControllerAdmin extends Controller
 {
@@ -74,7 +76,9 @@ class Kegiatan1ControllerAdmin extends Controller
             'caption_galleries' => serialize($request->caption_galleries_foto),
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
-            'published_at' => $request->publish_date . " " . $request->publish_time
+            // 'published_at' => $request->publish_date . " " . $request->publish_time
+            'published_at'=> Carbon::now()
+
         ]);
         
 
@@ -169,7 +173,9 @@ class Kegiatan1ControllerAdmin extends Controller
             'caption_galleries' => serialize($request->caption_galleries_foto),
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
-            'published_at' => $request->publish_date . " " . $request->publish_time
+            // 'published_at' => $request->publish_date . " " . $request->publish_time
+            'published_at'=> Carbon::now()
+
         ]);
 
         

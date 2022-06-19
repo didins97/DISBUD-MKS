@@ -234,7 +234,7 @@
             </div><!-- /.row -->
           
            
-            <div class="text-center d-flex justify-content-center">
+            {{-- <div class="text-center d-flex justify-content-center">
                 <div class="post-pagination mt-5">
                     <a href="#" class="page"><i class="fa fa-angle-left"></i></a>
                     <a href="#" class="page">1</a>
@@ -243,8 +243,8 @@
                     <a href="#" class="page"><i class="fa fa-angle-right"></i></a>
                 </div><!-- /.post-pagination -->
             </div><!-- /.text-center d-flex justify-content-center -->
-
-        </div><!-- /.container -->
+ </div><!-- /.container --> --}}
+    {{$artikel->links('partials.pagination')}}
 
 
     </section><!-- /.event-three -->
