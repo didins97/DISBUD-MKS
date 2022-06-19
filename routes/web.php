@@ -120,6 +120,12 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       Route::post('/parasanganta/kegiatan1/update/{photoId}', [Kegiatan1ControllerAdmin::class, 'update'])->name('admin.kegiatan1.update');
       Route::get('/parasanganta/kegiatan1/delete/{kegiatan1Id}', [Kegiatan1ControllerAdmin::class, 'delete'])->name('admin.kegiatan1.delete');
 
+      Route::get('/labu/konten', [\App\Http\Controllers\Admin\KontenLabuController::class, 'index'])->name('admin.konten_labu.index');
+      Route::get('/labu/konten/tambah', [\App\Http\Controllers\Admin\KontenLabuController::class, 'add'])->name('admin.konten_labu.add');
+      Route::post('/labu/konten/tambah', [\App\Http\Controllers\Admin\KontenLabuController::class, 'store'])->name('admin.konten_labu.store');
+      Route::get('/labu/konten/edit/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'edit'])->name('admin.konten_labu.edit');
+      Route::post('/labu/konten/update/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'update'])->name('admin.konten_labu.update');
+      Route::get('/labu/konten/delete/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'delete'])->name('admin.konten_labu.delete');
 
       // Route::get('/parasanganta/struktur', [StrukturControllerAdmin::class, 'index'])->name('admin.struktur.index');
       // Route::get('/parasanganta/situs', [SitusControllerAdmin::class, 'index'])->name('admin.situs.index');

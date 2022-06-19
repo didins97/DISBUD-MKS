@@ -49,8 +49,8 @@
       </div>
     </li> --}}
     <!-- Divider -->
-    <li class="nav-item {{ Request::segment(2) == 'artikel-kontributor' ? 'active' : '' }}">
-      <a class="nav-link" href="{{ route('admin.contributor_article.index') }}">
+    <li class="nav-item {{ Request::segment(2) == 'labu' && Request::segment(2) == 'konten' ? 'active' : '' }}">
+      <a class="nav-link" href="{{ route('admin.konten_labu.index') }}">
         <i class="fas fa-fw fa-edit"></i>
         <span>La'bu</span></a>
     </li>
