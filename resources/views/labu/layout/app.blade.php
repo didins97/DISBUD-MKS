@@ -14,8 +14,7 @@
     <link rel="manifest" href="{{asset('assets/images/favicon/site.webmanifest')}}">
 
     <!-- Fonts URL -->
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,700%7CPlayfair+Display:400,500,600,700,800,900%7CWork+Sans:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700%7CPlayfair+Display:400,500,600,700,800,900%7CWork+Sans:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
 
     <!-- Plugins CSS -->
@@ -35,8 +34,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/parasanganta-style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/la_bu-style.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
 
 
 
