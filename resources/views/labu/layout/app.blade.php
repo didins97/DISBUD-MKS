@@ -61,18 +61,18 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
 
-            <a href="{{ route('home') }}" class="side-menu__logo"><img src="{{ asset('assets/images/logo/logo-parasanganta2.svg') }}" alt="" width="170"></a>
-            <nav class="mobile-nav__container">
-                <!-- content is loading via js -->
-            </nav>
-            <p class="side-menu__block__copy">(c) 2022 <a href="javascript:;">Dinas Kebudayaan Kota Makassar</a></p>
-            <div class="side-menu__social d-none">
-                <a href="javascript:;"><i class="fab fa-facebook-f"></i></a>
-                <a href="javascript:;"><i class="fab fa-google-plus"></i></a>
-                <a href="javascript:;"><i class="fab fa-twitter"></i></a>
-                <a href="javascript:;"><i class="fab fa-instagram"></i></a>
-                <a href="javascript:;"><i class="fab fa-pinterest-p"></i></a>
-            </div>
+            <a href="{{ route('home') }}" class="side-menu__logo"> <img src="{{ asset('assets/images/logo/logo-labu-white.svg') }}" alt="" width="155">
+                <nav class="mobile-nav__container">
+                    <!-- content is loading via js -->
+                </nav>
+                <p class="side-menu__block__copy">(c) 2022 <a href="javascript:;">Dinas Kebudayaan Kota Makassar</a></p>
+                <div class="side-menu__social d-none">
+                    <a href="javascript:;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="javascript:;"><i class="fab fa-google-plus"></i></a>
+                    <a href="javascript:;"><i class="fab fa-twitter"></i></a>
+                    <a href="javascript:;"><i class="fab fa-instagram"></i></a>
+                    <a href="javascript:;"><i class="fab fa-pinterest-p"></i></a>
+                </div>
         </div><!-- /.side-menu__block-inner -->
     </div><!-- /.side-menu__block -->
 
