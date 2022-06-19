@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class ArtikelController extends Controller
 {
+    public function index(Request $request)
+    {
+        $artikel = Artikel::where('status', 'publikasi')->where('kategori', 'umum')->orderBy('published_at', 'desc')->paginate(6);
+
+        return view('labu.content.artikel', compact('artikel'));
+    }
+
     public function index_hk(Request $request)
     {
         $artikels = Artikel::where('kategori', 'Hari Kebudayaan')->where('status', 'publikasi')->orderBy('published_at', 'desc')->paginate(3);

@@ -278,6 +278,7 @@ Route::get('/labu/opk', [App\Http\Controllers\Labu\OpkController::class, 'index'
 Route::get('/labu/wbtb', [App\Http\Controllers\Labu\WbtbController::class, 'index'])->name('wbtb');
 Route::get('/labu/hari-kebudayaan', [App\Http\Controllers\Labu\ArtikelController::class, 'index_hk'])->name('hari-kebudayaan');
 Route::get('/labu/kampung-budaya', [App\Http\Controllers\Labu\ArtikelController::class, 'index_kb'])->name('kampung-budaya');
+Route::get('/labu/artikel', [App\Http\Controllers\Labu\ArtikelController::class, 'index'])->name('article_labu');
 Route::get('/labu/cari', [App\Http\Controllers\Labu\SearchController::class, 'search'])->name('article_labu_search');
 Route::get('/labu', [App\Http\Controllers\Labu\HomeController::class, 'index'])->name('labu');
 

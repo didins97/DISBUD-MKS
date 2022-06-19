@@ -69,7 +69,7 @@
                         <div class="collection-grid__single">
                             <div class="collection-grid__image text-center radius-medium">
                                 <img src="{{ asset('assets/images/konten/konten-1.png') }}" alt="">
-                                <a href="#" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
+                                <a href="{{ route('opk') }}" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
                                 <h3><a href="{{ route('opk') }}">Objek Pemajuan Kebudayaan</a></h3>
@@ -80,7 +80,7 @@
                         <div class="collection-grid__single">
                             <div class="collection-grid__image text-center radius-medium">
                                 <img src="{{ asset('assets/images/konten/konten-2.png') }}" alt="" class="radius-medium">
-                                <a href="#" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
+                                <a href="{{ route('hari-kebudayaan') }}" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
                                 <h3><a href="{{ route('hari-kebudayaan') }}">Hari Kebudayaan</a></h3>
@@ -92,7 +92,7 @@
                         <div class="collection-grid__single">
                             <div class="collection-grid__image text-center radius-medium">
                                 <img src="{{ asset('assets/images/konten/konten-4.png') }}" alt="" class="radius-medium">
-                                <a href="#" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
+                                <a href="{{ route('wbtb') }}" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
                                 <h3><a href="{{ route('wbtb') }}">Warisan Budaya Tak Benda</a></h3>
@@ -103,7 +103,7 @@
                         <div class="collection-grid__single">
                             <div class="collection-grid__image text-center radius-medium">
                                 <img src="{{ asset('assets/images/konten/konten-3.png') }}" alt="" class="radius-medium">
-                                <a href="#" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
+                                <a href="{{ route('kampung-budaya') }}" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
                                 <h3><a href="{{ route('kampung-budaya') }}">Kampung Budaya</a></h3>
@@ -123,7 +123,7 @@
                     <h3>Artikel Terbaru</h3>
                 </div>
                 <div class="more-post__block">
-                    <a class="more-post__link" href="#">
+                    <a class="more-post__link" href="{{ route('article_labu') }}">
                         All Post
                         <span class="curved-circle">View More &nbsp;&emsp;View More &nbsp;&emsp;View More View More View More &nbsp;&emsp;View &nbsp;&emsp; </span>
 
