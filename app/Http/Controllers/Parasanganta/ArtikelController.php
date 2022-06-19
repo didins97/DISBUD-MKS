@@ -18,7 +18,7 @@ class ArtikelController extends Controller
 {
 
     public function index(){
-        $artikel = Artikel::where('status', 'publikasi')->orderBy('published_at', 'desc');
+        $artikel = Artikel::where('status', 'publikasi')->where('kategori', 'Umum')->orderBy('published_at', 'desc');
         // ->where('published_at', '<=', Carbon::now())
         if(Session::get('lg') == 'en' ) {
             $artikel = $artikel->where('judul_english', '!=', null)->paginate(9);
@@ -40,7 +40,7 @@ class ArtikelController extends Controller
                     $i++;
                 }
                 return response()->json([
-                    'status' => 'success', 
+                    'status' => 'success',
                     'data' => $artikels
                 ]);
             } else {
@@ -69,7 +69,7 @@ class ArtikelController extends Controller
         //         $i++;
         //     }
         //     return response()->json([
-        //         'status' => 'success', 
+        //         'status' => 'success',
         //         'data' => $artikels
         //     ]);
         // } else {
@@ -84,23 +84,23 @@ class ArtikelController extends Controller
     public function show(Request $request, $slug)
     {
         // $slug_field = $lg == 'en' ? 'slug_english' : 'slug';
-        $query_without_this_article = Artikel::where('published_at', '<=', Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc');
-        $query_this_article = Artikel::where('slug', $slug)->orWhere('slug_english', $slug)->where('published_at', '<=', Carbon::now())->where('status', 'publikasi');
+        $query_without_this_article = Artikel::where('published_at', '<=', Carbon::now())->where('kategori', 'Umum')->where('status', 'publikasi')->orderBy('published_at', 'desc');
+        $query_this_article = Artikel::where('slug', $slug)->where('kategori', 'Umum')->orWhere('slug_english', $slug)->where('published_at', '<=', Carbon::now())->where('status', 'publikasi');
 
         $artikel = $query_this_article->firstOrFail();
         // $artikel = $query_this_article->all();
         // dd($artikel);
 
 
-        
+
 
         // check draft
         if( $artikel->status == 'draft' && !isset(auth()->user()->id) ) {
             abort(404);
         }
-      
+
         views($artikel)->record();
-        
+
 
         if(Session::get('lg') == 'en' ) {
             // if( count($query_without_this_article->get()) > 3 ) {
@@ -111,23 +111,23 @@ class ArtikelController extends Controller
             // } else {
                 // $artikel = $artikel->get();
                 // $artikelPopuler = $this->generate_articles_show($artikel->where('judul_english', '!=', null)->get());
-                
+
                 $artikelTerbaru = $query_without_this_article->orderBy('published_at')->take(3)->get();
                 // $artikelTerkait = $this->generate_articles_show($artikel->where('judul_english', '!=', null)->get());
                 // $artikelBacaJuga = $this->generate_articles_show($artikel->where('judul_english', '!=', null)->get(), false);
             // }
-            
-            
+
+
             return view('content_english.article_detail', compact('artikel', 'artikelTerbaru'));
         } else {
             // $artikelPopuler = $this->generate_articles_show($query_without_this_article->get());
             $artikelTerbaru = $query_without_this_article->orderBy('published_at')->take(3)->get();
-            
+
             // $artikelTerkait = $this->generate_articles_show($query_without_this_article->get());
             // $artikelBacaJuga = $this->generate_articles_show($query_without_this_article->get(), false);
 
         }
-        
+
         // if( count($query_without_this_article->get()) > 3 ) {
         //     $artikelPopuler = $artikelPopuler->take(3)->get();
         //     $artikelTerkait = $artikelTerkait->take(3)->get();
@@ -142,7 +142,7 @@ class ArtikelController extends Controller
         // }
         return view('parasanganta.content.article_detail', compact('artikel', 'artikelTerbaru'));
         // dd($artikelTerbaru);
-    
+
         // return view('content.article_detail', compact('artikel'));
 
     }
@@ -161,7 +161,7 @@ class ArtikelController extends Controller
         }
 
         $artikel = Artikel::when($search != null, function($query) use ($search) {
-            $query->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_english', 'LIKE', '%'.$search . '%')->where('published_at', '<=', Carbon::now());
+            $query->where('status', 'publikasi')->where('kategori', 'Umum')->orderBy('published_at', 'desc')->where('judul_english', 'LIKE', '%'.$search . '%')->where('published_at', '<=', Carbon::now());
         })->paginate(9);
 
         return view('parasanganta.content.articles', compact('artikel'));
@@ -188,14 +188,14 @@ class ArtikelController extends Controller
             } else {
                 $articles = $artikel;
             }
-            
+
             // dd('oke');
             return $articles;
         } else {
             $index = rand(1, count($artikel)) - 1;
             return $artikel[$index];
-        }   
-        
-    
+        }
+
+
     }
 }

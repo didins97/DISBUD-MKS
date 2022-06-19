@@ -74,6 +74,7 @@ class ArtikelController extends Controller
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'contributor' => $request->contributor_type,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
+            'kategori' => $request->kategori,
             'published_at' => $request->publish_date . " " . $request->publish_time
         ]);
 
@@ -153,6 +154,7 @@ class ArtikelController extends Controller
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'contributor' => $request->contributor_type,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
+            'kategori' => $request->kategori,
             'published_at' => $request->publish_date . " " . $request->publish_time
         ]);
 
@@ -160,7 +162,7 @@ class ArtikelController extends Controller
 
         $artikel->kategori_show()->sync($request->kategori_show);
         Alert::success('Berhasil', 'Artikel berhasil diedit');
-        
+
         if( $artikel->id_kontributor == null ) {
             return redirect()->route('admin.article.index');
         }
@@ -182,7 +184,7 @@ class ArtikelController extends Controller
         $artikel->delete();
 
         if( $artikel_kontributor ) {
-            return redirect()->route('admin.contributor_article.index');   
+            return redirect()->route('admin.contributor_article.index');
         }
         return redirect()->route('admin.article.index');
     }

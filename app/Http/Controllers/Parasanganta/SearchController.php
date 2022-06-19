@@ -35,7 +35,7 @@ class SearchController extends Controller
         $lg = (Session::get('lg') == 'en') ? 'english' : 'indo';
 
         $artikel = Artikel::when($search_condition, function($query) use ($search, $lg) {
-            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('kategori', 'Umum')->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
         })->when($lg == 'english', function($query) use ($lg, $search) {
             $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
         })->get();
