@@ -27,7 +27,7 @@
     </section><!-- /.about-four -->
 
     <section class="list-konten py-10 relative">
-        <img class="collection-two__bg" src="assets/images/backgrounds/huruf-lontara2.png" alt="">
+        <img class="collection-two__bg" src="{{ asset('assets/images/backgrounds/huruf-lontara2.png') }}" alt="">
         <div class="container">
             @foreach($konten_labu as $a)
             <div class="row mb-4">

@@ -13,7 +13,7 @@
         </div><!-- /.container -->
     </section><!-- /.page-header -->
     <section class="about-four relative">
-        <img src="assets/images/about/about-2.png" class="badik_content" alt="">
+        <img src="{{ asset('assets/images/about/about-2.png" class="badik_content') }}" alt="">
         <div class="garis_vertical"></div>
         <div class="container">
             <div class="row">
@@ -34,12 +34,12 @@
     </section><!-- /.about-four -->
 
     <section class="list-konten py-10 relative">
-        <img class="collection-two__bg" src="assets/images/backgrounds/huruf-lontara2.png" alt="">
+        <img class="collection-two__bg" src="{{ asset('assets/images/backgrounds/huruf-lontara2.png') }}" alt="">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk1.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk1.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Tradisi Lisan">Tradisi Lisan</a>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk2.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk2.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Manuskrip">Manuskrip</a>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk3.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk3.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Adat Istiadat">Adat Istiadat</a>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk4.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk4.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Ritus">Ritus</a>
@@ -73,7 +73,7 @@
             <div class="row mb-4">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk5.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk5.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Seni">Seni</a>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk6.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk6.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Bahasa">Bahasa</a>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk7.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk7.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Pengetahuan Tradisional">Pengetahuan Tradisional</a>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk8.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk8.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Teknologi Tradisiona">Teknologi Tradisional</a>
@@ -107,7 +107,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk9.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk9.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Permainan Rakyat">Permainan Rakyat</a>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
-                        <img src="assets/images/konten/konten-opk10.png" alt="">
+                        <img src="{{ asset('assets/images/konten/konten-opk10.png') }}" alt="">
                     </div>
                     <h3>
                         <a href="{{ route('opk') }}?kategori=Olahraga Tradisional">Olahraga Tradisional</a>

@@ -273,8 +273,11 @@ Route::get('/artikel/{slug}', [App\Http\Controllers\Parasanganta\ArtikelControll
 // LABU
 Route::get('/labu/opk/{slug}', [App\Http\Controllers\Labu\OpkController::class, 'show'])->name('opk_detail');
 Route::get('/labu/wbtb/{slug}', [App\Http\Controllers\Labu\WbtbController::class, 'show'])->name('wbtb_detail');
+Route::get('/labu/artikel/{slug}', [App\Http\Controllers\Labu\ArtikelController::class, 'show'])->name('article_labu_detail');
 Route::get('/labu/opk', [App\Http\Controllers\Labu\OpkController::class, 'index'])->name('opk');
 Route::get('/labu/wbtb', [App\Http\Controllers\Labu\WbtbController::class, 'index'])->name('wbtb');
+Route::get('/labu/hari-kebudayaan', [App\Http\Controllers\Labu\ArtikelController::class, 'index_hk'])->name('hari-kebudayaan');
+Route::get('/labu/kampung-budaya', [App\Http\Controllers\Labu\ArtikelController::class, 'index_kb'])->name('kampung-budaya');
 Route::get('/labu', [App\Http\Controllers\Labu\HomeController::class, 'index'])->name('labu');
 
 

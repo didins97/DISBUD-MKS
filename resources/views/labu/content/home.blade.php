@@ -8,7 +8,7 @@
             <div class="inner-container">
                 <div class="logo-box">
                     <a href="{{ route('labu') }}">
-                        <img src="assets/images/logo/logo-labu-white.svg" alt="" width="155">
+                        <img src="{{ asset('assets/images/logo/logo-labu-white.svg') }}" alt="" width="155">
                     </a>
                     <a href="javascript:;" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
                 </div><!-- /.logo-box -->
@@ -17,7 +17,7 @@
                         <li><a href="{{ route('labu') }}" class="labu-nav__link light">Beranda</a></li>
                         <li><a href="{{ route('opk') }}" class="labu-nav__link light">OPK</a></li>
                         <li><a href="{{ route('wbtb') }}" class="labu-nav__link dark">WBTB</a></li>
-                        <li><a href="{{ route('labu') }}" class="labu-nav__link light">Hari Kebudayaan</a></li>
+                        <li><a href="{{ route('hari-kebudayaan') }}" class="labu-nav__link light">Hari Kebudayaan</a></li>
                         <li><a href="{{ route('labu') }}" class="labu-nav__link light">Kampung Budaya</a></li>
                     </ul><!-- /.main-nav__navigation-box -->
                 </div><!-- /.main-nav__main-navigation -->
@@ -83,7 +83,7 @@
                                 <a href="#" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
-                                <h3><a href="#">Hari Kebudayaan</a></h3>
+                                <h3><a href="{{ route('hari-kebudayaan') }}">Hari Kebudayaan</a></h3>
                             </div><!-- /.collection-grid__content -->
                         </div><!-- /.collection-grid__single -->
                     </div><!-- /.col-lg-4 -->
@@ -95,7 +95,7 @@
                                 <a href="#" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
-                                <h3><a href="#">Warisan Budaya Tak Benda</a></h3>
+                                <h3><a href="{{ route('wbtb') }}">Warisan Budaya Tak Benda</a></h3>
                             </div><!-- /.collection-grid__content -->
                         </div><!-- /.collection-grid__single -->
                     </div><!-- /.col-lg-4 -->
@@ -106,7 +106,7 @@
                                 <a href="#" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
-                                <h3><a href="#">Kampung Budaya</a></h3>
+                                <h3><a href="{{ route('kampung-budaya') }}">Kampung Budaya</a></h3>
                             </div><!-- /.collection-grid__content -->
                         </div><!-- /.collection-grid__single -->
                     </div><!-- /.col-lg-4 -->
@@ -146,9 +146,9 @@
                                 <li><a href="javascript:;"> {{ $a->penulis != 'admin' ? $a->kontributor_relasi->nama : 'admin' }}</a></li>
                                 {{-- <li><a href="javascript:;">03 Comments</a></li> --}}
                             </ul>
-                            <h3><a href="{{ route('article_detail', $a->slug) }}">{{ $a->judul_indo }}</a></h3>
+                            <h3><a href="{{ route('article_labu_detail', $a->slug) }}">{{ $a->judul_indo }}</a></h3>
                             <p>{!! Str::limit($a->konten_indo, 100) !!}</p>
-                            <a href="{{ route('article_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
+                            <a href="{{ route('article_labu_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
                         </div>
                     </div>
                 </div>

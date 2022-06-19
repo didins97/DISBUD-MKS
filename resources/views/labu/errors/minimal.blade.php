@@ -54,7 +54,7 @@
 
     </head>
     <body class="antialiased" class="position-relative">
-        <img class="item-jelajah item-jelajah-3" src="assets/img/asset-jelajah.png">
+        <img class="item-jelajah item-jelajah-3" src="{{ asset('assets/img/asset-jelajah.png">
          <div class="position-relative" style="height: 100vh; width: 100vw;">
             <div class="position-absolute top-50 start-50 translate-middle text-center">
 

@@ -13,7 +13,7 @@ class OpkController extends Controller
         if (!$request->has('kategori')) return view('labu.content.opk');
 
         $kategori = $request->kategori;
-        $konten_labu = KontenLabu::whereHas('kategori_opk', function($query) use ($kategori) {
+        $konten_labu = KontenLabu::where('status', 'publikasi')->orderBy('published_at', 'desc')->whereHas('kategori_opk', function($query) use ($kategori) {
             $query->where('isi', $kategori);
         })->paginate(6);
 

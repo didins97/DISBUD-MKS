@@ -13,16 +13,16 @@
                         <h3 class="footer-widget__title">Konten</h3><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links-list list-unstyled">
                             <li>
-                                <a href="#">OPK</a>
+                                <a href="{{ route('opk') }}">OPK</a>
                             </li>
                             <li>
-                                <a href="#">WBTB</a>
+                                <a href="{{ route('wbtb') }}">WBTB</a>
                             </li>
                             <li>
-                                <a href="#">Hari Kebudayaan</a>
+                                <a href="{{ route('hari-kebudayaan') }}">Hari Kebudayaan</a>
                             </li>
                             <li>
-                                <a href="#">Kampung Budaya</a>
+                                <a href="{{ route('kampung-budaya') }}">Kampung Budaya</a>
                             </li>
                         </ul><!-- /.footer-widget__links-list -->
                     </div><!-- /.footer-widget -->

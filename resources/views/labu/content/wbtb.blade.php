@@ -12,7 +12,7 @@
         </div><!-- /.container -->
     </section><!-- /.page-header -->
     <section class="about-four relative" >
-        <img src="assets/images/about/about-2.png" class="badik_content" alt="">
+        <img src="{{ asset('assets/images/about/about-2.png" class="badik_content') }}" alt="">
         <div class="garis_vertical"></div>
         <div class="container">
             <div class="row">
@@ -36,7 +36,7 @@
     </section><!-- /.about-four -->
 
     <section class="list-konten py-10 relative">
-        <img class="collection-two__bg" src="assets/images/backgrounds/huruf-lontara2.png" alt="">
+        <img class="collection-two__bg" src="{{ asset('assets/images/backgrounds/huruf-lontara2.png') }}" alt="">
         <div class="container">
             @foreach($konten_labu as $a)
             <div class="row mb-4">
