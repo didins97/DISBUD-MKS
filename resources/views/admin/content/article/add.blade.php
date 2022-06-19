@@ -19,7 +19,7 @@
                 <div class="card shadow mb-4">
                   @if (count($errors) > 0)
                     <div class="alert alert-danger" role="alert">
-                      {{ $errors->first() }} 
+                      {{ $errors->first() }}
                     </div>
                   @endif
                   <div class="card-header py-3">
@@ -43,6 +43,31 @@
                         <label for="keywordsID" class="form-label">Keywords</label>
                         <input name="keywords_indo" value="{{ old('keywords_indo') }}" id="keywordsID" type="text" class="form-control tagin">
                         <little>gunakan tombol "," (koma) untuk memisahkan keyword</little>
+                      </div>
+                      <div class="mb-3">
+                        <label for="isiArtikelEnglish" class="form-label">Kategori Artikel</label>
+                        <div class="px-3 row">
+                          <div class="col-lg-4">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="kategori" id="kategori1" value="Umum" checked>
+                              <label class="form-check-label" for="kategori1">
+                                Umum
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="kategori" id="kategori2" value="Hari Kebudayaan">
+                              <label class="form-check-label" for="kategori2">
+                                Hari Kebudayaan
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="kategori" id="kategori2" value="Kampung Budaya">
+                              <label class="form-check-label" for="kategori2">
+                                Kampung Budaya/Lorong Wisata
+                              </label>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                   </div>
                 </div>
@@ -229,7 +254,7 @@
                       <label for="namaKontributor" class="form-label">Nama Kontributor</label>
                       <select id="namaKontributor" name="id_kontributor" class="form-select select2-style" aria-label="Default select example">
                         <option value="" selected>Pilih Kontributor</option>
-                        @foreach( $kontributor as $k ) 
+                        @foreach( $kontributor as $k )
                           <option value="{{ $k->id }}">{{ $k->nama }}</option>
                         @endforeach
                       </select>

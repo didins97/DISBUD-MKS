@@ -58,7 +58,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-7 center-v">
-                                                    <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi ?? '' }}</small></a>
+                                                    <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi ?? '' }}</small></a>
                                                     <h3 class="judul-artikel judul-artikel-tentang"><a href="{{ route('video_detail', $a->slug) }}" class="text-decoration-none clr-black">{{ $a->judul_indo }}</a> </h3>
                                                     <div class="wrap-tag-rempah">
                                                         @if( $a->rempahs != null )
@@ -88,11 +88,11 @@
                                             <div class="card-body row">
                                                 <div class="col-5 center-v">
                                                     <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ $a->cloud_key }}&color=%231a150d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                                                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="#" title="" target="_blank" style="color: #cccccc; text-decoration: none;"></a> · <a href="{{ route('audio_detail', $a->slug) }}" title="{{ $a->judul_indo }}" style="color: #cccccc; text-decoration: none;">{{ $a->judul_indo }}</a></div>
+                                                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="javascript:;" title="" target="_blank" style="color: #cccccc; text-decoration: none;"></a> · <a href="{{ route('audio_detail', $a->slug) }}" title="{{ $a->judul_indo }}" style="color: #cccccc; text-decoration: none;">{{ $a->judul_indo }}</a></div>
                                                     <main></main>
                                                 </div>
                                                 <div class="col-7 center-v">
-                                                    <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi ?? '' }}</small></a>
+                                                    <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi ?? '' }}</small></a>
                                                     <h3 class="judul-artikel judul-artikel-tentang"><a href="{{ route('audio_detail', $a->slug) }}" class="text-decoration-none clr-black">{{ $a->judul_indo }}</a> </h3>
                                                     <div class="wrap-tag-rempah">
                                                         @if( $a->rempahs != null )
@@ -124,7 +124,7 @@
                                                         <img class="tentang-thumbnail" src="{{ asset(get_asset_path($a->getTable(), $a->thumbnail)) }}" width="100%">
                                                     </div>
                                                     <div class="col-7 center-v">
-                                                        <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi ?? '' }}</small></a>
+                                                        <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>{{ $a->lokasi->nama_lokasi ?? '' }}</small></a>
                                                         <h3 class="judul-artikel judul-artikel-tentang"><a href="{{ route(generate_route_content($a->getTable()) . '_detail', $a->slug) }}" class="text-decoration-none clr-black">{{ $a->judul_indo }}</a> </h3>
                                                         <div class="wrap-tag-rempah">
                                                             @if( $a->rempahs != null )
@@ -204,7 +204,7 @@
                                             <p class="des-card-info-id">Sebuah upaya rekontruksi dan revitalisasi jalur budaya bahari.</p>
                                         </div>
                                     </div>
-                                    <a href="#" class="stretched-link"></a>
+                                    <a href="javascript:;" class="stretched-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +394,7 @@
                                 </div>
                             </div>
                             <div class="col-7 center-v">
-                                <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
+                                <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
                                 <h3 class="judul-artikel judul-artikel-tentang"><a href="video/${data.data[i].slug}" class="text-decoration-none clr-black">${data.data[i].judul}</a> </h3>
                                 <div class="wrap-tag-rempah">
                                     ${rempahs}
@@ -429,7 +429,7 @@
                                 </div>
                             </div>
                             <div class="col-7 center-v">
-                                <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
+                                <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
                                 <h3 class="judul-artikel judul-artikel-tentang"><a href="video/${data.data[i].slug}" class="text-decoration-none clr-black">${data.data[i].judul}</a> </h3>
                                 <div class="wrap-tag-rempah">
                                     ${rempahs}
@@ -470,7 +470,7 @@
                                 <img class="tentang-thumbnail" src="{{ asset('storage/assets/${asset}/thumbnail/${data.data[i].thumbnail}') }}" width="100%">
                             </div>
                             <div class="col-7 center-v">
-                                <a href="#" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
+                                <a href="javascript:;" class="text-danger m-0 p-0 text-decoration-none wilayah"><small>${data.data[i].nama_lokasi}</small></a>
                                 <h3 class="judul-artikel judul-artikel-tentang"><a href="video/${data.data[i].slug}" class="text-decoration-none clr-black">${data.data[i].judul}</a> </h3>
                                 <div class="wrap-tag-rempah">
                                     ${rempahs}

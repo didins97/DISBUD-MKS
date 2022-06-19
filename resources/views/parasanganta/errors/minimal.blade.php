@@ -62,7 +62,7 @@
 
                 <h1 class="mt-3">@yield('code')</h1>
                 <p> @yield('message')</p>
-                <a href="#" onclick="goBack()"> <i class="fas fa-arrow-alt-circle-left"></i> Kembali</a>
+                <a href="javascript:;" onclick="goBack()"> <i class="fas fa-arrow-alt-circle-left"></i> Kembali</a>
             </div>
           </div>
       <!-- Optional JavaScript; choose one of the two! -->

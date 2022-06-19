@@ -19,7 +19,7 @@
             <div class="card shadow mb-4">
               @if (count($errors) > 0)
                 <div class="alert alert-danger" role="alert">
-                  {{ $errors->first() }} 
+                  {{ $errors->first() }}
                 </div>
               @endif
               {{-- <div class="card-header py-3">
@@ -44,6 +44,31 @@
                     <input name="keywords_indo" value="{{ $artikel->keywords_indo }}" id="keywordsID" type="text" class="form-control tagin">
                     <little>gunakan tombol "," (koma) untuk memisahkan keyword</little>
                   </div>
+                  <div class="mb-3">
+                    <label for="isiArtikelEnglish" class="form-label">Kategori Artikel</label>
+                    <div class="px-3 row">
+                        <div class="col-lg-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="kategori" id="kategori1" value="Umum" {{ $artikel->kategori == 'Umum' ? 'checked' : '' }}>
+                                <label class="form-check-label" for="kategori1">
+                                    Umum
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="kategori" id="kategori2" value="Hari Kebudayaan" {{ $artikel->kategori == 'Hari Kebudayaan' ? 'checked' : '' }}>
+                                <label class="form-check-label" for="kategori2">
+                                    Hari Kebudayaan
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="kategori" id="kategori2" value="kampung Budaya" {{ $artikel->kategori == 'kampung Budaya' ? 'checked' : '' }}>
+                                <label class="form-check-label" for="kategori2">
+                                    kampung Budaya/Lorong Wisata
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -110,7 +135,7 @@
                     <label for="lokasiArtikel" class="form-label">Lokasi</label>
                     <select id="pilihLokasi" name="id_lokasi" class="form-select select2-style" name="id_lokasi" aria-label="Default select example">
                       <option value="" selected>Pilih Lokasi</option>
-                      @foreach( $lokasi as $l ) 
+                      @foreach( $lokasi as $l )
                         @if( $l->id == $artikel->id_lokasi )
                           <option selected value="{{ $l->id }}">{{ $l->nama_lokasi }}</option>
                         @else
@@ -127,12 +152,12 @@
                       <div class="col-lg-4">
                         <div class="form-check">
                           @php
-                            $checked = ''; 
+                            $checked = '';
                             foreach( $ids as $id ) {
                               if( $id == $r->id ) {
                                 $checked = 'checked';
                               }
-                            } 
+                            }
                             @endphp
                             <input class="form-check-input" {{ $checked }} name="rempah[]" type="checkbox" value="{{ $r->id }}" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
@@ -151,12 +176,12 @@
                         @foreach( $kategori_show as $k )
                           <div class="form-check">
                             @php
-                              $checked = ''; 
+                              $checked = '';
                               foreach( $ids as $id ) {
                                 if( $id == $k->id ) {
                                   $checked = 'checked';
                                 }
-                              } 
+                              }
                               @endphp
                               <input class="form-check-input" {{ $checked }} name="kategori_show[]" type="checkbox" value="{{ $k->id }}" id="flexCheckDefault">
                               <label class="form-check-label" for="flexCheckDefault">
@@ -173,10 +198,10 @@
                       <div class="col-lg-4">
                         <div class="form-check">
                           @if( $artikel->penulis == 'kontributor umum/pamong budaya' )
-                            <input checked class="form-check-input" type="checkbox" name="contributor"  
+                            <input checked class="form-check-input" type="checkbox" name="contributor"
                             value="contributor" id="peng-kontributor">
                           @else
-                            <input class="form-check-input" type="checkbox" name="contributor"  
+                            <input class="form-check-input" type="checkbox" name="contributor"
                             value="contributor" id="peng-kontributor">
                           @endif
                             <label class="form-check-label-contributor" for="flexCheckDefault-contributor"">
@@ -195,7 +220,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>  
+                  </div>
               </div>
             </div>
           </div> --}}
@@ -312,7 +337,7 @@
         };
       });
 
-     
+
     })
   </script>
 

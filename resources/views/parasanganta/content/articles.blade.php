@@ -29,8 +29,8 @@
                         </div>
                         <div class="blog-one__content">
                             <ul class="blog-one__meta list-unstyled">
-                                <li><a href="#">{{ $a->penulis != 'admin' ? $a->kontributor_relasi->nama : 'admin' }}</a></li>
-                                {{-- <li><a href="#">03 Comments</a></li> --}}
+                                <li><a href="javascript:;">{{ $a->penulis != 'admin' ? $a->kontributor_relasi->nama : 'admin' }}</a></li>
+                                {{-- <li><a href="javascript:;">03 Comments</a></li> --}}
                             </ul>
                             <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->judul_indo }}</a></h3>
                             <p>{!! Str::limit($a->konten_indo, 100) !!}</p>
@@ -38,19 +38,19 @@
                         </div>
                     </div>
                 </div>
-                
+
                 @endforeach
 
-               
+
             </div><!-- /.row -->
 
             {{$artikel->links('partials.pagination')}}
             {{-- {{$artikel->links()}} --}}
-           
 
 
 
-            
+
+
         </div>
     </section>
     @endsection

@@ -22,7 +22,7 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $semua_artikel = Artikel::where('status', 'publikasi')->where('slider_utama', 1);
+        $semua_artikel = Artikel::where('status', 'publikasi')->where('slider_utama', 1)->where('kategori', 'Umum');
         $semua_publikasi = Publikasi::where('status', 'publikasi')->where('slider_utama', 1);
         $semua_video = Video::where('status', 'publikasi')->where('slider_utama', 1);
         $semua_audio = Audio::where('status', 'publikasi')->where('slider_utama', 1);
@@ -30,13 +30,13 @@ class HomeController extends Controller
         $semua_kegiatan = Kegiatan::where('status', 'publikasi')->where('slider_utama', 1);
         $semua_kerjasama = Kerjasama::where('status', 'publikasi')->where('slider_utama', 1);
 
-        
+
         if( request()->get('search') != null ) {
-            $artikel = Artikel::where('status', 'publikasi')->where('judul_indo', 'LIKE', request()->get('search'))->orderBy('published_at', 'desc');
+            $artikel = Artikel::where('status', 'publikasi')->where('kategori', 'Umum')->where('judul_indo', 'LIKE', request()->get('search'))->orderBy('published_at', 'desc');
         } else {
-            $artikel = Artikel::where('status', 'publikasi')->orderBy('published_at', 'desc');
+            $artikel = Artikel::where('status', 'publikasi')->where('kategori', 'Umum')->orderBy('published_at', 'desc');
         }
-        
+
         $kegiatan = Kegiatan::where('status', 'publikasi')->orderBy('published_at', 'desc');
         $video = Video::where('status', 'publikasi')->orderBy('published_at', 'desc');
 
@@ -57,7 +57,7 @@ class HomeController extends Controller
             $slider = $semua_artikel->mergeRecursive($semua_publikasi)->mergeRecursive($semua_video)->mergeRecursive($semua_audio)->mergeRecursive($semua_foto)->mergeRecursive($semua_kegiatan)->mergeRecursive($semua_kerjasama);
 
             return view('content_english.home', compact('artikel', 'kegiatan', 'video', 'slider'));
-        } 
+        }
         $semua_artikel = $semua_artikel->get();
         $semua_audio = $semua_audio->get();
         $semua_foto = $semua_foto->get();

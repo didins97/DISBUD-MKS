@@ -1,6 +1,6 @@
 @if( Session::get('lg') == 'en' )
 {{-- Bahasa Inggriss --}}
-@if( Request::segment(1) == null )  
+@if( Request::segment(1) == null )
 <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top bg-trans d-none d-lg-block d-xl-none">
   <div class="container">
     <a class="navbar-brand" href="{{ route('home') }}">
@@ -8,7 +8,7 @@
     </a>
     <ul class="link-bahasa d-block d-lg-none">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ asset('assets/img/bendera/flag-english.png') }}" class="mr-2 flag" width="20px"> EN
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,7 +50,7 @@
         <div class="wrap-language">
           <ul class="link-bahasa d-none d-lg-block">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -89,7 +89,7 @@
       </div>
       <div class="col"></div>
       <div class="col mt-1">
-        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: 0px">
@@ -159,7 +159,7 @@
     </a>
     <ul class="link-bahasa d-block d-lg-none">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle clr-black" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') :  asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -188,16 +188,16 @@
           <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             About
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ route('tentangjalur') }}">The Route</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangjejak') }}">The Trace</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangmasadepan') }}">The Future</a></li>
-            {{-- <li><a class="dropdown-item" href="#">The Route</a></li>
-            <li><a class="dropdown-item" href="#">The Trace</a></li>
-            <li><a class="dropdown-item" href="#">The Future</a></li> --}}
+            {{-- <li><a class="dropdown-item" href="javascript:;">The Route</a></li>
+            <li><a class="dropdown-item" href="javascript:;">The Trace</a></li>
+            <li><a class="dropdown-item" href="javascript:;">The Future</a></li> --}}
           </ul>
         </li>
         <li class="nav-item">
@@ -211,7 +211,7 @@
         <div class="wrap-language">
           <ul class="link-bahasa d-none d-lg-block">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle clr-black" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -250,7 +250,7 @@
       </div>
       <div class="col"></div>
       <div class="col mt-1">
-        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: 0px">
@@ -280,7 +280,7 @@
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="page-scroll dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="page-scroll dropdown-toggle clr-black" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-info-circle mr-2"></i> About
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -288,9 +288,9 @@
             <li><a class="dropdown-item" href="{{ route('tentangjalur') }}">The Route</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangjejak') }}">The Trace</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangmasadepan') }}">The Future</a></li>
-            {{-- <li><a class="dropdown-item" href="#">The Route</a></li>
-            <li><a class="dropdown-item" href="#">The Trace</a></li>
-            <li><a class="dropdown-item" href="#">The Future</a></li> --}}
+            {{-- <li><a class="dropdown-item" href="javascript:;">The Route</a></li>
+            <li><a class="dropdown-item" href="javascript:;">The Trace</a></li>
+            <li><a class="dropdown-item" href="javascript:;">The Future</a></li> --}}
           </ul>
         </li>
         <li class="nav-item">
@@ -329,7 +329,7 @@
     </a>
     <ul class="link-bahasa d-block d-lg-none">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -358,16 +358,16 @@
           <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             About
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ route('tentangjalur') }}">The Route</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangjejak') }}">The Trace</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangmasadepan') }}">The Future</a></li>
-            {{-- <li><a class="dropdown-item" href="#">The Route</a></li>
-            <li><a class="dropdown-item" href="#">The Trace</a></li>
-            <li><a class="dropdown-item" href="#">The Future</a></li> --}}
+            {{-- <li><a class="dropdown-item" href="javascript:;">The Route</a></li>
+            <li><a class="dropdown-item" href="javascript:;">The Trace</a></li>
+            <li><a class="dropdown-item" href="javascript:;">The Future</a></li> --}}
           </ul>
         </li>
         <li class="nav-item">
@@ -381,7 +381,7 @@
         <div class="wrap-language">
           <ul class="link-bahasa d-none d-lg-block">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') :  asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -420,7 +420,7 @@
       </div>
       <div class="col"></div>
       <div class="col mt-1">
-        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: 0px">
@@ -450,16 +450,16 @@
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="page-scroll dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="page-scroll dropdown-toggle clr-black" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-info-circle mr-2"></i> About
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ route('tentangjalur') }}">The Route</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangjejak') }}">The Trace</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangmasadepan') }}">The Future</a></li>
-            {{-- <li><a class="dropdown-item" href="#">The Route</a></li>
-            <li><a class="dropdown-item" href="#">The Trace</a></li>
-            <li><a class="dropdown-item" href="#">The Future</a></li> --}}
+            {{-- <li><a class="dropdown-item" href="javascript:;">The Route</a></li>
+            <li><a class="dropdown-item" href="javascript:;">The Trace</a></li>
+            <li><a class="dropdown-item" href="javascript:;">The Future</a></li> --}}
           </ul>
         </li>
         <li class="nav-item">
@@ -495,7 +495,7 @@
 @else
 
 {{-- Bahasa Indonesia --}}
-@if( Request::segment(1) == null )  
+@if( Request::segment(1) == null )
 <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top bg-trans d-none d-lg-block d-xl-none">
   <div class="container">
     <a class="navbar-brand" href="{{ route('home') }}">
@@ -503,7 +503,7 @@
     </a>
     <ul class="link-bahasa d-block d-lg-none">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> ID
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -545,7 +545,7 @@
         <div class="wrap-language">
           <ul class="link-bahasa d-none d-lg-block">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -583,7 +583,7 @@
       </div>
       <div class="col"></div>
       <div class="col mt-1">
-        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: 0px">
@@ -653,7 +653,7 @@
     </a>
     <ul class="link-bahasa d-block d-lg-none">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle clr-black" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') :  asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -682,16 +682,16 @@
           <a class="nav-link" aria-current="page" href="{{ route('home') }}">Beranda</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Tentang
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ route('tentangjalur') }}">Jalur</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangjejak') }}">Jejak</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangmasadepan') }}">Masa Depan</a></li>
-            {{-- <li><a class="dropdown-item" href="#">Jalur</a></li>
-            <li><a class="dropdown-item" href="#">Jejak</a></li>
-            <li><a class="dropdown-item" href="#">Masa Depan</a></li> --}}
+            {{-- <li><a class="dropdown-item" href="javascript:;">Jalur</a></li>
+            <li><a class="dropdown-item" href="javascript:;">Jejak</a></li>
+            <li><a class="dropdown-item" href="javascript:;">Masa Depan</a></li> --}}
           </ul>
         </li>
         <li class="nav-item">
@@ -705,7 +705,7 @@
         <div class="wrap-language">
           <ul class="link-bahasa d-none d-lg-block">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle clr-black" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -743,7 +743,7 @@
       </div>
       <div class="col"></div>
       <div class="col mt-1">
-        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: 0px">
@@ -773,16 +773,16 @@
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="page-scroll dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="page-scroll dropdown-toggle clr-black" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-info-circle mr-2"></i> Tentang
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li style="padding-top : 0px"><a class="dropdown-item" href="{{ route('tentangjalur') }}">Jalur</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangjejak') }}">Jejak</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangmasadepan') }}">Masa Depan</a></li>
-            {{-- <li><a class="dropdown-item" href="#">Jalur</a></li>
-            <li><a class="dropdown-item" href="#">Jejak</a></li>
-            <li><a class="dropdown-item" href="#">Masa Depan</a></li> --}}
+            {{-- <li><a class="dropdown-item" href="javascript:;">Jalur</a></li>
+            <li><a class="dropdown-item" href="javascript:;">Jejak</a></li>
+            <li><a class="dropdown-item" href="javascript:;">Masa Depan</a></li> --}}
           </ul>
         </li>
         <li class="nav-item">
@@ -821,7 +821,7 @@
     </a>
     <ul class="link-bahasa d-block d-lg-none">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -850,16 +850,16 @@
           <a class="nav-link" aria-current="page" href="{{ route('home') }}">Beranda</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Tentang
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ route('tentangjalur') }}">Jalur</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangjejak') }}">Jejak</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangmasadepan') }}">Masa Depan</a></li>
-            {{-- <li><a class="dropdown-item" href="#">Jalur</a></li>
-            <li><a class="dropdown-item" href="#">Jejak</a></li>
-            <li><a class="dropdown-item" href="#">Masa Depan</a></li> --}}
+            {{-- <li><a class="dropdown-item" href="javascript:;">Jalur</a></li>
+            <li><a class="dropdown-item" href="javascript:;">Jejak</a></li>
+            <li><a class="dropdown-item" href="javascript:;">Masa Depan</a></li> --}}
           </ul>
         </li>
         <li class="nav-item">
@@ -873,7 +873,7 @@
         <div class="wrap-language">
           <ul class="link-bahasa d-none d-lg-block">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') :  asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -911,7 +911,7 @@
       </div>
       <div class="col"></div>
       <div class="col mt-1">
-        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ Session::get('lg') == 'en' ? asset('assets/img/bendera/flag-english.png') : asset('assets/img/bendera/flag-indonesia.png') }}" class="mr-2 flag" width="20px"> {{ Session::get('lg') == 'en' ? 'EN' : 'ID' }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: 0px">
@@ -941,16 +941,16 @@
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="page-scroll dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="page-scroll dropdown-toggle clr-black" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-info-circle mr-2"></i> Tentang
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li style="padding-top : 0px"><a class="dropdown-item" href="{{ route('tentangjalur') }}">Jalur</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangjejak') }}">Jejak</a></li>
             <li><a class="dropdown-item" href="{{ route('tentangmasadepan') }}">Masa Depan</a></li>
-            {{-- <li><a class="dropdown-item" href="#">Jalur</a></li>
-            <li><a class="dropdown-item" href="#">Jejak</a></li>
-            <li><a class="dropdown-item" href="#">Masa Depan</a></li> --}}
+            {{-- <li><a class="dropdown-item" href="javascript:;">Jalur</a></li>
+            <li><a class="dropdown-item" href="javascript:;">Jejak</a></li>
+            <li><a class="dropdown-item" href="javascript:;">Masa Depan</a></li> --}}
           </ul>
         </li>
         <li class="nav-item">

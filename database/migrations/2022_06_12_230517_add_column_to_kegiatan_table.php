@@ -14,7 +14,7 @@ class AddColumnToKegiatanTable extends Migration
     public function up()
     {
         Schema::table('kegiatans', function (Blueprint $table) {
-            $table->string('venue')->nullable();
+            $table->string('venue')->nullable()->change();
         });
     }
 

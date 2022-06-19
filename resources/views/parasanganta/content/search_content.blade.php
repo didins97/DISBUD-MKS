@@ -19,15 +19,15 @@
             <div class="block-title mb-5">
                 <p class="text-regular keyword-search">keyword “{{$search}}”</p>
             </div><!-- /.block-title -->
-           
+
             <div class="block-title mb-4">
                 <h3 class="text-regular">Hasil</h3>
             </div><!-- /.block-title -->
-           
+
             <div class="row">
                 @foreach($artikel as $a)
                     @if($a->getTable()=='bangunans')
-                   
+
 
 
                     <div class="col-lg-4">
@@ -41,8 +41,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -63,8 +62,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -85,8 +83,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -107,8 +104,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -129,8 +125,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -151,8 +146,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
                                 </h3>
@@ -173,8 +167,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->judul_indo }}</a>
                                 </h3>
@@ -187,7 +180,7 @@
                     <div class="col-lg-4">
                         <div class="blog-one__single">
                             <div class="blog-one__image">
-                                <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
+                                <img src="{{ asset('storage/assets/kegiatan/thumbnail/' . $a->thumbnail) }}" alt="">
                                 <div class="blog-one__date">
                                     <i class="far fa-calendar-alt"></i>
                                      {{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}
@@ -195,8 +188,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->nama }}</a>
                                 </h3>
@@ -217,8 +209,7 @@
                             </div>
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
-                                    <li><a href="#">By {{$a->penulis}}</a></li>
-                                    <li><a href="#">03 Comments</a></li>
+                                    <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
                                 <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->judul_indo }}</a>
                                 </h3>
@@ -229,8 +220,8 @@
                     </div>
                     @endif
                 @endforeach
-               
-               
+
+
             </div><!-- /.row -->
           
            
@@ -244,7 +235,12 @@
                 </div><!-- /.post-pagination -->
             </div><!-- /.text-center d-flex justify-content-center -->
  </div><!-- /.container --> --}}
-    {{$artikel->links('partials.pagination')}}
+    {{-- {{$artikel->links('partials.pagination')}} --}}
+
+
+            {!! $artikel->links('parasanganta.vendor.pagination.custom') !!}
+
+        </div><!-- /.container -->
 
 
     </section><!-- /.event-three -->

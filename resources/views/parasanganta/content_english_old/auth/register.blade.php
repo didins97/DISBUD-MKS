@@ -58,7 +58,7 @@
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                   <label class="form-check-label des-form-daftar" for="flexCheckChecked">
-                    I agree with <a class="link-daftar" href="#">Term of Use</a>
+                    I agree with <a class="link-daftar" href="javascript:;">Term of Use</a>
                   </label>
                 </div>
                 <div class="row">

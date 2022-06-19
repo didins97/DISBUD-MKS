@@ -120,6 +120,12 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       Route::post('/parasanganta/kegiatan1/update/{photoId}', [Kegiatan1ControllerAdmin::class, 'update'])->name('admin.kegiatan1.update');
       Route::get('/parasanganta/kegiatan1/delete/{kegiatan1Id}', [Kegiatan1ControllerAdmin::class, 'delete'])->name('admin.kegiatan1.delete');
 
+      Route::get('/labu/konten', [\App\Http\Controllers\Admin\KontenLabuController::class, 'index'])->name('admin.konten_labu.index');
+      Route::get('/labu/konten/tambah', [\App\Http\Controllers\Admin\KontenLabuController::class, 'add'])->name('admin.konten_labu.add');
+      Route::post('/labu/konten/tambah', [\App\Http\Controllers\Admin\KontenLabuController::class, 'store'])->name('admin.konten_labu.store');
+      Route::get('/labu/konten/edit/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'edit'])->name('admin.konten_labu.edit');
+      Route::post('/labu/konten/update/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'update'])->name('admin.konten_labu.update');
+      Route::get('/labu/konten/delete/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'delete'])->name('admin.konten_labu.delete');
 
       // Route::get('/parasanganta/struktur', [StrukturControllerAdmin::class, 'index'])->name('admin.struktur.index');
       // Route::get('/parasanganta/situs', [SitusControllerAdmin::class, 'index'])->name('admin.situs.index');
@@ -262,20 +268,19 @@ Route::get('/parasanganta/tentang-kawasan', [App\Http\Controllers\Parasanganta\K
 Route::get('/parasanganta/tentang-kegiatan', [App\Http\Controllers\Parasanganta\Kegiatan1Controller::class, 'index'])->name('tentangkegiatan1');
 Route::get('/parasanganta/events', [App\Http\Controllers\Parasanganta\KegiatanController::class, 'index'])->name('tentangkegiatan');
 Route::get('/parasanganta', [App\Http\Controllers\Parasanganta\HomeController::class, 'index'])->name('parasanganta');
-
-// Route::get('/artikel/{slug}', [ArtikelController::class, 'show'])->name('article_detail');
-
 Route::get('/artikel/{slug}', [App\Http\Controllers\Parasanganta\ArtikelController::class, 'show'])->name('article_detail');
 
-// Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
-// Route::get('/tentang-benda', [BendaController::class, 'index'])->name('tentangbenda');
-// Route::get('/tentang-bangunan', [BangunanController::class, 'index'])->name('tentangbangunan');
-// Route::get('/tentang-struktur', [StrukturController::class, 'index'])->name('tentangstruktur');
-// Route::get('/tentang-situs', [SitusController::class, 'index'])->name('tentangsitus');
-// Route::get('/tentang-kawasan', [KawasanController::class, 'index'])->name('tentangkawasan');
-// Route::get('/tentang-kegiatan1', [Kegiatan1Controller::class, 'index'])->name('tentangkegiatan1');
-
-
+// LABU
+Route::get('/labu/opk/{slug}', [App\Http\Controllers\Labu\OpkController::class, 'show'])->name('opk_detail');
+Route::get('/labu/wbtb/{slug}', [App\Http\Controllers\Labu\WbtbController::class, 'show'])->name('wbtb_detail');
+Route::get('/labu/artikel/{slug}', [App\Http\Controllers\Labu\ArtikelController::class, 'show'])->name('article_labu_detail');
+Route::get('/labu/opk', [App\Http\Controllers\Labu\OpkController::class, 'index'])->name('opk');
+Route::get('/labu/wbtb', [App\Http\Controllers\Labu\WbtbController::class, 'index'])->name('wbtb');
+Route::get('/labu/hari-kebudayaan', [App\Http\Controllers\Labu\ArtikelController::class, 'index_hk'])->name('hari-kebudayaan');
+Route::get('/labu/kampung-budaya', [App\Http\Controllers\Labu\ArtikelController::class, 'index_kb'])->name('kampung-budaya');
+Route::get('/labu/artikel', [App\Http\Controllers\Labu\ArtikelController::class, 'index'])->name('article_labu');
+Route::get('/labu/cari', [App\Http\Controllers\Labu\SearchController::class, 'search'])->name('article_labu_search');
+Route::get('/labu', [App\Http\Controllers\Labu\HomeController::class, 'index'])->name('labu');
 
 
 

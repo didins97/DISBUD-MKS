@@ -70,7 +70,7 @@
               <a href="{{ route('tentangjalur') }}" class="btn btn-danger btn-jelajah">
                 Jelajahi
               </a>
-              {{-- <a href="#" class="btn btn-danger btn-jelajah">
+              {{-- <a href="javascript:;" class="btn btn-danger btn-jelajah">
                 Jelajahi
               </a> --}}
             </div>
@@ -84,7 +84,7 @@
               <a href="{{ route('tentangjejak') }}" class="btn btn-danger btn-jelajah">
                 Jelajahi
               </a>
-              {{-- <a href="#" class="btn btn-danger btn-jelajah">
+              {{-- <a href="javascript:;" class="btn btn-danger btn-jelajah">
                 Jelajahi
               </a> --}}
             </div>
@@ -104,7 +104,7 @@
               <a href="{{ route('tentangmasadepan') }}" class="btn btn-danger btn-jelajah">
                 Jelajahi
               </a>
-              {{-- <a href="#" class="btn btn-danger btn-jelajah">
+              {{-- <a href="javascript:;" class="btn btn-danger btn-jelajah">
                 Jelajahi
               </a> --}}
             </div>

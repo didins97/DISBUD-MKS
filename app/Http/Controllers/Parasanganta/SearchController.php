@@ -35,7 +35,7 @@ class SearchController extends Controller
         $lg = (Session::get('lg') == 'en') ? 'english' : 'indo';
 
         $artikel = Artikel::when($search_condition, function($query) use ($search, $lg) {
-            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
+            $query->where('published_at', '<=', \Carbon\Carbon::now())->where('kategori', 'Umum')->where('status', 'publikasi')->orderBy('published_at', 'desc')->where('judul_' . $lg , 'LIKE', '%'.$search . '%');
         })->when($lg == 'english', function($query) use ($lg, $search) {
             $query->where('published_at', '<=', \Carbon\Carbon::now())->where('judul_english', '!=', null);
         })->get();
@@ -82,12 +82,12 @@ class SearchController extends Controller
         })->get();
 
         $artikel = $this->paginate($artikel->mergeRecursive($kawasan)->mergeRecursive($struktur)->mergeRecursive($kegiatan1)->mergeRecursive($kegiatan)->mergeRecursive($benda)->mergeRecursive($bangunan)->mergeRecursive($situs)->mergeRecursive($foto), 9);
-        $artikel->setPath('cari?search=' . $search);
+        $artikel->setPath('parasanganta/cari?search=' . $search);
 
 
         if( Session::get('lg') == 'en' )
             return view('content_english.search_content', compact('artikel'));
-    
+
 
         return view('parasanganta.content.search_content', compact('artikel','search'));
     }

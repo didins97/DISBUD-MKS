@@ -41,6 +41,8 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="gT2cR5h4"></script>
 
     @yield('content')
     @include('partials.footer')
@@ -49,7 +51,7 @@
 
     <div class="side-menu__block">
 
-        <a href="#" class="side-menu__toggler side-menu__close-btn"><i class="fa fa-times"></i>
+        <a href="javascript:;" class="side-menu__toggler side-menu__close-btn"><i class="fa fa-times"></i>
             <!-- /.fa fa-close --></a>
 
         <div class="side-menu__block-overlay custom-cursor__overlay">
@@ -62,13 +64,13 @@
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
-            <p class="side-menu__block__copy">(c) 2022 <a href="#">Dinas Kebudayaan Kota Makassar</a></p>
+            <p class="side-menu__block__copy">(c) 2022 <a href="javascript:;">Dinas Kebudayaan Kota Makassar</a></p>
             <div class="side-menu__social d-none">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-google-plus"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="javascript:;"><i class="fab fa-facebook-f"></i></a>
+                <a href="javascript:;"><i class="fab fa-google-plus"></i></a>
+                <a href="javascript:;"><i class="fab fa-twitter"></i></a>
+                <a href="javascript:;"><i class="fab fa-instagram"></i></a>
+                <a href="javascript:;"><i class="fab fa-pinterest-p"></i></a>
             </div>
         </div><!-- /.side-menu__block-inner -->
     </div><!-- /.side-menu__block -->
@@ -86,12 +88,24 @@
         </div><!-- /.search-popup__inner -->
     </div><!-- /.search-popup -->
 
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    <a href="javascript:;" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
     <!-- Template JS -->
 
     @include('partials.js')
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P32HEMNE79"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P32HEMNE79');
+    </script>
 
 </body>
 
