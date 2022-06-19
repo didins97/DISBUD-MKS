@@ -5,7 +5,7 @@
 @include('labu.partials.header')
 
 
-<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
+<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/bg-header.jpg') }}); background-size: cover; background-position: center;">
     <div class="container">
         <h2>OPK</h2>
     </div><!-- /.container -->

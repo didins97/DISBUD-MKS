@@ -53,7 +53,7 @@
             <div class="inner-container">
                 <p>&copy; Copyright 2022 Dinas Kebudayaan Kota Makassar</p>
                 <a href="@" class="site-footer__bottom-logo">
-                    <img src="{{ asset('assets/images/resources/logo-makassar.png') }}" alt="" width="60">
+                    <img src="{{ asset('assets/images/resources/logo-makassar.webp') }}" alt="" width="60">
                 </a>
                 <div class="site-footer__bottom-links">
                     <!-- <a href="#">Terms & conditions</a> -->

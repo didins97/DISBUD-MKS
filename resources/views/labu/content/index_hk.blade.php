@@ -4,7 +4,7 @@
 
 @include('labu.partials.header')
 
-<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
+<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/bg-header.jpg') }}); background-size: cover; background-position: center;">
     <div class="container">
         <h2>Hari Kebudayaan</h2>
     </div><!-- /.container -->
@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-lg-2">
                             <div class="image_before_tr wow fadeInRight mr-0" data-wow-duration="1500ms">
-                                <img src="{{ asset('assets/images/konten/konten-hk1.png') }}" alt="">
+                                <img class="radius-medium" src="{{ asset('assets/images/konten/konten-hk.jpg') }}" alt="" width="500px">
                             </div><!-- /.about-four__image -->
                         </div>
                     </div>

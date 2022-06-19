@@ -4,7 +4,7 @@
 
 @include('labu.partials.header')
 
-<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
+<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/bg-header.jpg') }}); background-size: cover; background-position: center;">
     <div class="container">
         <h2>Kampung Budaya</h2>
     </div><!-- /.container -->
@@ -14,15 +14,15 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="about-four__content">
-                    <div class="block-title">
-                        <p class="hidden">Apa Itu kampung Budaya</p>
+                    <div class="block-title mb-3">
+                        <p class="hidden">Apa Itu Kampung Budaya/Lorong Wisata?</p>
                         <h3>Kampung Budaya</h3>
 
                     </div><!-- /.block-title -->
                     <div class="row">
                         <div class="col-lg-10">
                             <p>Kampung budaya memiliki pengertian sebagai wilayah atau desa yang memiliki potensi kebudayaan untuk dikembangkan.</p>
-                            <div class="block-title">
+                            <div class="block-title mb-3 mt-5">
                                 <h3>Lorong Wisata</h3>
                             </div><!-- /.block-title -->
                             <div class="row">
@@ -33,8 +33,8 @@
                         </div>
 
                         <div class="col-lg-2">
-                            <div class="image_before_tr wow fadeInRight mr-0" data-wow-duration="1500ms">
-                                <img src="{{ asset('assets/images/konten/konten-hk1.png') }}" alt="">
+                            <div class="image_before_tr wow fadeInRight mr-0 radius-medium" data-wow-duration="1500ms">
+                                <img class="radius-medium" src="{{ asset('assets/images/konten/konten-kblw.jpg') }}" alt="" width="500px">
                             </div><!-- /.about-four__image -->
                         </div>
                     </div>
