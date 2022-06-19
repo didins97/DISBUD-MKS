@@ -272,7 +272,9 @@ Route::get('/artikel/{slug}', [App\Http\Controllers\Parasanganta\ArtikelControll
 
 // LABU
 Route::get('/labu/opk/{slug}', [App\Http\Controllers\Labu\OpkController::class, 'show'])->name('opk_detail');
+Route::get('/labu/wbtb/{slug}', [App\Http\Controllers\Labu\WbtbController::class, 'show'])->name('wbtb_detail');
 Route::get('/labu/opk', [App\Http\Controllers\Labu\OpkController::class, 'index'])->name('opk');
+Route::get('/labu/wbtb', [App\Http\Controllers\Labu\WbtbController::class, 'index'])->name('wbtb');
 Route::get('/labu', [App\Http\Controllers\Labu\HomeController::class, 'index'])->name('labu');
 
 

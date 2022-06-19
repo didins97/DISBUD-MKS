@@ -16,7 +16,7 @@
                     <ul class="main-nav__navigation-box">
                         <li><a href="{{ route('labu') }}" class="labu-nav__link light">Beranda</a></li>
                         <li><a href="{{ route('opk') }}" class="labu-nav__link light">OPK</a></li>
-                        <li><a href="{{ route('labu') }}" class="labu-nav__link dark">WBTB</a></li>
+                        <li><a href="{{ route('wbtb') }}" class="labu-nav__link dark">WBTB</a></li>
                         <li><a href="{{ route('labu') }}" class="labu-nav__link light">Hari Kebudayaan</a></li>
                         <li><a href="{{ route('labu') }}" class="labu-nav__link light">Kampung Budaya</a></li>
                     </ul><!-- /.main-nav__navigation-box -->
