@@ -83,7 +83,7 @@
             <div class="cursor-follower"></div>
         </div><!-- /.search-popup__overlay -->
         <div class="search-popup__inner">
-            <form action="{{route('article_search')}}" class="search-popup__form">
+            <form action="{{route('article_labu_search')}}" class="search-popup__form">
                 <input type="text" name="search" placeholder="Tulis yang ingin kamu cari....">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
