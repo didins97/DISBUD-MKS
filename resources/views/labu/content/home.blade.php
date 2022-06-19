@@ -10,15 +10,15 @@
                     <a href="{{ route('labu') }}">
                         <img src="assets/images/logo/logo-labu-white.svg" alt="" width="155">
                     </a>
-                    <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
+                    <a href="javascript:;" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
                 </div><!-- /.logo-box -->
                 <div class="main-nav__main-navigation">
                     <ul class="main-nav__navigation-box">
                         <li><a href="{{ route('labu') }}" class="labu-nav__link light">Beranda</a></li>
-                        <li><a href="#" class="labu-nav__link light">OPK</a></li>
-                        <li><a href="#" class="labu-nav__link dark">WBTB</a></li>
-                        <li><a href="#" class="labu-nav__link light">Hari Kebudayaan</a></li>
-                        <li><a href="#" class="labu-nav__link light">Kampung Budaya</a></li>
+                        <li><a href="{{ route('opk') }}" class="labu-nav__link light">OPK</a></li>
+                        <li><a href="{{ route('labu') }}" class="labu-nav__link dark">WBTB</a></li>
+                        <li><a href="{{ route('labu') }}" class="labu-nav__link light">Hari Kebudayaan</a></li>
+                        <li><a href="{{ route('labu') }}" class="labu-nav__link light">Kampung Budaya</a></li>
                     </ul><!-- /.main-nav__navigation-box -->
                 </div><!-- /.main-nav__main-navigation -->
                 <div class="main-nav__right">
@@ -70,7 +70,7 @@
                                 <a href="#" class="collection-grid__link">+</a><!-- /.collection-grid__link -->
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
-                                <h3><a href="#">Objek Pemajuan Kebudayaan</a></h3>
+                                <h3><a href="{{ route('opk') }}">Objek Pemajuan Kebudayaan</a></h3>
                             </div><!-- /.collection-grid__content -->
                         </div><!-- /.collection-grid__single -->
                     </div><!-- /.col-lg-4 -->

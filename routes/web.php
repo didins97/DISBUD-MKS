@@ -271,7 +271,9 @@ Route::get('/parasanganta', [App\Http\Controllers\Parasanganta\HomeController::c
 Route::get('/artikel/{slug}', [App\Http\Controllers\Parasanganta\ArtikelController::class, 'show'])->name('article_detail');
 
 // LABU
-Route::get('/labu', [App\Http\Controllers\labu\HomeController::class, 'index'])->name('labu');
+Route::get('/labu/opk/{slug}', [App\Http\Controllers\Labu\OpkController::class, 'show'])->name('opk_detail');
+Route::get('/labu/opk', [App\Http\Controllers\Labu\OpkController::class, 'index'])->name('opk');
+Route::get('/labu', [App\Http\Controllers\Labu\HomeController::class, 'index'])->name('labu');
 
 
 
