@@ -39,12 +39,12 @@
 </head>
 <body>
 
-<div class="preloader">
+<!-- <div class="preloader">
     <div class="lds-ripple">
         <div></div>
         <div></div>
     </div>
-</div><!-- /.preloader -->
+</div> -->
 <div class="page-wrapper">
     <nav class="main-nav-one stricky main-nav-one__home-three" style="background-color: #000;">
         <div class="container">
