@@ -45,7 +45,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="javascript:;"" class=" canvas">
+                <a href="{{ route('labu') }}" class=" canvas">
                     <div class="canvas_border">
                         <svg>
                             <defs>

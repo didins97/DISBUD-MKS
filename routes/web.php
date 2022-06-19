@@ -268,20 +268,10 @@ Route::get('/parasanganta/tentang-kawasan', [App\Http\Controllers\Parasanganta\K
 Route::get('/parasanganta/tentang-kegiatan', [App\Http\Controllers\Parasanganta\Kegiatan1Controller::class, 'index'])->name('tentangkegiatan1');
 Route::get('/parasanganta/events', [App\Http\Controllers\Parasanganta\KegiatanController::class, 'index'])->name('tentangkegiatan');
 Route::get('/parasanganta', [App\Http\Controllers\Parasanganta\HomeController::class, 'index'])->name('parasanganta');
-
-// Route::get('/artikel/{slug}', [ArtikelController::class, 'show'])->name('article_detail');
-
 Route::get('/artikel/{slug}', [App\Http\Controllers\Parasanganta\ArtikelController::class, 'show'])->name('article_detail');
 
-// Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
-// Route::get('/tentang-benda', [BendaController::class, 'index'])->name('tentangbenda');
-// Route::get('/tentang-bangunan', [BangunanController::class, 'index'])->name('tentangbangunan');
-// Route::get('/tentang-struktur', [StrukturController::class, 'index'])->name('tentangstruktur');
-// Route::get('/tentang-situs', [SitusController::class, 'index'])->name('tentangsitus');
-// Route::get('/tentang-kawasan', [KawasanController::class, 'index'])->name('tentangkawasan');
-// Route::get('/tentang-kegiatan1', [Kegiatan1Controller::class, 'index'])->name('tentangkegiatan1');
-
-
+// LABU
+Route::get('/labu', [App\Http\Controllers\labu\HomeController::class, 'index'])->name('labu');
 
 
 
