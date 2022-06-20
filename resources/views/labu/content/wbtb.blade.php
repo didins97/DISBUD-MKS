@@ -41,11 +41,12 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="image-card radius-medium">
                         <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
+                        <a href="{{ route('wbtb_detail', $a->slug) }}" class="stretched-link"></a>
                     </div>
                     <h3>
-                        {{ $a->judul }}
+                    <a href="{{ route('wbtb_detail', $a->slug) }}">{{ $a->judul }}</a>
                     </h3>
-                    <a href="{{ route('wbtb_detail', $a->slug) }}" class="stretched-link"></a>
+
                 </div>
             @endforeach
         </div>
