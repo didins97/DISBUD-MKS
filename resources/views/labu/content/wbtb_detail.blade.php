@@ -35,7 +35,7 @@
                             <h3 class="sidebar__title title-underline">WBTB Lainnya</h3>
                             <div class="sidebar__post">
                                 @foreach($konten_labu as $a)
-                                <div class="sidebar__post-single`">
+                                <div class="sidebar__post-single">
                                     <div class="sidebar__post-image">
                                         <img src="{{ asset('storage/assets/foto/thumbnail/' . $detail->thumbnail) }}" alt="OPK"
                                             class="radius-medium">
