@@ -10,7 +10,7 @@ class WbtbController extends Controller
 {
     public function index(Request $request)
     {
-        $konten_labu = KontenLabu::where('is_wbtb', 1)->where('status', 'publikasi')->orderBy('published_at', 'desc')->paginate(6);
+        $konten_labu = KontenLabu::where('is_wbtb', 1)->where('status', 'publikasi')->orderBy('published_at', 'desc')->paginate(9);
 
         return view('labu.content.wbtb', compact('konten_labu'));
     }
@@ -20,7 +20,7 @@ class WbtbController extends Controller
         $detail = KontenLabu::where('slug', $slug)->firstOrFail();
 
         // check draft
-        if( $detail->status == 'draft' && !isset(auth()->user()->id) ) {
+        if ($detail->status == 'draft' && !isset(auth()->user()->id)) {
             abort(404);
         }
 
