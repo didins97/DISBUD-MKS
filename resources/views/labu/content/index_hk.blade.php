@@ -49,10 +49,10 @@
                 @foreach($artikels as $a)
                 <div class="row mb-3">
                     <div class="col-lg-3">
-                        <img src="{{ asset('storage/assets/artikel/thumbnail/' . $a->thumbnail) }}" alt="artikel" class="article_img">
+                        <img src="{{ asset('storage/assets/artikel/thumbnail/' . $a->thumbnail) }}" alt="artikel" class="article_img radius-medium">
                     </div>
-                    <div class="col-lg-8 py-4">
-                        <span class="article_date">{{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}</span>
+                    <div class="col-lg-8">
+                        <!-- <span class="article_date">{{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}</span> -->
                         <h3 class="article_title"><a href="{{route('article_labu_detail', $a->slug)}}">{{$a->judul_indo}}</a></h3>
                         <p class="article_desc">{!! Str::limit($a->konten_indo, 100) !!}</p>
                     </div>
