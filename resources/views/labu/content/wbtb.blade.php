@@ -36,18 +36,19 @@
 <section class="list-konten py-10 relative">
     <img class="collection-two__bg" src="{{ asset('assets/images/backgrounds/huruf-lontara2.png') }}" alt="">
     <div class="container">
-        @foreach($konten_labu as $a)
         <div class="row mb-4">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="image-card radius-medium">
-                    <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
+            @foreach($konten_labu as $a)
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="image-card radius-medium">
+                        <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
+                    </div>
+                    <h3>
+                        {{ $a->judul }}
+                    </h3>
+                    <a href="{{ route('wbtb_detail', $a->slug) }}" class="stretched-link"></a>
                 </div>
-                <h3>
-                    <a href="{{ route('wbtb_detail', $a->slug) }}">{{ $a->judul }}</a>
-                </h3>
-            </div>
+            @endforeach
         </div>
-        @endforeach
         {{ $konten_labu->links('partials.pagination') }}
     </div>
 </section>
