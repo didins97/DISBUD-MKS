@@ -478,6 +478,7 @@ ol li {
 .wrap-img-konten__info {
   color: #202020;
   font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .content-img-labu {
@@ -527,6 +528,11 @@ ol li {
     width: 165px !important;
   }
 
+  .logo-box-labu img {
+    width: 125px !important;
+  }
+
+
   body > div.page-wrapper > section.event-one > img {
     display: none;
   }
@@ -537,5 +543,10 @@ ol li {
 
   .list-group-item {
     padding: 0.5rem 0.75rem;
+  }
+
+  .wrap-img-konten__img1,
+  .wrap-img-konten__img2{
+    height: 300px;
   }
 }
