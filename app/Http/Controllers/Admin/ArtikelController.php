@@ -187,6 +187,8 @@ class ArtikelController extends Controller
             return redirect()->route('admin.contributor_article.index');
         }
         return redirect()->route('admin.article.index');
+
+        //branch main
     }
 
 }
