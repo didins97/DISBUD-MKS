@@ -30,6 +30,8 @@
                     <div class="mb-3">
                       <label for="judulArtikelBahasa" class="form-label">Nama</label>
                       <input required value="{{ old('nama') }}" type="text" name="nama" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama kawasan">
+                      <little><sup>*</sup> wajib</little>
+                      
                     </div>
                     <div class="mb-3">
                       <label for="judulArtikelBahasa" class="form-label">Nama Lain</label>
@@ -38,6 +40,8 @@
                     <div class="mb-3">
                       <label for="isiArtikelBahasa" class="form-label">Konten</label>
                       <textarea required class="form-control editor" name="konten" id="editor" rows="8">{{ old('konten') }}</textarea>
+                      <little><sup>*</sup> wajib</little>
+
                     </div>
                     <div class="mb-3">
                       <label for="judulArtikelBahasa" class="form-label">Tahun dibuat</label>
@@ -124,6 +128,8 @@
                     </div>
                     <div class="mb-4">
                       <input required name="thumbnail" class="form-control" id="uploadThumbnail" type="file" data-preview=".preview" accept="image/png, image/jpeg">
+                      <little><sup>*</sup> wajib</little>
+
                     </div>
                     <div class="mb-3">
                       <h5>Panduan unggah gambar</h5>
@@ -159,6 +165,8 @@
                           <div class="row">
                             <div class="col-12 mb-2">
                               <input required class="form-control" name="galleries_foto[]" id="uploadThumbnail" type="file" data-preview=".sliderPreview" accept="image/png, image/jpeg">
+                        <little><sup>*</sup> wajib</little>
+
                             </div>
                             <div class="col-12 mb-2">
                               <textarea name="caption_galleries_foto[]" required maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini"></textarea>
@@ -374,6 +382,8 @@
                   <div class="row">
                     <div class="col-12 mb-2">
                       <input required class="form-control" name="galleries_foto[]" id="uploadThumbnail" type="file" data-preview=".sliderPreview` + i + `" accept="image/png, image/jpeg">
+                      <little><sup>*</sup> wajib</little>
+
                     </div>
                     <div class="col-12 mb-2">
                       <textarea name="caption_galleries_foto[]"  required maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini" name="captionFoto` + i + `"></textarea>

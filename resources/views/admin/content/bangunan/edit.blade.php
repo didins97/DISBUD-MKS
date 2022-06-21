@@ -30,6 +30,8 @@
                       <div class="mb-3">
                         <label for="judulArtikelBahasa" class="form-label">Nama</label>
                         <input required value="{{$foto->nama }}" type="text" name="nama" class="form-control" id="judulArtikelBahasa" placeholder="masukkan nama bangunan">
+                        
+
                       </div>
                       <div class="mb-3">
                         <label for="judulArtikelBahasa" class="form-label">Nama Lain</label>
