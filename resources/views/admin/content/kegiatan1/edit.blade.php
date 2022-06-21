@@ -122,7 +122,7 @@
                       </div>
                     </div>
                     <div class="mb-4">
-                      <input required name="thumbnail" class="form-control" id="uploadThumbnail" type="file" data-preview=".preview" accept="image/png, image/jpeg">
+                      <input  name="thumbnail" class="form-control" id="uploadThumbnail" type="file" data-preview=".preview" accept="image/png, image/jpeg">
                     </div>
                     <div class="mb-3">
                       <h5>Panduan unggah gambar</h5>
