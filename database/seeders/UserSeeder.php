@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'email' => 'superadmin@dikemas.com',
             'email_verified_at' => now(),
             'telp' => '12323232',
-            'role' => 'admin',
+            'role' => 'super admin',
             'password' => bcrypt('dikemas@disbud'), // password
             'remember_token' => Str::random(10),
             'domisili' => 1
