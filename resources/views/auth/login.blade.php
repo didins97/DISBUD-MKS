@@ -18,7 +18,7 @@
     <div id="content">
       <div class="row">
         <div class="col-lg-7 wrap-img-daftar">
-          <img id="img-login" src="{{ asset('assets_old/img/hero/hero-6.jpg') }}">
+          <img id="img-login" src="{{ asset('assets_old/img/hero/museum-kota.jpg') }}">
         </div>
         <div class="col-lg-5 wrap-form-daftar center-v">
           <a href="{{ route('home') }}">
