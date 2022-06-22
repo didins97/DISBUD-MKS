@@ -18,10 +18,10 @@
                   <div class="card-header py-3">
                     <div class="row">
                       <div class="col-6">
-                        <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">List Benda</h2>
+                        <h2 class="m-0 font-weight-bold sub-judul">List Benda</h2>
                       </div>
                       <div class="col-6 text-end">
-                        <a href="{{ route('admin.benda.add') }}" class="btn btn-primary">
+                        <a href="{{ route('admin.benda.add') }}" class="btn btn-secondary">
                           <i class="fa fa-plus mr-1"></i> Tambah
                         </a>
                       </div>
