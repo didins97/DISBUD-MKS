@@ -18,6 +18,14 @@
     z-index: 5;
   }
 
+  #content{
+    background-color: #202020;
+  }
+
+  #content h1{
+    color: #fff;
+  }
+
   #contentWrapper {
     padding-left: 19.5%;
     padding-top: 7%;
