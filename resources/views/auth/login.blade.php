@@ -15,7 +15,7 @@
 
 <body>
   <main>
-    <div id="content">
+    <div id="content" class="login-content">
       <div class="row">
         <div class="col-lg-7 wrap-img-daftar">
           <img id="img-login" src="{{ asset('assets_old/img/hero/museum-kota.jpg') }}">
