@@ -6540,7 +6540,6 @@ a:focus {
 /* === PAGINATION === */
 .post-pagination a {
     border-color: var(--thm-base);
-    background-color: var(--thm-base);
     font-weight: normal;
     color: black;
 }
@@ -6549,8 +6548,9 @@ a:focus {
     border-radius: 15px;
 }
 
-.post-pagination .page:hover {
-    background-color: #AAA081;
+.post-pagination a:hover,
+.post-pagination a:active {
+    background-color: var(--thm-base);
     color: white;
     border-color: transparent;
 }
