@@ -42,14 +42,14 @@
                                 <div class="placeholder"></div>
                         </div>
                         @if($foto->longitude != null && $foto->latitude != null)
-                            <h3 class="mt-5">Peta</h3>
-                            <input type="hidden" id="longi" placeholder="longi" value={{$foto->longitude}}>
-                            <input type="hidden" id="lati" placeholder="lati" value={{$foto->latitude}}>
-                            <div id="map" class="google-map__contact" allowfullscreen></div>
+                        <h3 class="mt-5">Peta</h3>
+                        <input type="hidden" id="longi" placeholder="longi" value={{$foto->longitude}}>
+                        <input type="hidden" id="lati" placeholder="lati" value={{$foto->latitude}}>
+                        <div id="map" class="google-map__contact" allowfullscreen></div>
                         @endif
 
                         {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="google-map__contact" allowfullscreen></iframe> --}}
-                    </div>      
+                    </div>
                 </div>
             </div><!-- /.col-lg-8 -->
             <div class="col-lg-4">
@@ -79,20 +79,15 @@
                                 {{$foto->kecamatan}}
                             </li>
                         </ul><!-- /.event-details__booking-info list-unstyled -->
-                        <div class="row justify-content-center">
-                            <div class="col-8 text-center py-4 bg-white">
-                                {{QrCode::size(175)->generate( url()->current() );}}
-                            </div>
-                        </div>
                         <!-- /.thm-btn event-details__book-btn -->
                     </div>
                 </div><!-- /.event-details__booking -->
             </div><!-- /.col-lg-4 -->
-             @php
-             $konten_name = 'benda';
-             $konten = $foto;
-             @endphp
-             @include('parasanganta.partials.social-share')
+            @php
+            $konten_name = 'benda';
+            $konten = $foto;
+            @endphp
+            @include('parasanganta.partials.social-share')
             <div class="col-lg-12 mt-5 event-details__content">
                 <div class="fb-comments" data-href="{{ Request::url() }}" data-width="" data-numposts="5"></div>
             </div>
