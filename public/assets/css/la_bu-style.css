@@ -175,6 +175,10 @@
     line-height: 1.2;
 }
 
+.article_title:hover {
+    color: var(--thm-base);
+}
+
 .article_desc {
     color: #252930;
 }
