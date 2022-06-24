@@ -6550,7 +6550,7 @@ a:focus {
 
 .post-pagination a:hover,
 .post-pagination a:active {
-    background-color: var(--thm-base);
+    background-color: var(--thm-base) !important;
     color: white;
     border-color: transparent;
 }
