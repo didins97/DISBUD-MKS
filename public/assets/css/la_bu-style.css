@@ -166,6 +166,20 @@
     font-weight: bold;
 }
 
+.article_title {
+    display: inline-block;
+    font-family: var(--heading-font);
+    color: var(--thm-black);
+    font-size: 1.75rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.article_desc {
+    color: #252930;
+}
+
 .title-underline {
     position: relative;
 }
