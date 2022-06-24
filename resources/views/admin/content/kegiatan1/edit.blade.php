@@ -45,7 +45,7 @@
                     </div>
                       <div class="mb-3">
                         <label for="isiArtikelBahasa" class="form-label">Letak</label>
-                        <textarea required class="form-control editor" name="letak" id="editor" rows="8">{{$foto->letak}}</textarea>
+                        <textarea required class="form-control" name="letak" id="editor" rows="8">{{$foto->letak}}</textarea>
                       </div>
                       <div class="mb-3">
                         <label for="judulArtikelBahasa" class="form-label">kelurahan</label>
@@ -59,13 +59,14 @@
                       <div class="card-body">
                         <div class="row">
                           <div class='col-lg-6'>
-                            <label  class="form-label">longitude</label>
-                            <input  name="longitude"  type="text" class="form-control" value="{{$foto->longitude}}" >
-                          </div>
-                          <div class='col-lg-6'>
                             <label  class="form-label">latitude</label>
                             <input  name="latitude"  type="text" class="form-control" value="{{$foto->latitude}}">
                           </div>
+                          <div class='col-lg-6'>
+                            <label  class="form-label">longitude</label>
+                            <input  name="longitude"  type="text" class="form-control" value="{{$foto->longitude}}" >
+                          </div>
+                       
                         </div>
                       </div>
 
@@ -121,7 +122,7 @@
                       </div>
                     </div>
                     <div class="mb-4">
-                      <input required name="thumbnail" class="form-control" id="uploadThumbnail" type="file" data-preview=".preview" accept="image/png, image/jpeg">
+                      <input  name="thumbnail" class="form-control" id="uploadThumbnail" type="file" data-preview=".preview" accept="image/png, image/jpeg">
                     </div>
                     <div class="mb-3">
                       <h5>Panduan unggah gambar</h5>
@@ -340,7 +341,7 @@
                </div>
              </div>
            </div>
-           <div class="col-lg-12 mb-3">
+           {{-- <div class="col-lg-12 mb-3">
             <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Tanggal Konten</h2>
@@ -358,7 +359,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="col-lg-12 mb-5 text-center">
             <button name="draft" value="draft" class="btn btn-lg btn-secondary mr-3">
               Save as Draft
@@ -396,7 +397,7 @@
     var x = 1;
     $("#tambahFoto").click(function() {
       i++;
-      if (x < 10) {
+      if (x < 100) {
         x++;
         document.querySelector('#fotoSliderBody').insertAdjacentHTML(
           'beforeend',

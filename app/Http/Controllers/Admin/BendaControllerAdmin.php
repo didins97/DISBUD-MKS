@@ -7,6 +7,8 @@ use App\Models\Benda;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File; 
 use Alert;
+use Carbon\Carbon;
+
 
 class BendaControllerAdmin extends Controller
 {
@@ -72,7 +74,9 @@ class BendaControllerAdmin extends Controller
             'caption_galleries' => serialize($request->caption_galleries_foto),
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
-            'published_at' => $request->publish_date . " " . $request->publish_time
+            // 'published_at' => $request->publish_date . " " . $request->publish_time
+            'published_at'=> Carbon::now()
+
         ]);
         
 
@@ -167,7 +171,9 @@ class BendaControllerAdmin extends Controller
             'caption_galleries' => serialize($request->caption_galleries_foto),
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
-            'published_at' => $request->publish_date . " " . $request->publish_time
+            // 'published_at' => $request->publish_date . " " . $request->publish_time
+            'published_at'=> Carbon::now()
+
         ]);
 
         

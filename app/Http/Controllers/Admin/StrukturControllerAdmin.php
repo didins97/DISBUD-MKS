@@ -8,6 +8,8 @@ use App\Models\Struktur;
 use Illuminate\Support\Facades\File; 
 
 use Alert;
+use Carbon\Carbon;
+
 
 class StrukturControllerAdmin extends Controller
 {
@@ -73,7 +75,9 @@ class StrukturControllerAdmin extends Controller
             'caption_galleries' => serialize($request->caption_galleries_foto),
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
-            'published_at' => $request->publish_date . " " . $request->publish_time
+            // 'published_at' => $request->publish_date . " " . $request->publish_time
+            'published_at'=> Carbon::now()
+
         ]);
         
 
@@ -166,7 +170,9 @@ class StrukturControllerAdmin extends Controller
             'caption_galleries' => serialize($request->caption_galleries_foto),
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
-            'published_at' => $request->publish_date . " " . $request->publish_time
+            // 'published_at' => $request->publish_date . " " . $request->publish_time
+            'published_at'=> Carbon::now()
+            
         ]);
 
         

@@ -8,7 +8,7 @@
     <nav class="main-nav-one stricky main-nav-one__home-two">
         <div class="container">
             <div class="inner-container">
-                <div class="logo-box">
+                <div class="logo-box logo-box-labu">
                     <a href="{{ route('labu') }}">
                         <img src="{{ asset('assets/images/logo/logo-labu-black.svg')}}" alt="" width="155">
                     </a>

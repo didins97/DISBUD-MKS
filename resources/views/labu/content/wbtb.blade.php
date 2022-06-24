@@ -4,7 +4,7 @@
 
 @include('labu.partials.header')
 
-<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
+<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/bg-header.jpg') }}); background-size: cover; background-position: center;">
     <div class="container">
         <h2>WBTB</h2>
     </div><!-- /.container -->
@@ -36,18 +36,20 @@
 <section class="list-konten py-10 relative">
     <img class="collection-two__bg" src="{{ asset('assets/images/backgrounds/huruf-lontara2.png') }}" alt="">
     <div class="container">
-        @foreach($konten_labu as $a)
         <div class="row mb-4">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="image-card radius-medium">
-                    <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
-                </div>
-                <h3>
+            @foreach($konten_labu as $a)
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="image-card radius-medium">
+                        <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
+                        <a href="{{ route('wbtb_detail', $a->slug) }}" class="stretched-link"></a>
+                    </div>
+                    <h3>
                     <a href="{{ route('wbtb_detail', $a->slug) }}">{{ $a->judul }}</a>
-                </h3>
-            </div>
+                    </h3>
+
+                </div>
+            @endforeach
         </div>
-        @endforeach
         {{ $konten_labu->links('partials.pagination') }}
     </div>
 </section>

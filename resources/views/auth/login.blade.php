@@ -15,17 +15,17 @@
 
 <body>
   <main>
-    <div id="content">
+    <div id="content" class="login-content">
       <div class="row">
         <div class="col-lg-7 wrap-img-daftar">
-          <img id="img-login" src="{{ asset('assets_old/img/hero/hero-6.jpg') }}">
+          <img id="img-login" src="{{ asset('assets_old/img/hero/museum-kota.jpg') }}">
         </div>
         <div class="col-lg-5 wrap-form-daftar center-v">
           <a href="{{ route('home') }}">
-            <img class="logo-daftar mb-4" src="{{ asset('assets/images/card-hover/statue2.png') }}">
+            <img class="logo-daftar mb-4" src="{{ asset('assets/img/logo/logo.png') }}">
           </a>
           <h1>Login Admin</h1>
-          <p class="des-form-daftar">Fill in the data for profile. It will take a couple of minutes. You only need a passport</p>
+          <p class="des-form-daftar">sign in dengan memasukkan email dan password</p>
           <div class="card mt-5 mb-2">
             <div class="card-body">
               <h3 class="sub-judul-form">Form Login</h3>

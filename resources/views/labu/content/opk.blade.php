@@ -5,7 +5,7 @@
 @include('labu.partials.header')
 
 
-<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
+<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/bg-header.jpg') }}); background-size: cover; background-position: center;">
     <div class="container">
         <h2>OPK</h2>
     </div><!-- /.container -->
@@ -38,6 +38,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk1.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Tradisi Lisan" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Tradisi Lisan">Tradisi Lisan</a>
@@ -46,6 +47,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk2.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Manuskrip" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Manuskrip">Manuskrip</a>
@@ -54,6 +56,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk3.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Adat Istiadat" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Adat Istiadat">Adat Istiadat</a>
@@ -62,6 +65,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk4.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Ritus" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Ritus">Ritus</a>
@@ -72,6 +76,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk5.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Seni" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Seni">Seni</a>
@@ -80,6 +85,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk6.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Bahasa" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Bahasa">Bahasa</a>
@@ -88,6 +94,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk7.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Pengetahuan Tradisional" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Pengetahuan Tradisional">Pengetahuan Tradisional</a>
@@ -96,9 +103,10 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk8.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Teknologi Tradisional" class="stretched-link"></a>
                 </div>
                 <h3>
-                    <a href="{{ route('opk') }}?kategori=Teknologi Tradisiona">Teknologi Tradisional</a>
+                    <a href="{{ route('opk') }}?kategori=Teknologi Tradisional">Teknologi Tradisional</a>
                 </h3>
             </div>
         </div>
@@ -106,6 +114,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk9.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Permainan Rakyat" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Permainan Rakyat">Permainan Rakyat</a>
@@ -114,6 +123,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="image-card radius-medium">
                     <img src="{{ asset('assets/images/konten/konten-opk10.png') }}" alt="">
+                    <a href="{{ route('opk') }}?kategori=Olahraga Tradisional" class="stretched-link"></a>
                 </div>
                 <h3>
                     <a href="{{ route('opk') }}?kategori=Olahraga Tradisional">Olahraga Tradisional</a>

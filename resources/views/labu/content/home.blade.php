@@ -35,7 +35,7 @@
         <div class="banner-carousel thm__owl-carousel owl-theme owl-carousel" data-options='{"loop": true, "items": 1, "margin": 0, "dots": false, "nav": true, "animateOut": "fadeOut", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 6000, "autoplayHoverPause": false}'>
             <!-- Slide Item -->
             <div class="slide-item">
-                <div class="image-layer lazy-image" style="background-image: url('assets/images/blog/blog-labu.png');">
+                <div class="image-layer lazy-image" style="background-image: url('assets/images/blog/blog-labu.jpg');">
                     <div class="layer-mask"></div>
                 </div>
                 <div class="container">
@@ -64,41 +64,74 @@
                             Makassar</h3>
                     </div><!-- /.block-title -->
                 </div>
-                <div class="col-lg-8 col-md-12 col-sm-10 masonary-layout left-5">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="wrap-img-konten mb-5">
+                                <img class="wrap-img-konten__img1" src="{{ asset('assets/images/konten/konten-1.jpg') }}" alt="objek pemajuan kebudayaan">
+                                <p class="wrap-img-konten__info">Objek Pemajuan Kebudayaan</p>
+                                <a href="{{ route('opk') }}" class="stretched-link"></a>
+                            </div>
+                            <div class="wrap-img-konten mb-5">
+                                <img class="wrap-img-konten__img2" src="{{ asset('assets/images/konten/konten-2.jpg') }}" alt="Hari Kebudayaan">
+                                <p class="wrap-img-konten__info">Hari Kebudayaan</p>
+                                <a href="{{ route('hari-kebudayaan') }}" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="wrap-img-konten mb-5">
+                                <img class="wrap-img-konten__img2" src="{{ asset('assets/images/konten/konten-4.jpg') }}" alt="Warisan Budaya Tak Benda">
+                                <p class="wrap-img-konten__info">Warisan Budaya Tak Benda</p>
+                                <a href="{{ route('wbtb') }}" class="stretched-link"></a>
+                            </div>
+                            <div class="wrap-img-konten mb-5">
+                                <img class="wrap-img-konten__img1" src="{{ asset('assets/images/konten/konten-3.jpg') }}" alt="Kampung Budaya">
+                                <p class="wrap-img-konten__info">Kampung Budaya</p>
+                                <a href="{{ route('kampung-budaya') }}" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8 col-md-12 col-sm-10 masonary-layout left-5 d-none">
                     <div class="col-lg-5 col-md-4 filter-item masonary-item pic">
                         <div class="collection-grid__single">
                             <div class="collection-grid__image text-center radius-medium">
-                                <img src="{{ asset('assets/images/konten/konten-1.png') }}" alt="">
-                            </div><!-- /.collection-grid__image -->
+                                <img src="{{ asset('assets/images/konten/konten-1.jpg') }}" alt="">
+                                <a href="{{ route('opk') }}" class="stretched-link"></a>
+                            </div>
                             <div class="collection-grid__content">
                                 <h3><a href="{{ route('opk') }}">Objek Pemajuan Kebudayaan</a></h3>
-                            </div><!-- /.collection-grid__content -->
-                        </div><!-- /.collection-grid__single -->
-                    </div><!-- /.col-lg-4 -->
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-5 col-md-4  filter-item masonary-item dis">
                         <div class="collection-grid__single">
                             <div class="collection-grid__image text-center radius-medium">
-                                <img src="{{ asset('assets/images/konten/konten-2.png') }}" alt="" class="radius-medium">
-                            </div><!-- /.collection-grid__image -->
+                                <img src="{{ asset('assets/images/konten/konten-2.jpg') }}" alt="" class="radius-medium">
+                                <a href="{{ route('hari-kebudayaan') }}" class="stretched-link"></a>
+                            </div>
                             <div class="collection-grid__content">
                                 <h3><a href="{{ route('hari-kebudayaan') }}">Hari Kebudayaan</a></h3>
-                            </div><!-- /.collection-grid__content -->
-                        </div><!-- /.collection-grid__single -->
-                    </div><!-- /.col-lg-4 -->
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-5 col-md-4 filter-item masonary-item pic poster">
                         <div class="collection-grid__single">
                             <div class="collection-grid__image text-center radius-medium">
-                                <img src="{{ asset('assets/images/konten/konten-4.png') }}" alt="" class="radius-medium">
-                            </div><!-- /.collection-grid__image -->
+                                <img src="{{ asset('assets/images/konten/konten-4.jpg') }}" alt="" class="radius-medium">
+                                <a href="{{ route('wbtb') }}" class="stretched-link"></a>
+                            </div>
                             <div class="collection-grid__content">
                                 <h3><a href="{{ route('wbtb') }}">Warisan Budaya Tak Benda</a></h3>
-                            </div><!-- /.collection-grid__content -->
-                        </div><!-- /.collection-grid__single -->
-                    </div><!-- /.col-lg-4 -->
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-5 col-md-4 filter-item masonary-item dis pic">
                         <div class="collection-grid__single">
                             <div class="collection-grid__image text-center radius-medium">
-                                <img src="{{ asset('assets/images/konten/konten-3.png') }}" alt="" class="radius-medium">
+                                <img src="{{ asset('assets/images/konten/konten-3.jpg') }}" alt="" class="radius-medium">
+                                <a href="{{ route('kampung-budaya') }}" class="stretched-link"></a>
                             </div><!-- /.collection-grid__image -->
                             <div class="collection-grid__content">
                                 <h3><a href="{{ route('kampung-budaya') }}">Kampung Budaya</a></h3>

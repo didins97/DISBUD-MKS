@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Bangunan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File; 
+use Carbon\Carbon;
+
 
 use Alert;
 
@@ -73,7 +75,8 @@ class BangunanControllerAdmin extends Controller
             'caption_galleries' => serialize($request->caption_galleries_foto),
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
-            'published_at' => $request->publish_date . " " . $request->publish_time
+            // 'published_at' => $request->publish_date . " " . $request->publish_time
+            'published_at'=> Carbon::now()
         ]);
         
 
@@ -168,7 +171,9 @@ class BangunanControllerAdmin extends Controller
             'caption_galleries' => serialize($request->caption_galleries_foto),
             'slider_utama' => $request->slider_utama != null ? 1 : 0,
             'status' => $request->publish != null ? 'publikasi' : 'draft',
-            'published_at' => $request->publish_date . " " . $request->publish_time
+            // 'published_at' => $request->publish_date . " " . $request->publish_time
+            'published_at'=> Carbon::now()
+
         ]);
 
         
