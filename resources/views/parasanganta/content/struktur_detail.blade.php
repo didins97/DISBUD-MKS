@@ -95,19 +95,16 @@
     </div><!-- /.container -->
 </section><!-- /.event-details -->
 
-<section class="cta-one" style="background-image: url( {{ asset('assets/images/shapes/cta-bg-1-1.jpg') }});">
+<!-- <section class="cta-one" style="background-image: url( {{ asset('assets/images/shapes/cta-bg-1-1.jpg') }});">
     <div class="container text-center">
         <h3>Download Informasi Lengkap</h3>
         <p>
             Download Informasi lengkap mengenai cagar budaya ini dalam bentuk PDF
         </p>
         <div class="cta-one__btn-block ">
-            <button class="thm-btn cta-one__btn-two btn-pill" data-toggle="modal" data-target="#downloadPDF">Download PDF</button><!-- /.thm-btn cta-one__btn-two -->
+            <button class="thm-btn cta-one__btn-two btn-pill" data-toggle="modal" data-target="#downloadPDF">Download PDF</button>
         </div>
-        <!-- /.cta-one__btn-block -->
-    </div>
-    <!-- /.container -->
-</section>
+</section> -->
 @include('partials.location')
 
 @endsection
