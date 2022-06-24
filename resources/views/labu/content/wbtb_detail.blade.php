@@ -37,7 +37,7 @@
                                 @foreach($konten_labu as $a)
                                 <div class="sidebar__post-single">
                                     <div class="sidebar__post-image">
-                                        <img src="{{ asset('storage/assets/foto/thumbnail/' . $detail->thumbnail) }}" alt="OPK"
+                                        <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="OPK"
                                             class="radius-medium">
                                     </div><!-- /.sidebar__post-image -->
                                     <div class="sidebar__post-content">
