@@ -6539,7 +6539,8 @@ a:focus {
 
 /* === PAGINATION === */
 .post-pagination a {
-    border-color: #AAA081;
+    border-color: var(--thm-base);
+    background-color: var(--thm-base);
     font-weight: normal;
     color: black;
 }
