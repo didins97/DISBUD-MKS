@@ -4,7 +4,7 @@
 
 @include('labu.partials.header')
 
-<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/bg-header.jpg') }}); background-size: cover; background-position: center;">
+<section class="page-header" style="background-image: url( {{ asset('assets/images/backgrounds/musium-kota-makassar.jpg') }}); background-size: cover; background-position: center;">
     <div class="container">
         <h2>Hari Kebudayaan</h2>
     </div><!-- /.container -->
@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-lg-2">
                             <div class="image_before_tr wow fadeInRight mr-0" data-wow-duration="1500ms">
-                                <img class="radius-medium" src="{{ asset('assets/images/konten/konten-hk.jpg') }}" alt="" width="500px">
+                                <img src="{{ asset('assets/images/konten/konten-hk1.png') }}" alt="">
                             </div><!-- /.about-four__image -->
                         </div>
                     </div>
@@ -49,11 +49,13 @@
                 @foreach($artikels as $a)
                 <div class="row mb-3">
                     <div class="col-lg-3">
-                        <img src="{{ asset('storage/assets/artikel/thumbnail/' . $a->thumbnail) }}" alt="artikel" class="article_img radius-medium">
+                        <a href="{{route('article_labu_detail', $a->slug)}}">
+                            <img src="{{ asset('storage/assets/artikel/thumbnail/' . $a->thumbnail) }}" alt="artikel" class="article_img">
+                        </a>
                     </div>
-                    <div class="col-lg-8">
-                        <!-- <span class="article_date">{{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}</span> -->
-                        <h3 class="article_title"><a href="{{route('article_labu_detail', $a->slug)}}">{{$a->judul_indo}}</a></h3>
+                    <div class="col-lg-8 py-4">
+                        <span class="article_date">{{ \Carbon\Carbon::parse($a->published_at)->isoFormat('D MMMM Y'); }}</span>
+                        <a href="{{route('article_labu_detail', $a->slug)}}" class="article_title">{{$a->judul_indo}}</a>
                         <p class="article_desc">{!! Str::limit($a->konten_indo, 100) !!}</p>
                     </div>
                 </div>
