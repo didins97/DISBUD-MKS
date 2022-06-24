@@ -67,24 +67,24 @@
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="wrap-img-konten">
+                            <div class="wrap-img-konten mb-5">
                                 <img class="wrap-img-konten__img1" src="{{ asset('assets/images/konten/konten-1.jpg') }}" alt="objek pemajuan kebudayaan">
                                 <p class="wrap-img-konten__info">Objek Pemajuan Kebudayaan</p>
                                 <a href="{{ route('opk') }}" class="stretched-link"></a>
                             </div>
-                            <div class="wrap-img-konten mt-5">
+                            <div class="wrap-img-konten mb-5">
                                 <img class="wrap-img-konten__img2" src="{{ asset('assets/images/konten/konten-2.jpg') }}" alt="Hari Kebudayaan">
                                 <p class="wrap-img-konten__info">Hari Kebudayaan</p>
                                 <a href="{{ route('hari-kebudayaan') }}" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="wrap-img-konten">
+                            <div class="wrap-img-konten mb-5">
                                 <img class="wrap-img-konten__img2" src="{{ asset('assets/images/konten/konten-4.jpg') }}" alt="Warisan Budaya Tak Benda">
                                 <p class="wrap-img-konten__info">Warisan Budaya Tak Benda</p>
                                 <a href="{{ route('wbtb') }}" class="stretched-link"></a>
                             </div>
-                            <div class="wrap-img-konten mt-5">
+                            <div class="wrap-img-konten mb-5">
                                 <img class="wrap-img-konten__img1" src="{{ asset('assets/images/konten/konten-3.jpg') }}" alt="Kampung Budaya">
                                 <p class="wrap-img-konten__info">Kampung Budaya</p>
                                 <a href="{{ route('kampung-budaya') }}" class="stretched-link"></a>
