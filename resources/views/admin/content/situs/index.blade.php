@@ -33,7 +33,7 @@
                         <tr>
                           <th>No.</th>
                           <th>Tanggal Dibuat</th>
-                          <th>Tanggal Dipublish</th>
+                          <th>Qr Code</th>
                           <th>Judul Artikel</th>
                           <th>Penulis</th>
                           <th>Slider Utama</th>
@@ -46,7 +46,7 @@
                         <tr>
                           <td>#</td>
                           <td>{{ $f->created_at->isoFormat('DD/MM/YYYY'); }}</td>
-                          <td>{{ \Carbon\Carbon::parse($f->published_at)->isoFormat('DD/MM/YYYY') }}</td>
+                          <td>{{QrCode::size(100)->generate( route('situs_detail', $f->slug) );}}</td>
                           <td>{{ $f->nama }}</td>
                           <td>{{ $f->penulis != 'admin' ? $f->kontributor_relasi->nama : 'admin' }}</td>
                           <td>
