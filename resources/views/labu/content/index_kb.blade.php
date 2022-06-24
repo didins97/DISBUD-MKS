@@ -50,7 +50,7 @@
             <div class="col-lg-11">
                 @foreach($artikels as $a)
                 <div class="row mb-3">
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <a href="{{route('article_labu_detail', $a->slug)}}">
                             <img src="{{ asset('storage/assets/artikel/thumbnail/' . $a->thumbnail) }}" alt="artikel" class="article_img radius-medium">
                         </a>
