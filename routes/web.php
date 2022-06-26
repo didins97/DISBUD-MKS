@@ -131,6 +131,8 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       // Route::get('/parasanganta/situs', [SitusControllerAdmin::class, 'index'])->name('admin.situs.index');
       // Route::get('/parasanganta/kawasan', [KawasanControllerAdmin::class, 'index'])->name('admin.kawasan.index');
       // Route::get('/parasanganta/kegiatan', [Kegiatan1ControllerAdmin::class, 'index'])->name('admin.kegiatan.index');
+        //cetak Konten Parasanganta
+      Route::get('/parasanganta/konten', [\App\Http\Controllers\Admin\CetakKontenController::class, 'cetak'])->name('admin.konten.cetak');
 
 
 

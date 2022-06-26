@@ -24,6 +24,9 @@
                         <a href="{{ route('admin.benda.add') }}" class="btn btn-secondary">
                           <i class="fa fa-plus mr-1"></i> Tambah
                         </a>
+                        <a href="{{ route('admin.konten.cetak') }}?cetak=Benda" class="btn btn-sm btn-outline-info mb-1">
+                          Cetak
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -62,6 +65,7 @@
                             <a href="{{ route('admin.benda.edit', $f->id) }}" class="btn btn-sm btn-outline-info mb-1">
                               Edit
                             </a>
+                           
                             <button class="btn btn-sm btn-outline-danger btn-hapus mb-1" data-id="{{ $f->id }}">
                               Hapus
                             </button>
