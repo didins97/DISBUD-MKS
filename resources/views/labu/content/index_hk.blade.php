@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-lg-2">
                             <div class="image_before_tr wow fadeInRight mr-0" data-wow-duration="1500ms">
-                                <img src="{{ asset('assets/images/konten/konten-hk1.png') }}" alt="">
+                                <img class="radius-medium" src="{{ asset('assets/images/konten/konten-hk.jpg') }}" width="500px" alt="">
                             </div><!-- /.about-four__image -->
                         </div>
                     </div>
