@@ -65,7 +65,7 @@
                             <a href="{{ route('admin.kawasan.edit', $f->id) }}" class="btn btn-sm btn-outline-info mb-1">
                               Edit
                             </a>
-                            <a href="{{ route('admin.konten.cetak', $f->slug) }}?cetak=kawasan" class="btn btn-sm btn-outline-info mb-1">
+                            <a href="{{ route('admin.konten.cetak', $f->id) }}?cetak=kawasan" class="btn btn-sm btn-outline-info mb-1">
                               <i class="fa fa-print mr-1"></i> Cetak
                             </a>
                             
