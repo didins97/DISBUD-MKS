@@ -15,7 +15,7 @@
     <li class="nav-item  {{ Request::segment(3) == 'benda' || Request::segment(3) == 'bangunan' || Request::segment(3) == 'struktur' || Request::segment(3) == 'situs' || Request::segment(3) == 'kawasan' | Request::segment(3) == 'kegiatan1'  ? 'active' : '' }}">
       <a class="nav-link  {{ Request::segment(3) == 'benda' || Request::segment(3) == 'bangunan' || Request::segment(3) == 'struktur' || Request::segment(3) == 'situs' || Request::segment(3) == 'kawasan'  || Request::segment(3) == 'kegiatan1'  ? '' : 'collapsed' }}" href="javascript:;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded=" {{ Request::segment(3) == 'benda' || Request::segment(3) == 'bangunan' || Request::segment(3) == 'struktur' || Request::segment(3) == 'situs' || Request::segment(3) == 'kawasan' | Request::segment(3) == 'kegiatan1' ? 'true' : 'false' }}" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-th-large"></i>
-        <span>Konten</span>
+        <span>Parasanganta</span>
       </a>
       <div id="collapseTwo" class="collapse  {{ Request::segment(3) == 'benda' || Request::segment(3) == 'bangunan' || Request::segment(3) == 'struktur' || Request::segment(3) == 'situs' || Request::segment(3) == 'kawasan' || Request::segment(3) == 'kegiatan1' ? 'show' : '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
         <div class="bg-submenu-nav py-2 collapse-inner rounded">
