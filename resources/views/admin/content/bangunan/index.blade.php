@@ -24,9 +24,9 @@
                         <a href="{{ route('admin.bangunan.add') }}" class="btn btn-secondary">
                           <i class="fa fa-plus mr-1"></i> Tambah
                         </a>
-                        <a href="{{ route('admin.konten.cetak') }}?cetak=Bangunan" class="btn btn-secondary bg-success">
+                        {{-- <a href="{{ route('admin.konten.cetak') }}?cetak=Bangunan" class="btn btn-secondary bg-success">
                           <i class="fa fa-print mr-1"></i> Cetak
-                        </a>
+                        </a> --}}
                       </div>
                     </div>
                   </div>
@@ -69,6 +69,9 @@
                             </a>
                             <a href="{{ route('admin.bangunan.edit', $f->id) }}" class="btn btn-sm btn-outline-info mb-1">
                               Edit
+                            </a>
+                            <a href="{{ route('admin.konten.cetak', $f->id) }}?cetak=bangunan" class="btn btn-sm btn-outline-info mb-1">
+                              <i class="fa fa-print mr-1"></i> Cetak
                             </a>
                            
                             <button class="btn btn-sm btn-outline-danger btn-hapus mb-1" data-id="{{ $f->id }}">

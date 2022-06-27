@@ -13,10 +13,17 @@ use App\Http\Controllers\Controller;
 
 class CetakKontenController extends Controller
 {
-    public function cetak(Request $request){
+    public function cetak(Request $request, $id){
     
         $req = $request->cetak;
 
+//             $bangunan = Bangunan::find($id);
+//             $benda = Benda::find($id);
+//             $kawasan = Kawasan::find($id);
+//             $kegiatan1 = Kegiatan1::find($id);
+//             $situs = Situs::find($id);
+//             $struktur= Struktur::find($id);
+// $cetak = $bangunan->mergeRecursive($benda)->toArray();
             $bangunan = Bangunan::all();
             $benda = Benda::all();
             $kawasan = Kawasan::all();
@@ -26,10 +33,11 @@ class CetakKontenController extends Controller
 
             $cetak = $bangunan->mergeRecursive($benda)->mergeRecursive($kawasan)
                     ->mergeRecursive($kegiatan1)->mergeRecursive($situs)
-                    ->mergeRecursive($struktur);
+                    ->mergeRecursive($struktur)->find($id);
+            // dd($cetak);
 
-            return view('admin.content.cetak', compact('cetak', 'req'));
-
+            return view('admin.content.cetakQr', compact('cetak', 'req'));
+// return view('admin.content.cetakQr');
 
     }
 }
