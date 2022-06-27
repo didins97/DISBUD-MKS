@@ -24,8 +24,8 @@
                         <a href="{{ route('admin.situs.add') }}" class="btn btn-secondary">
                           <i class="fa fa-plus mr-1"></i> Tambah
                         </a>
-                        <a href="{{ route('admin.konten.cetak') }}?cetak=Situs" class="btn btn-sm btn-outline-info mb-1">
-                          Cetak
+                        <a href="{{ route('admin.konten.cetak') }}?cetak=Situs" class="btn btn-secondary bg-success">
+                          <i class="fa fa-print mr-1"></i> Cetak
                         </a>
                       </div>
                     </div>
