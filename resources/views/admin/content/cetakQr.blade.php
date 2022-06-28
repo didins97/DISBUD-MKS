@@ -9,10 +9,11 @@
 <body>
    
     
-    <div class="qrcode">
-        {{QrCode::size(200)->generate( route($req.'_detail', $cetak->slug) );}}
+    <div class="qrcode" style="text-align:center">
+        {{QrCode::size(300)->generate( route($req.'_detail', $cetak->slug) );}}
+        <h1>{{$cetak->nama}}</h1>
     </div>
-    <h1>{{$cetak->nama}}</h1>
+    
     
     <script type="text/javascript">
         window.print();
