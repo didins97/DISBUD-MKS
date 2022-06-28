@@ -12,6 +12,10 @@
     <div class="qrcode" style="text-align:center">
         {{QrCode::size(300)->generate( route($req.'_detail', $cetak->slug) );}}
         <h1>{{$cetak->nama}}</h1>
+        @if($cetak->getTable()=='konten_labu')
+        <h1>{{$cetak->judul}}</h1>
+        @endif
+
     </div>
     
     

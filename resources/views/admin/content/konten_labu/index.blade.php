@@ -62,6 +62,9 @@
                             <a href="{{ route('admin.konten_labu.edit', $f->id) }}" class="btn btn-sm btn-outline-info mb-1">
                               Edit
                             </a>
+                            <a href="{{ route('admin.konten.cetak', $f->slug) }}?cetak=wbtb" class="btn btn-sm btn-outline-info mb-1">
+                              Cetak Qr
+                            </a>
                             <button class="btn btn-sm btn-outline-danger btn-hapus mb-1" data-id="{{ $f->id }}">
                               Hapus
                             </button>
