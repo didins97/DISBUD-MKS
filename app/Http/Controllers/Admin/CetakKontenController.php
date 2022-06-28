@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 
 class CetakKontenController extends Controller
 {
-    public function cetak(Request $request, $id){
+    public function cetak(Request $request, $slug){
     
         $req = $request->cetak;
 
@@ -33,7 +33,7 @@ class CetakKontenController extends Controller
 
             $cetak = $bangunan->mergeRecursive($benda)->mergeRecursive($kawasan)
                     ->mergeRecursive($kegiatan1)->mergeRecursive($situs)
-                    ->mergeRecursive($struktur)->find($id);
+                    ->mergeRecursive($struktur)->where('slug', $slug)->firstOrFail();
             // dd($cetak);
 
             return view('admin.content.cetakQr', compact('cetak', 'req'));
