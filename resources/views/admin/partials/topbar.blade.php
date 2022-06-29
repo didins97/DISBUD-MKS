@@ -14,7 +14,7 @@
         <span class="mr-2 d-none d-lg-inline text-gray-400 small">v{{ config('app.version') }} |</span>
         <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->email }}</span>
         <!-- <img class="img-profile rounded-circle" src="{{ asset('storage/assets/user/' . auth()->user()->photo) }}"> -->
-        <img class="img-profile rounded-circle" src="{{ asset('storage/assets/user/default-user-image.jpeg') }}">
+        <img class="img-profile rounded-circle" src="{{ asset('assets/admin/img/avatar/default-user-image.jpeg') }}">
       </a>
       <!-- Dropdown - User Information -->
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
