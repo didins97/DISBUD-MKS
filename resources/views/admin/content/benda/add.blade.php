@@ -59,20 +59,19 @@
                         <label for="judulArtikelBahasa" class="form-label">kecamatan</label>
                         <input  value="{{ old('kecamatan') }}" type="text" name="kecamatan" class="form-control" id="judulArtikelBahasa" >
                       </div>
-
-                     
-                      <div class="card-body">
-                        <div class="row">
-                          <div class='col-lg-6'>
-                            <label  class="form-label">latitude</label>
-                            <input  name="latitude"  type="text" class="form-control" >
-                          </div>
-                          <div class='col-lg-6'>
-                            <label  class="form-label">longitude</label>
-                            <input  name="longitude"  type="text" class="form-control" >
-                          </div>
-                          
+                      <div class="row mb-3">
+                        <div class='col-lg-6'>
+                          <label  class="form-label">latitude</label>
+                          <input  name="latitude"  type="text" class="form-control" >
                         </div>
+                        <div class='col-lg-6'>
+                          <label  class="form-label">longitude</label>
+                          <input  name="longitude"  type="text" class="form-control" >
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="judulArtikelBahasa" class="form-label">No. SK</label>
+                        <input  value="{{ old('sk_penetapan') }}" type="text" name="sk_penetapan" class="form-control" id="judulArtikelBahasa" >
                       </div>
 
                       {{-- <div class="mb-3">
