@@ -36,7 +36,6 @@
                         <tr>
                           <th>No.</th>
                           <th>Tanggal Dibuat</th>
-                          <th>Qr Code</th>
                           <th>Judul Artikel</th>
                           <th>Penulis</th>
                           <th>Slider Utama</th>
@@ -49,7 +48,6 @@
                         <tr>
                           <td>#</td>
                           <td>{{ $f->created_at->isoFormat('DD/MM/YYYY'); }}</td>
-                          <td>{{QrCode::size(100)->generate( route('struktur_detail', $f->slug) );}}</td>
                           <td>{{ $f->nama }}</td>
                           <td>{{ $f->penulis != 'admin' ? $f->kontributor_relasi->nama : 'admin' }}</td>
                           <td>
@@ -59,18 +57,19 @@
                             <span class="badge rounded-pill py-1 px-3 {{ $f->status == 'publikasi' ? 'bg-success' : 'bg-secondary' }}">{{ $f->status == 'publikasi' ? 'Aktif' : 'Draft' }}</span>
                           </td>
                           <td>
-                            <a href="{{ route('struktur_detail', $f->slug) }}" class="btn btn-sm btn-outline-primary mb-1">
-                              View
-                            </a>
-                            <a href="{{ route('admin.struktur.edit', $f->id) }}" class="btn btn-sm btn-outline-info mb-1">
-                              Edit
-                            </a>
-                            <a href="{{ route('admin.konten.cetak', $f->slug) }}?cetak=struktur" class="btn btn-sm btn-outline-info mb-1">
-                              <i class="fa fa-print mr-1"></i> Cetak
-                            </a>
-                            <button class="btn btn-sm btn-outline-danger btn-hapus mb-1" data-id="{{ $f->id }}">
-                              Hapus
-                            </button>
+                            <div class="dropdown">
+                              <a class="dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                      aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i>
+                              </a>
+                              <!--Menu-->
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('struktur_detail', $f->slug) }}">View Artikel</a></li>
+                                <li><a class="dropdown-item" href="{{ route('admin.struktur.edit', $f->id) }}">Edit</a></li>
+                                <li><a class="dropdown-item" href="{{ route('admin.konten.cetak', $f->slug) }}?cetak=struktur">Cetak</a></li>
+                                <li><a class="dropdown-item btn-hapus" href="javascript:void(0)" data-id="{{ $f->id }}">Hapus</a></li>
+                                <li><a class="dropdown-item btn-vqr" href="javascript:void(0)" data-id="{{ $f->id }}">View QR</a></li>
+                              </ul>
+                            </div>
                           </td>
                         </tr>
                        @endforeach
@@ -83,6 +82,24 @@
           </div>
           <!-- /.container-fluid -->
         
+@endsection
+
+@section('modal')
+     <div class="modal" tabindex="-1" id="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Qr Code</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center">
+            ...
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
 @endsection
 
 @section('js')
@@ -107,6 +124,21 @@
           )
         }
       })
+    });
+
+    $(document).on('click', '.btn-vqr', function(e) {
+      let id = $(this).attr("data-id");
+      $($.ajax({
+        url: `/admin/parasanganta/struktur/qr/${id}`,
+        success: function (response) {
+          $('#modal .modal-body').html(response);
+          $('#modal').modal('show');
+        }
+      }));
+    });
+
+    $('.btn-close').click(function(e) {
+      $('#modal').modal('hide');
     });
     </script>
 @endsection

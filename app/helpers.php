@@ -54,7 +54,8 @@ if( !function_exists('upload_file') ) {
             $filename = uniqid() . '.webp';
             // cek path is exists
             if( !File::exists(storage_path($path)) ) {
-                File::makeDirectory(storage_path($path));
+                // File::makeDirectory(storage_path($path));
+                File::makeDirectory(storage_path($path), 0777, true);
             }
 
             $path = $path . '/' . $filename;

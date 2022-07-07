@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\File;
 
 use Alert;
 use Carbon\Carbon;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class StrukturControllerAdmin extends Controller
 {
@@ -196,5 +196,12 @@ class StrukturControllerAdmin extends Controller
         $bangunan->delete();
 
         return redirect()->route('admin.struktur.index');
+    }
+
+    public function showQrCode($id)
+    {
+        $bangunan = Struktur::findOrFail($id);
+        $qrCode = QrCode::size(300)->generate( route('struktur_detail', $bangunan->slug) );
+        return $qrCode;
     }
 }

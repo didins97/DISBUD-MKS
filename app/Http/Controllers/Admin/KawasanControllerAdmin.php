@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\File;
 
 use Alert;
 use Carbon\Carbon;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class KawasanControllerAdmin extends Controller
 {
@@ -201,5 +201,12 @@ class KawasanControllerAdmin extends Controller
         $bangunan->delete();
 
         return redirect()->route('admin.kawasan.index');
+    }
+
+    public function showQrCode($id)
+    {
+        $bangunan = Kawasan::findOrFail($id);
+        $qrCode = QrCode::size(300)->generate( route('kawasan_detail', $bangunan->slug) );
+        return $qrCode;
     }
 }

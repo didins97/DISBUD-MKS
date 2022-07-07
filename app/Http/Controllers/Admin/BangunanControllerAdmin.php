@@ -10,6 +10,7 @@ use Carbon\Carbon;
 
 
 use Alert;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class BangunanControllerAdmin extends Controller
 {
@@ -198,5 +199,12 @@ class BangunanControllerAdmin extends Controller
         $bangunan->delete();
 
         return redirect()->route('admin.bangunan.index');
+    }
+
+    public function showQrCode($id)
+    {
+        $bangunan = Bangunan::findOrFail($id);
+        $qrCode = QrCode::size(300)->generate( route('bangunan_detail', $bangunan->slug) );
+        return $qrCode;
     }
 }

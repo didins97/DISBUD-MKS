@@ -57,6 +57,7 @@ use App\Http\Controllers\Admin\Kegiatan1ControllerAdmin;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CaptchaServiceController;
+use App\Http\Controllers\Parasanganta\BangunanController;
 
 // use App\Http\Middleware\Language;
 /*
@@ -84,6 +85,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       Route::get('/parasanganta/benda/edit/{photoId}', [BendaControllerAdmin::class, 'edit'])->name('admin.benda.edit');
       Route::post('/parasanganta/benda/update/{photoId}', [BendaControllerAdmin::class, 'update'])->name('admin.benda.update');
       Route::get('/parasanganta/benda/delete/{bendaId}', [BendaControllerAdmin::class, 'delete'])->name('admin.benda.delete');
+      Route::get('/parasanganta/benda/qr/{bendaId}', [BendaControllerAdmin::class, 'showQrCode'])->name('admin.benda.viewqr');
 
       Route::get('/parasanganta/situs', [SitusControllerAdmin::class, 'index'])->name('admin.situs.index');
       Route::get('/parasanganta/situs/tambah', [SitusControllerAdmin::class, 'add'])->name('admin.situs.add');
@@ -91,6 +93,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       Route::get('/parasanganta/situs/edit/{photoId}', [SitusControllerAdmin::class, 'edit'])->name('admin.situs.edit');
       Route::post('/parasanganta/situs/update/{photoId}', [SitusControllerAdmin::class, 'update'])->name('admin.situs.update');
       Route::get('/parasanganta/situs/delete/{situsId}', [SitusControllerAdmin::class, 'delete'])->name('admin.situs.delete');
+      Route::get('/parasanganta/situs/qr/{situsId}', [SitusControllerAdmin::class, 'showQrCode'])->name('admin.benda.viewqr');
 
       Route::get('/parasanganta/bangunan', [BangunanControllerAdmin::class, 'index'])->name('admin.bangunan.index');
       Route::get('/parasanganta/bangunan/tambah', [BangunanControllerAdmin::class, 'add'])->name('admin.bangunan.add');
@@ -98,6 +101,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       Route::get('/parasanganta/bangunan/edit/{photoId}', [BangunanControllerAdmin::class, 'edit'])->name('admin.bangunan.edit');
       Route::post('/parasanganta/bangunan/update/{photoId}', [BangunanControllerAdmin::class, 'update'])->name('admin.bangunan.update');
       Route::get('/parasanganta/bangunan/delete/{bangunanId}', [BangunanControllerAdmin::class, 'delete'])->name('admin.bangunan.delete');
+      Route::get('/parasanganta/bangunan/qr/{bangunanId}', [BangunanControllerAdmin::class, 'showQrCode'])->name('admin.benda.viewqr');
 
       Route::get('/parasanganta/kawasan', [kawasanControllerAdmin::class, 'index'])->name('admin.kawasan.index');
       Route::get('/parasanganta/kawasan/tambah', [kawasanControllerAdmin::class, 'add'])->name('admin.kawasan.add');
@@ -105,6 +109,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       Route::get('/parasanganta/kawasan/edit/{photoId}', [kawasanControllerAdmin::class, 'edit'])->name('admin.kawasan.edit');
       Route::post('/parasanganta/kawasan/update/{photoId}', [kawasanControllerAdmin::class, 'update'])->name('admin.kawasan.update');
       Route::get('/parasanganta/kawasan/delete/{kawasanId}', [kawasanControllerAdmin::class, 'delete'])->name('admin.kawasan.delete');
+      Route::get('/parasanganta/kawasan/qr/{kawasanId}', [kawasanControllerAdmin::class, 'showQrCode'])->name('admin.benda.viewqr');
 
       Route::get('/parasanganta/struktur', [StrukturControllerAdmin::class, 'index'])->name('admin.struktur.index');
       Route::get('/parasanganta/struktur/tambah', [StrukturControllerAdmin::class, 'add'])->name('admin.struktur.add');
@@ -112,6 +117,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       Route::get('/parasanganta/struktur/edit/{photoId}', [StrukturControllerAdmin::class, 'edit'])->name('admin.struktur.edit');
       Route::post('/parasanganta/struktur/update/{photoId}', [StrukturControllerAdmin::class, 'update'])->name('admin.struktur.update');
       Route::get('/parasanganta/struktur/delete/{strukturId}', [StrukturControllerAdmin::class, 'delete'])->name('admin.struktur.delete');
+      Route::get('/parasanganta/struktur/qr/{strukturId}', [StrukturControllerAdmin::class, 'showQrCode'])->name('admin.benda.viewqr');
 
       Route::get('/parasanganta/kegiatan1', [Kegiatan1ControllerAdmin::class, 'index'])->name('admin.kegiatan1.index');
       Route::get('/parasanganta/kegiatan1/tambah', [Kegiatan1ControllerAdmin::class, 'add'])->name('admin.kegiatan1.add');
@@ -119,6 +125,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
       Route::get('/parasanganta/kegiatan1/edit/{photoId}', [Kegiatan1ControllerAdmin::class, 'edit'])->name('admin.kegiatan1.edit');
       Route::post('/parasanganta/kegiatan1/update/{photoId}', [Kegiatan1ControllerAdmin::class, 'update'])->name('admin.kegiatan1.update');
       Route::get('/parasanganta/kegiatan1/delete/{kegiatan1Id}', [Kegiatan1ControllerAdmin::class, 'delete'])->name('admin.kegiatan1.delete');
+      Route::get('/parasanganta/kegiatan1/qr/{kegiatan1Id}', [Kegiatan1ControllerAdmin::class, 'showQrCode'])->name('admin.benda.viewqr');
 
       Route::get('/labu/konten', [\App\Http\Controllers\Admin\KontenLabuController::class, 'index'])->name('admin.konten_labu.index');
       Route::get('/labu/konten/tambah', [\App\Http\Controllers\Admin\KontenLabuController::class, 'add'])->name('admin.konten_labu.add');

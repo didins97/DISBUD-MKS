@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File; 
 use Alert;
 use Carbon\Carbon;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class BendaControllerAdmin extends Controller
 {
@@ -197,5 +197,12 @@ class BendaControllerAdmin extends Controller
         $bangunan->delete();
 
         return redirect()->route('admin.benda.index');
+    }
+
+    public function showQrCode($id)
+    {
+        $bangunan = Benda::findOrFail($id);
+        $qrCode = QrCode::size(300)->generate( route('benda_detail', $bangunan->slug) );
+        return $qrCode;
     }
 }

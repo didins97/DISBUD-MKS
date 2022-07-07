@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\File;
 
 use Alert;
 use Carbon\Carbon;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class SitusControllerAdmin extends Controller
 {
@@ -198,5 +198,12 @@ class SitusControllerAdmin extends Controller
         $bangunan->delete();
 
         return redirect()->route('admin.situs.index');
+    }
+
+    public function showQrCode($id)
+    {
+        $bangunan = Situs::findOrFail($id);
+        $qrCode = QrCode::size(300)->generate( route('situs_detail', $bangunan->slug) );
+        return $qrCode;
     }
 }
