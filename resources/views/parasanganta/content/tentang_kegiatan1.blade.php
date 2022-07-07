@@ -18,15 +18,17 @@
                 <p>Gallery</p>
                 <h3>Daftar <br> Kegiatan</h3>
             </div><!-- /.block-title-two -->
-            <div class="row">
+            <div class="row justify-content-center">
                 @foreach($foto as $a)
 
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="collection-two__single">
                         <div class="collection-two__image konten-list-card">
                             <div class="layer-mask"></div>
-                            <!-- Untuk Card yang membutuhkan badge -->
-                            <!-- <img class="badge-list-card" src=" {{ asset('assets/images/badge-cagarbudaya.svg') }}"> -->
+                            @if ($a->sk_penetapan != null)
+                                <!-- Untuk Card yang membutuhkan badge -->
+                                <img class="badge-list-card" src=" {{ asset('assets/images/badge-cagarbudaya.svg') }}">
+                            @endif
                             <img src="{{ asset('storage/assets/foto/thumbnail/' . $a->thumbnail) }}" alt="">
                             <div class="row collection-two__image__info konten-list-card__info">
                                 <div class="col-12 text-center">

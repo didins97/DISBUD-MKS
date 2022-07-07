@@ -61,6 +61,12 @@
                                 <span>Nama Lain</span>
                                 {{$foto->nama_lain}}
                             </li>
+                            @if ($foto->sk_penetapan != null)
+                            <li>
+                                <span>No. SK</span>
+                                {{$foto->sk_penetapan}}
+                            </li>
+                            @endif
                             <li>
                                 <span>Kategori</span>
                                 Benda
