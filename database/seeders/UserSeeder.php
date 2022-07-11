@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'email' => 'superadmin@dikemas.com',
             'email_verified_at' => now(),
             'telp' => '12323232',
-            'role' => 'super admin',
+            'role' => 'superAdmin',
             'password' => bcrypt('dikemas@disbud'), // password
             'remember_token' => Str::random(10),
             'domisili' => 1
@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
                 'email' => 'adminparasanganta@dikemas.com',
                 'email_verified_at' => now(),
                 'telp' => '12323232',
-                'role' => 'admin',
+                'role' => 'adminParasanganta',
                 'password' => bcrypt('cagarbudaya@123'), // password
                 'remember_token' => Str::random(10),
                 'domisili' => 1
@@ -42,7 +42,7 @@ class UserSeeder extends Seeder
                 'email' => 'adminlabu@dikemas.com',
                 'email_verified_at' => now(),
                 'telp' => '12323232',
-                'role' => 'admin',
+                'role' => 'adminLabu',
                 'password' => bcrypt('kebudayaan@123'), // password
                 'remember_token' => Str::random(10),
                 'domisili' => 1
