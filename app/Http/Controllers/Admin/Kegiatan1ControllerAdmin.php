@@ -207,6 +207,9 @@ class Kegiatan1ControllerAdmin extends Controller
     {
         $bangunan = Kegiatan1::findOrFail($id);
         $qrCode = QrCode::size(300)->generate( route('kegiatan1_detail', $bangunan->slug) );
-        return $qrCode;
+        return [
+            'qrCode' => base64_encode($qrCode),
+            'slug' => $bangunan->slug
+        ];
     }
 }

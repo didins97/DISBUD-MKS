@@ -209,6 +209,9 @@ class KawasanControllerAdmin extends Controller
     {
         $bangunan = Kawasan::findOrFail($id);
         $qrCode = QrCode::size(300)->generate( route('kawasan_detail', $bangunan->slug) );
-        return $qrCode;
+        return [
+            'qrCode' => base64_encode($qrCode),
+            'slug' => $bangunan->slug
+        ];
     }
 }

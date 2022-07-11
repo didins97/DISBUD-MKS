@@ -38,7 +38,6 @@
                           <th>Tanggal Dibuat</th>
                           <th>Judul Artikel</th>
                           <th>Penulis</th>
-                          <th>Slider Utama</th>
                           <th>Status</th>
                           <th>Aksi</th>
                         </tr>
@@ -50,9 +49,6 @@
                           <td>{{ $f->created_at->isoFormat('DD/MM/YYYY'); }}</td>
                           <td>{{ $f->nama }}</td>
                           <td>{{ $f->penulis != 'admin' ? $f->kontributor_relasi->nama : 'admin' }}</td>
-                          <td>
-                            <span class="badge rounded-pill py-1 px-3 {{ $f->slider_utama ? 'bg-success' : 'bg-secondary' }}">{{ $f->slider_utama ? 'Aktif' : 'Tidak Aktif' }}</span>
-                          </td>
                           {{-- <td>
                             {{QrCode::size(100)->generate( route('admin.bangunan.edit', $f->id) );}}
 
@@ -98,6 +94,7 @@
             ...
           </div>
           <div class="modal-footer">
+            <a href="" class="btn btn-secondary">Cetak</a>
           </div>
         </div>
       </div>
@@ -133,7 +130,8 @@
       $($.ajax({
         url: `/admin/parasanganta/bangunan/qr/${id}`,
         success: function (response) {
-          $('#modal .modal-body').html(response);
+          $('#modal .modal-body').html(atob(response.qrCode));
+          $('#modal .modal-footer').find('a').attr('href', `/admin/parasanganta/konten/cetak/${response.slug}?cetak=bangunan`);
           $('#modal').modal('show');
         }
       }));

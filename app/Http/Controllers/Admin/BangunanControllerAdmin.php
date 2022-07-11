@@ -207,6 +207,12 @@ class BangunanControllerAdmin extends Controller
     {
         $bangunan = Bangunan::findOrFail($id);
         $qrCode = QrCode::size(300)->generate( route('bangunan_detail', $bangunan->slug) );
-        return $qrCode;
+
+        // data qrCode kosong saat dikirim dengan tipe data array
+
+        return [
+            'qrCode' => base64_encode($qrCode),
+            'slug' => $bangunan->slug
+        ];
     }
 }

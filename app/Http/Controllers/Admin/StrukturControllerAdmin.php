@@ -205,6 +205,9 @@ class StrukturControllerAdmin extends Controller
     {
         $bangunan = Struktur::findOrFail($id);
         $qrCode = QrCode::size(300)->generate( route('struktur_detail', $bangunan->slug) );
-        return $qrCode;
+        return [
+            'qrCode' => base64_encode($qrCode),
+            'slug' => $bangunan->slug
+        ];
     }
 }

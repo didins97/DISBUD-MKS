@@ -205,6 +205,9 @@ class BendaControllerAdmin extends Controller
     {
         $bangunan = Benda::findOrFail($id);
         $qrCode = QrCode::size(300)->generate( route('benda_detail', $bangunan->slug) );
-        return $qrCode;
+        return [
+            'qrCode' => base64_encode($qrCode),
+            'slug' => $bangunan->slug
+        ];
     }
 }

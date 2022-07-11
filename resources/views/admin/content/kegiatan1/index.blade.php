@@ -38,7 +38,6 @@
                           <th>Tanggal Dibuat</th>
                           <th>Judul Artikel</th>
                           <th>Penulis</th>
-                          <th>Slider Utama</th>
                           <th>Status</th>
                           <th>Aksi</th>
                         </tr>
@@ -51,9 +50,6 @@
                           <td>{{ $f->nama }}</td>
                           <td>{{ $f->penulis != 'admin' ? $f->kontributor_relasi->nama : 'admin' }}</td>
                           <td>
-                            <span class="badge rounded-pill py-1 px-3 {{ $f->slider_utama ? 'bg-success' : 'bg-secondary' }}">{{ $f->slider_utama ? 'Aktif' : 'Tidak Aktif' }}</span>
-                          </td>
-                          <td>
                             <span class="badge rounded-pill py-1 px-3 {{ $f->status == 'publikasi' ? 'bg-success' : 'bg-secondary' }}">{{ $f->status == 'publikasi' ? 'Aktif' : 'Draft' }}</span>
                           </td>
                           <td>
@@ -64,7 +60,6 @@
                               <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{ route('kegiatan1_detail', $f->slug) }}">View Artikel</a></li>
                                 <li><a class="dropdown-item" href="{{ route('admin.kegiatan1.edit', $f->id) }}">Edit</a></li>
-                                <li><a class="dropdown-item" href="{{ route('admin.konten.cetak', $f->slug) }}?cetak=kegiatan1">Cetak</a></li>
                                 <li><a class="dropdown-item btn-hapus" href="javascript:void(0)" data-id="{{ $f->id }}">Hapus</a></li>
                                 <li><a class="dropdown-item btn-vqr" href="javascript:void(0)" data-id="{{ $f->id }}">View QR</a></li>
                               </ul>
@@ -94,6 +89,7 @@
             ...
           </div>
           <div class="modal-footer">
+            <a href="" class="btn btn-secondary">Cetak</a>
           </div>
         </div>
       </div>
@@ -129,7 +125,8 @@
       $($.ajax({
         url: `/admin/parasanganta/kegiatan1/qr/${id}`,
         success: function (response) {
-          $('#modal .modal-body').html(response);
+          $('#modal .modal-body').html(atob(response.qrCode));
+          $('#modal .modal-footer').find('a').attr('href', `/admin/parasanganta/konten/cetak/${response.slug}?cetak=kegiatan1`);
           $('#modal').modal('show');
         }
       }));

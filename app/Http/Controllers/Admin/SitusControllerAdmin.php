@@ -206,6 +206,9 @@ class SitusControllerAdmin extends Controller
     {
         $bangunan = Situs::findOrFail($id);
         $qrCode = QrCode::size(300)->generate( route('situs_detail', $bangunan->slug) );
-        return $qrCode;
+        return [
+            'qrCode' => base64_encode($qrCode),
+            'slug' => $bangunan->slug
+        ];
     }
 }
