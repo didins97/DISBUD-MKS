@@ -43,7 +43,7 @@
                                 <ul class="blog-one__meta list-unstyled">
                                     <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
-                                <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
+                                <h3><a href="{{ route('bangunan_detail', $a->slug) }}">{{$a->nama}}</a>
                                 </h3>
                                 <p>{!! Str::limit($a->konten, 100) !!}</p>
                                 <a href="{{ route('bangunan_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
@@ -64,7 +64,7 @@
                                 <ul class="blog-one__meta list-unstyled">
                                     <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
-                                <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
+                                <h3><a href="{{ route('kawasan_detail', $a->slug) }}">{{$a->nama}}</a>
                                 </h3>
                                 <p>{!! Str::limit($a->konten, 100) !!}</p>
                                 <a href="{{ route('kawasan_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
@@ -85,7 +85,7 @@
                                 <ul class="blog-one__meta list-unstyled">
                                     <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
-                                <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
+                                <h3><a href="{{ route('kegiatan1_detail', $a->slug) }}">{{$a->nama}}</a>
                                 </h3>
                                 <p>{!! Str::limit($a->konten, 100) !!}</p>
                                 <a href="{{ route('kegiatan1_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
@@ -106,7 +106,7 @@
                                 <ul class="blog-one__meta list-unstyled">
                                     <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
-                                <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
+                                <h3><a href="{{ route('struktur_detail', $a->slug) }}">{{$a->nama}}</a>
                                 </h3>
                                 <p>{!! Str::limit($a->konten, 100) !!}</p>
                                 <a href="{{ route('struktur_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
@@ -127,7 +127,7 @@
                                 <ul class="blog-one__meta list-unstyled">
                                     <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
-                                <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
+                                <h3><a href="{{ route('situs_detail', $a->slug) }}">{{$a->nama}}</a>
                                 </h3>
                                 <p>{!! Str::limit($a->konten, 100) !!}</p>
                                 <a href="{{ route('situs_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
@@ -148,7 +148,7 @@
                                 <ul class="blog-one__meta list-unstyled">
                                     <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
-                                <h3><a href="./parasanganta/artikel-detail.html">{{$a->nama}}</a>
+                                <h3><a href="{{ route('benda_detail', $a->slug) }}">{{$a->nama}}</a>
                                 </h3>
                                 <p>{!! Str::limit($a->konten, 100) !!}</p>
                                 <a href="{{ route('benda_detail', $a->slug) }}" class="blog-one__link">Selengkapnya</a>
@@ -190,7 +190,7 @@
                                 <ul class="blog-one__meta list-unstyled">
                                     <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
-                                <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->nama }}</a>
+                                <h3><a href="{{route('event_detail',$a->slug)}}">{{ $a->nama }}</a>
                                 </h3>
                                 <p>{!! Str::limit($a->nama, 100) !!}</p>
                                 <a href="{{route('event_detail',$a->slug)}}" class="blog-one__link">Selengkapnya</a>
@@ -211,7 +211,7 @@
                                 <ul class="blog-one__meta list-unstyled">
                                     <li><a href="javascript:;">By {{$a->penulis}}</a></li>
                                 </ul>
-                                <h3><a href="{{route('article_detail',$a->slug)}}">{{ $a->judul_indo }}</a>
+                                <h3><a href="{{route('event_detail',$a->slug)}}">{{ $a->judul_indo }}</a>
                                 </h3>
                                 <p>{!! Str::limit($a->nama, 100) !!}</p>
                                 <a href="{{route('event_detail',$a->slug)}}" class="blog-one__link">Selengkapnya</a>
