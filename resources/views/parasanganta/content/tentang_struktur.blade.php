@@ -39,10 +39,7 @@
                             <a href="{{ route('struktur_detail', $a->slug) }}" class="stretched-link"></a>
                         </div>
                     </div>
-
                 @endforeach
-
-
             </div><!-- /.collection-two__carousel shadowed__carousel thm__owl-carousel owl-carousel owl-theme -->
         </div><!-- /.container-fluid -->
         {{$foto->links('partials.pagination')}}
