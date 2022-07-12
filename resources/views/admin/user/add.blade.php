@@ -35,12 +35,12 @@
                         <input type="email" required name="email" class="form-control" id="email">
                       </div>
                       <div class="mb-3">
-                        <label for="domisili" class="col-form-label">Domisili</label>
-                        <select id="domisili" name="domisili" required class="form-select select2-style" aria-label="Default select example">
-                          <option value="" selected>Pilih Lokasi</option>
-                          @foreach( $lokasi as $l )
-                            <option value="{{ $l->id }}">{{ $l->nama_lokasi }}</option>
-                          @endforeach
+                        <label for="role" class="col-form-label">Role</label>
+                        <select id="role" name="role" required class="form-select select2-style" aria-label="Default select example">
+                          <option value="" selected>Pilih Role</option>
+                          <option value="superAdmin">Super Admin</option>
+                          <option value="adminParasanganta">Admin Parasanganta</option>
+                          <option value="adminLabu">Admin Labu</option>
                         </select>
                       </div>
                       {{-- <div class="mb-3">

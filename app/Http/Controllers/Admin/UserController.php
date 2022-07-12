@@ -34,16 +34,15 @@ class UserController extends Controller
         $request->validate([
             'nama' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'domisili' => 'required',
+            'role' => 'required',
             'password' => 'required|min:4'
         ]);
 
         User::create([
             'nama' => $request->nama,
             'email' => $request->email,
-            'domisili' => $request->domisili,
+            'role' => $request->role,
             'password' => bcrypt($request->password),
-            'role' => 'admin'
         ]);
 
         Alert::success('Berhasil', 'User berhasil ditambah');
@@ -64,7 +63,7 @@ class UserController extends Controller
         $request->validate([
             'nama' => 'required|max:255',
             'email' => 'required|email|max:255',
-            'domisili' => 'required',
+            'role' => 'required',
         ]);
 
         $user = User::findOrFail($userId);
@@ -77,14 +76,14 @@ class UserController extends Controller
             $user->update([
                 'nama' => $request->nama,
                 'email' => $request->email,
-                'domisili' => $request->domisili,
+                'role' => $request->role,
                 'password' => bcrypt($request->password)
             ]);
         }else {
             $user->update([
                 'nama' => $request->nama,
                 'email' => $request->email,
-                'domisili' => $request->domisili,
+                'role' => $request->role,
             ]);
         }
 

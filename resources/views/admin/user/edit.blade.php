@@ -35,16 +35,11 @@
                         <input type="email" value="{{ $user->email }}" required name="email" class="form-control" id="email">
                       </div>
                       <div class="mb-3">
-                        <label for="domisili" class="col-form-label">Domisili</label>
-                        <select id="domisili" name="domisili" required class="form-select select2-style" aria-label="Default select example">
-                          <option value="" selected>Pilih Lokasi</option>
-                          @foreach( $lokasi as $l )
-                            @if( $l->id == $user->lokasi->id )
-                                <option value="{{ $l->id }}" selected>{{ $l->nama_lokasi }}</option>
-                            @else
-                                <option value="{{ $l->id }}">{{ $l->nama_lokasi }}</option>
-                            @endif
-                          @endforeach
+                        <label for="role" class="col-form-label">Role</label>
+                        <select id="role" name="role" required class="form-select select2-style" aria-label="Default select example">
+                          <option value="superAdmin" @if ($user->role == 'superAdmin') selected @endif>Super Admin</option>
+                          <option value="adminParasanganta" @if ($user->role == 'adminParasanganta') selected @endif>Admin Parasanganta</option>
+                          <option value="adminLabu" @if ($user->role == 'adminLabu') selected @endif>Admin Labu</option>
                         </select>
                       </div>
                       {{-- <div class="mb-3">
