@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\File;
 use Alert;
 use App\Models\KategoriOpk;
 use App\Models\KontenLabu;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class KontenLabuController extends Controller
 {
@@ -175,5 +176,18 @@ class KontenLabuController extends Controller
         $konten->delete();
 
         return redirect()->route('admin.konten_labu.index');
+    }
+
+    public function showQrCode($id)
+    {
+        $bangunan = KontenLabu::findOrFail($id);
+        $qrCode = QrCode::size(300)->generate( route('bangunan_detail', $bangunan->slug) );
+
+        // data qrCode kosong saat dikirim dengan tipe data array
+
+        return [
+            'qrCode' => base64_encode($qrCode),
+            'slug' => $bangunan->slug
+        ];
     }
 }

@@ -38,6 +38,6 @@ class RoleAdmin
             return redirect()->back();
         }
 
-        return redirect()->back();
+        return redirect()->route('login');
     }
 }

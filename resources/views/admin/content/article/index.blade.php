@@ -56,15 +56,15 @@
                               <span class="badge rounded-pill py-1 px-3 {{ $a->status == 'publikasi' ? 'bg-success' : 'bg-secondary' }}">{{ $a->status == 'publikasi' ? 'Aktif' : 'Draft' }}</span>
                             </td>
                             <td>
-                              <a href="{{ route('article_detail', $a->slug) }}" class="btn btn-sm btn-outline-primary mb-1">
-                                View
+                              <a class="dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i>
                               </a>
-                              <a href="{{ route('admin.article.edit', $a->id) }}" class="btn btn-sm btn-outline-info mb-1">
-                                Edit
-                              </a>
-                              <button class="btn btn-sm btn-outline-danger btn-hapus mb-1" data-id="{{ $a->id }}">
-                                Hapus
-                              </button>
+                              <!--Menu-->
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('article_detail', $a->slug) }}">View</a></li>
+                                <li><a class="dropdown-item" href="{{ route('admin.article.edit', $a->id) }}">Edit</a></li>
+                                <li><a class="dropdown-item btn-hapus" href="javascript:void(0)" data-id="{{ $a->id }}">Hapus</a></li>
+                              </ul>
                             </td>
                           </tr>
                         @endforeach

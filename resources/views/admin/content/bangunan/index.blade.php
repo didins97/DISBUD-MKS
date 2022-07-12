@@ -64,7 +64,6 @@
                               <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{ route('bangunan_detail', $f->slug) }}">View Artikel</a></li>
                                 <li><a class="dropdown-item" href="{{ route('admin.bangunan.edit', $f->id) }}">Edit</a></li>
-                                <li><a class="dropdown-item" href="{{ route('admin.konten.cetak', $f->slug) }}?cetak=bangunan">Cetak</a></li>
                                 <li><a class="dropdown-item btn-hapus" href="javascript:void(0)" data-id="{{ $f->id }}">Hapus</a></li>
                                 <li><a class="dropdown-item btn-vqr" href="javascript:void(0)" data-id="{{ $f->id }}">View QR</a></li>
                               </ul>

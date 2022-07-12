@@ -28,7 +28,7 @@
                   <div class="card-body">
                     {{-- <div class="col-lg-12 mb-3"> --}}
                       {{-- <div class="card shadow mb-4"> --}}
-                        <div class="card-header py-3 mb-3">
+                        <div class="py-3 mb-3">
                           <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Gambar Header</h2>
                         {{-- </div> --}}
                         <div class="card-body ">

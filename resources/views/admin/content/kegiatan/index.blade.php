@@ -56,15 +56,15 @@
                       <span class="badge rounded-pill py-1 px-3 {{ $k->status == 'publikasi' ? 'bg-success' : 'bg-secondary' }}">{{ $k->status == 'publikasi' ? 'Aktif' : 'Draft' }}</span>
                     </td>
                     <td>
-                      <a href="{{ route('event_detail', $k->slug) }}" class="btn btn-sm btn-outline-primary mb-1">
-                        View
+                      <a class="dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i>
                       </a>
-                      <a href="{{ route('admin.kegiatan.edit', $k->id) }}" class="btn btn-sm btn-outline-info mb-1">
-                        Edit
-                      </a>
-                      <button class="btn btn-sm btn-outline-danger btn-hapus mb-1" data-id="{{ $k->id }}">
-                        Hapus
-                      </button>
+                      <!--Menu-->
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('event_detail', $k->slug) }}">View</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.kegiatan.edit', $k->id) }}">Edit</a></li>
+                        <li><a class="dropdown-item btn-hapus" href="javascript:void(0)" data-id="{{ $k->id }}">Hapus</a></li>
+                      </ul>
                     </td>
                   </tr>
                   @endforeach

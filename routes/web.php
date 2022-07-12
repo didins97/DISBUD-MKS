@@ -161,7 +161,8 @@ Route::prefix('admin')->group(function () {
       Route::post('/labu/konten/tambah', [\App\Http\Controllers\Admin\KontenLabuController::class, 'store'])->name('admin.konten_labu.store');
       Route::get('/labu/konten/edit/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'edit'])->name('admin.konten_labu.edit');
       Route::post('/labu/konten/update/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'update'])->name('admin.konten_labu.update');
-      Route::get('/labu/konten/delete/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'delete'])->name('admin.konten_labu.delete'); 
+      Route::get('/labu/konten/delete/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'delete'])->name('admin.konten_labu.delete');
+      Route::get('/labu/konten/qr/{id}', [\App\Http\Controllers\Admin\KontenLabuController::class, 'showQrCode'])->name('admin.konten_labu.viewqr');
 
       Route::get('/labu/konten/cetak/{slug}', [\App\Http\Controllers\Admin\CetakKontenController::class, 'cetak'])->name('admin.konten-labu.cetak');
     });
@@ -177,6 +178,10 @@ Route::prefix('admin')->group(function () {
     });
 
 });
+
+
+
+
 
 // Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
 //     Route::get('/', [HomeControllerAdmin::class, 'index'])->name('admin.home');
