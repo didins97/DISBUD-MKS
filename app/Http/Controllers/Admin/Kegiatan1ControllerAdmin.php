@@ -70,6 +70,7 @@ class Kegiatan1ControllerAdmin extends Controller
             'nama_lain'=>$request->nama_lain,
             'tahun'=>$request->tahun,
             'sk_penetapan'=>$request->sk_penetapan,
+            'user_id' => auth()->user()->id,
 
             // 'id_kontributor' => ($request->contributor != null && $request->id_kontributor != null) ? $request->id_kontributor : null,
             'galleries_file' => $request->slider_utama != null ? $filename_galleries : null,
@@ -168,6 +169,7 @@ class Kegiatan1ControllerAdmin extends Controller
             'nama_lain'=>$request->nama_lain,
             'tahun'=>$request->tahun,
             'sk_penetapan'=>$request->sk_penetapan,
+            'user_id' => auth()->user()->id,
 
             // 'id_kontributor' => ($request->contributor != null && $request->id_kontributor != null) ? $request->id_kontributor : null,
             'galleries_file' => $request->slider_utama != null ? $filename_galleries : null,
