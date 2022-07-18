@@ -48,7 +48,7 @@
                           <td>#</td>
                           <td>{{ $f->created_at->isoFormat('DD/MM/YYYY'); }}</td>
                           <td>{{ $f->nama }}</td>
-                          <td>{{ $f->user->nama}}</td>
+                          <td>{{ $f->user_id != null ? $f->user->nama : 'Admin Cagar Budaya' }}</td>
                           {{-- <td>
                             {{QrCode::size(100)->generate( route('admin.bangunan.edit', $f->id) );}}
 
