@@ -13,6 +13,7 @@ use App\Models\Kegiatan1;
 use App\Models\Situs;
 use App\Models\Struktur;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class BendaControllerAdmin extends Controller
@@ -90,25 +91,11 @@ class BendaControllerAdmin extends Controller
         Benda::create($data);
         
         if( !empty($request->kategori) ) {
-            if( in_array('bangunan', $request->kategori) ) {
-                Bangunan::create($data);
-            }
-
-            if( in_array('struktur', $request->kategori) ) {
-                Struktur::create($data);
-            }
-
-            if( in_array('kawasan', $request->kategori) ) {
-                Kawasan::create($data);
-            }
-
-            if( in_array('situs', $request->kategori) ) {
-                Situs::create($data);
-            }
-
-            if( in_array('kegiatan', $request->kategori) ) {
-                Kegiatan1::create($data);
-            }
+            if( in_array('bangunan', $request->kategori) ) Bangunan::create($data);
+            if( in_array('struktur', $request->kategori) ) Struktur::create($data);
+            if( in_array('kawasan', $request->kategori) ) Kawasan::create($data);
+            if( in_array('situs', $request->kategori) ) Situs::create($data);
+            if( in_array('kegiatan', $request->kategori) ) Kegiatan1::create($data);
         }
         
 

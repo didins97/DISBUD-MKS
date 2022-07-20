@@ -90,25 +90,11 @@ class StrukturControllerAdmin extends Controller
         Struktur::create($data);
 
         if( !empty($request->kategori) ) {
-            if( in_array('benda', $request->kategori) ) {
-                Benda::create($data);
-            }
-
-            if( in_array('bangunan', $request->kategori) ) {
-                Bangunan::create($data);
-            }
-
-            if( in_array('kawasan', $request->kategori) ) {
-                Kawasan::create($data);
-            }
-
-            if( in_array('situs', $request->kategori) ) {
-                Situs::create($data);
-            }
-
-            if( in_array('kegiatan', $request->kategori) ) {
-                Kegiatan1::create($data);
-            }
+            if( in_array('benda', $request->kategori) ) Benda::create($data);
+            if( in_array('bangunan', $request->kategori) ) Bangunan::create($data);
+            if( in_array('kawasan', $request->kategori) ) Kawasan::create($data);
+            if( in_array('situs', $request->kategori) ) Situs::create($data);
+            if( in_array('kegiatan', $request->kategori) ) Kegiatan1::create($data);
         }
         
 
