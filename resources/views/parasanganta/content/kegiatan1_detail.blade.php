@@ -18,6 +18,10 @@
         <div class="event-details__top">
             <p class="d-none">Wednesday, Dec 18, 2019</p>
             <h3>{{$foto->nama}}</h3>
+            <ul class="blog-one__meta list-unstyled">
+                <li><a href="javascript:;" class="text-uppercase">Oleh <span class="text-bold">{{ $foto->user_id != null ? $foto->user->nama : 'Admin Cagar Budaya' }}</span></a></li>
+                <li class="text-uppercase"> {{ \Carbon\Carbon::parse($foto->published_at)->isoFormat('D MMMM Y'); }}</li>
+            </ul>
 
         </div><!-- /.event-details__top -->
         <div class="row high-gutter">
