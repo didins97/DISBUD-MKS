@@ -8,6 +8,11 @@ use App\Models\Struktur;
 use Illuminate\Support\Facades\File; 
 
 use Alert;
+use App\Models\Bangunan;
+use App\Models\Benda;
+use App\Models\Kawasan;
+use App\Models\Kegiatan1;
+use App\Models\Situs;
 use Carbon\Carbon;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
@@ -54,7 +59,7 @@ class StrukturControllerAdmin extends Controller
         
       
 
-        Struktur::create([
+        $data = [
             'nama' => $request->nama,
             'konten' => $request->konten,
             'meta' => $request->meta,
@@ -80,7 +85,31 @@ class StrukturControllerAdmin extends Controller
             // 'published_at' => $request->publish_date . " " . $request->publish_time
             'published_at'=> Carbon::now()
 
-        ]);
+        ];
+
+        Struktur::create($data);
+
+        if( !empty($request->kategori) ) {
+            if( in_array('benda', $request->kategori) ) {
+                Benda::create($data);
+            }
+
+            if( in_array('bangunan', $request->kategori) ) {
+                Bangunan::create($data);
+            }
+
+            if( in_array('kawasan', $request->kategori) ) {
+                Kawasan::create($data);
+            }
+
+            if( in_array('situs', $request->kategori) ) {
+                Situs::create($data);
+            }
+
+            if( in_array('kegiatan', $request->kategori) ) {
+                Kegiatan1::create($data);
+            }
+        }
         
 
         Alert::success('Berhasil', 'Foto berhasil ditambahkan');
