@@ -429,6 +429,9 @@
               </div>
             </div>`
         )
+
+        sliderPreview();
+        
       } else {
         alert("Sudah melebihi batas")
       }
@@ -456,6 +459,23 @@
           };
         });
       })
+
+      function sliderPreview() {
+        if(x > 1) {
+          $('#fotoSliderBody').find('.wrapper-foto-slider').each(function(i, v) {
+            let id = $(this).data('id');
+            // $('.sliderPreview' + id).attr('src', "{{ asset('assets/admin/img/noimage.jpg') }}");
+            $("input[data-preview='.sliderPreview" + id + "']").change(function() {
+              var input = $(this);
+              var oFReader = new FileReader();
+              oFReader.readAsDataURL(this.files[0]);
+              oFReader.onload = function(oFREvent) {
+                $(input.data('preview')).attr('src', oFREvent.target.result);
+              };
+            });
+          });
+        }
+      }
     </script>
   
     <script>
