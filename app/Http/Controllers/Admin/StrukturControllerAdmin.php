@@ -165,6 +165,7 @@ class StrukturControllerAdmin extends Controller
             'kecamatan'=> $request->kecamatan,
             'letak' => $request->letak,
             'tahun'=>$request->tahun,
+            'nama_lain'=>$request->nama_lain,
             'sk_penetapan'=>$request->sk_penetapan,
 
             // 'id_kontributor' => ($request->contributor != null && $request->id_kontributor != null) ? $request->id_kontributor : null,
