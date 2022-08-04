@@ -75,6 +75,29 @@
                         <label for="judulArtikelBahasa" class="form-label">No. SK</label>
                         <input  value="{{ old('sk_penetapan') }}" type="text" name="sk_penetapan" class="form-control" id="judulArtikelBahasa" >
                       </div>
+                      <div class="mb-3">
+                        <label for="judulArtikelBahasa" class="form-label">Kategori</label><br>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="kategori[]" id="bangunan" value="bangunan">
+                          <label class="form-check-label" for="bangunan">Bangunan</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="kategori[]" id="struktur" value="struktur">
+                          <label class="form-check-label" for="struktur">Struktur</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="kategori[]" id="situs" value="situs">
+                          <label class="form-check-label" for="situs">Situs</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="kategori[]" id="kawasan" value="kawasan">
+                          <label class="form-check-label" for="kawasan">Kawasan</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="kategori[]" id="benda" value="benda">
+                          <label class="form-check-label" for="benda">Benda</label>
+                        </div>
+                      </div>
 
                       {{-- <div class="mb-3">
                         <label for="metaDesID" class="form-label">Meta Description</label>
@@ -401,6 +424,8 @@
               </div>
             </div>`
         )
+
+        sliderPreview();
       } else {
         alert("Sudah melebihi batas")
       }
@@ -428,6 +453,23 @@
           };
         });
       })
+
+      function sliderPreview() {
+        if(x > 1) {
+          $('#fotoSliderBody').find('.wrapper-foto-slider').each(function(i, v) {
+            let id = $(this).data('id');
+            // $('.sliderPreview' + id).attr('src', "{{ asset('assets/admin/img/noimage.jpg') }}");
+            $("input[data-preview='.sliderPreview" + id + "']").change(function() {
+              var input = $(this);
+              var oFReader = new FileReader();
+              oFReader.readAsDataURL(this.files[0]);
+              oFReader.onload = function(oFREvent) {
+                $(input.data('preview')).attr('src', oFREvent.target.result);
+              };
+            });
+          });
+        }
+      }
     </script>
   
     <script>

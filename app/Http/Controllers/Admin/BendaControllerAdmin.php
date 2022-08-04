@@ -7,7 +7,13 @@ use App\Models\Benda;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File; 
 use Alert;
+use App\Models\Bangunan;
+use App\Models\Kawasan;
+use App\Models\Kegiatan1;
+use App\Models\Situs;
+use App\Models\Struktur;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class BendaControllerAdmin extends Controller
@@ -31,6 +37,7 @@ class BendaControllerAdmin extends Controller
             'galleries_foto' => 'required'
         ]);
 
+
         // UPLOAD THUMBNAIL
         $thumbnail = $request->file('thumbnail');
         $filename_thumbnail = upload_file('app/public/assets/foto/thumbnail', $thumbnail);
@@ -53,7 +60,7 @@ class BendaControllerAdmin extends Controller
         
       
 
-        Benda::create([
+        $data = [
             'nama' => $request->nama,
             'konten' => $request->konten,
             'meta' => $request->meta,
@@ -68,6 +75,7 @@ class BendaControllerAdmin extends Controller
             'nama_lain'=>$request->nama_lain,
             'tahun'=>$request->tahun,
             'sk_penetapan'=>$request->sk_penetapan,
+            'user_id' => auth()->user()->id,
 
             // 'id_kontributor' => ($request->contributor != null && $request->id_kontributor != null) ? $request->id_kontributor : null,
             'galleries_file' => $request->slider_utama != null ? $filename_galleries : null,
@@ -78,7 +86,17 @@ class BendaControllerAdmin extends Controller
             // 'published_at' => $request->publish_date . " " . $request->publish_time
             'published_at'=> Carbon::now()
 
-        ]);
+        ];
+
+        Benda::create($data);
+        
+        if( !empty($request->kategori) ) {
+            if( in_array('bangunan', $request->kategori) ) Bangunan::create($data);
+            if( in_array('struktur', $request->kategori) ) Struktur::create($data);
+            if( in_array('kawasan', $request->kategori) ) Kawasan::create($data);
+            if( in_array('situs', $request->kategori) ) Situs::create($data);
+            if( in_array('kegiatan', $request->kategori) ) Kegiatan1::create($data);
+        }
         
 
         Alert::success('Berhasil', 'Foto berhasil ditambahkan');

@@ -29,6 +29,11 @@ class Struktur extends Model
             ->saveSlugsTo('slug');
     }
 
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id', 'id');
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';

@@ -34,7 +34,7 @@
                             </ul>
                         </li>
                         <li><a href="{{route('articles')}}">Artikel</a></li>
-                        <li><a href="{{route('events')}}">Event</a></li>
+                        {{-- <li><a href="{{route('events')}}">Event</a></li> --}}
                         <li><a href="{{route('tentang')}}">Tentang</a></li>
                     </ul><!-- /.main-nav__navigation-box -->
                 </div><!-- /.main-nav__main-navigation -->
@@ -215,7 +215,7 @@
         </div><!-- /.container -->
     </section>
 
-    <section class="event-one">
+    {{-- <section class="event-one">
         <img src="assets/images/resources/badik.webp" alt="" class="event-one__moc" width="250px">
         <div class="container">
             <div class="block-title-two text-center">
@@ -249,5 +249,5 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
     @endsection

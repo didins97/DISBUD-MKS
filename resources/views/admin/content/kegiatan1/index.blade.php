@@ -48,7 +48,7 @@
                           <td>#</td>
                           <td>{{ $f->created_at->isoFormat('DD/MM/YYYY'); }}</td>
                           <td>{{ $f->nama }}</td>
-                          <td>{{ $f->penulis != 'admin' ? $f->kontributor_relasi->nama : 'admin' }}</td>
+                          <td>{{ $f->user_id != null ? $f->user->nama : 'Admin Cagar Budaya' }}</td>
                           <td>
                             <span class="badge rounded-pill py-1 px-3 {{ $f->status == 'publikasi' ? 'bg-success' : 'bg-secondary' }}">{{ $f->status == 'publikasi' ? 'Aktif' : 'Draft' }}</span>
                           </td>
