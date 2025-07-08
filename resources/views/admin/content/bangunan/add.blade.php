@@ -14,13 +14,13 @@
         <!-- Begin Page Content -->
         <div class="container-fluid" id="contentWrapper">
             <!-- Page Heading -->
-  
+
             <div class="row">
               <div class="col-lg-12 mb-3">
                 <div class="card shadow mb-4">
                   @if (count($errors) > 0)
                     <div class="alert alert-danger" role="alert">
-                      {{ $errors->first() }} 
+                      {{ $errors->first() }}
                     </div>
                   @endif
                   <div class="card-header py-3">
@@ -152,7 +152,6 @@
                     <div class="mb-4">
                       <input required name="thumbnail" class="form-control" id="uploadThumbnail" type="file" data-preview=".preview" accept="image/png, image/jpeg">
                       <little><sup>*</sup> wajib</little>
-
                     </div>
                     <div class="mb-3">
                       <h5>Panduan unggah gambar</h5>
@@ -216,13 +215,13 @@
                   </div>
                 </div>
               </div>
-              
+
               {{-- <div class="col-lg-12 mb-3">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Tag Artikel</h2>
                   </div>
-                  <div class="card-body">                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                  <div class="card-body">
                        <div class="mb-3">
                         <label for="lokasiArtikel" class="form-label">Lokasi</label>
                         <select id="pilihLokasi" name="id_lokasi" class="form-select select2-style" name="id_lokasi" aria-label="Default select example">
@@ -231,7 +230,7 @@
                             <option value="{{ $l->id }}">{{ $l->nama_lokasi }}</option>
                           @endforeach
                         </select>
-                      </div> 
+                      </div>
                        <div class="mb-3">
                         <label for="isiArtikelEnglish" class="form-label">Jenis Rempah</label>
                         <div class="px-3 row">
@@ -246,7 +245,7 @@
                           </div>
                           @endforeach
                         </div>
-                      </div> 
+                      </div>
                       <div class="mb-3">
                         <label for="isiArtikelEnglish" class="form-label">Kategori</label>
                         <div class="px-3 row">
@@ -284,7 +283,7 @@
                   </div>
                 </div>
               </div> --}}
-              
+
              </div>
              <div id="fotoSlider" class="col-lg-12 mb-3" style="display: none;">
               <div class="card shadow mb-4">
@@ -328,7 +327,7 @@
                    <label for="namaKontributor" class="form-label">Nama Kontributor</label>
                    <select id="namaKontributor" name="id_kontributor" class="form-select select2-style" aria-label="Default select example">
                      <option value="" selected>Pilih Kontributor</option>
-                     {{-- @foreach( $kontributor as $k ) 
+                     {{-- @foreach( $kontributor as $k )
                        <option value="{{ $k->id }}">{{ $k->nama }}</option>
                      @endforeach --}}
                    </select>
@@ -412,7 +411,7 @@
                       <textarea name="caption_galleries_foto[]" required maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini" name="captionFoto` + i + `"></textarea>
                       <little><sup>*</sup> maksimsal 100 karakter</little>
                     </div>
-                   
+
                   </div>
                 </div>
                 <div class="col-sm-1">
@@ -429,10 +428,10 @@
         alert("Sudah melebihi batas")
       }
       console.log(x);
-  
-  
+
+
     });
-  
+
     $('#fotoSliderBody').on('click', '.btn-hapus-foto', function(e) {
       x--;
       console.log(x);
@@ -470,7 +469,7 @@
         }
       }
     </script>
-  
+
     <script>
       $(document).ready(function() {
         $("#peng-kontributor").click(function() {
@@ -479,9 +478,9 @@
         });
         $("#peng-slider").click(function() {
           $("#fotoSlider").toggle();
-  
+
         });
-  
+
       });
     </script>
 @endsection

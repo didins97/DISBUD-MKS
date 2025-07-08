@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Bangunan;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File; 
+use Illuminate\Support\Facades\File;
 use Carbon\Carbon;
 
 
@@ -24,7 +24,7 @@ class BangunanControllerAdmin extends Controller
         return view('admin.content.bangunan.index', compact('bangunan'));
     }
 
-    public function add() 
+    public function add()
     {
         return view('admin.content.bangunan.add');
     }
@@ -57,8 +57,8 @@ class BangunanControllerAdmin extends Controller
         }
 
         $galleries_foto_array = serialize( $galleries_foto_array);
-        
-      
+
+
 
         $data = [
             'nama' => $request->nama,
@@ -76,7 +76,7 @@ class BangunanControllerAdmin extends Controller
             'tahun'=>$request->tahun,
             'sk_penetapan'=>$request->sk_penetapan,
             'user_id' => auth()->user()->id,
-            
+
             // 'id_kontributor' => ($request->contributor != null && $request->id_kontributor != null) ? $request->id_kontributor : null,
             'galleries_file' => $request->slider_utama != null ? $filename_galleries : null,
             'galleries' => $galleries_foto_array,
@@ -96,7 +96,7 @@ class BangunanControllerAdmin extends Controller
             if( in_array('situs', $request->kategori) ) Situs::create($data);
             if( in_array('kegiatan', $request->kategori) ) Kegiatan1::create($data);
         }
-        
+
 
         Alert::success('Berhasil', 'Foto berhasil ditambahkan');
 
@@ -106,7 +106,7 @@ class BangunanControllerAdmin extends Controller
     public function edit($bangunanId)
     {
         $foto = Bangunan::findOrFail($bangunanId);
-        
+
 
 
         return view('admin.content.bangunan.edit', compact('foto'));
@@ -132,14 +132,14 @@ class BangunanControllerAdmin extends Controller
         } else {
             $filename_thumbnail = $foto->thumbnail;
         }
-    
+
 
         // UPLOAD FILE SLIDER UTAMA(NULLABLE)
         if( $request->has('slider') ) {
             $galleries = $request->file('slider');
             $filename_galleries = upload_file('app/public/assets/foto/slider', $galleries);
 
-            File::delete(storage_path('app/public/assets/foto/slider', $foto->galleries));            
+            File::delete(storage_path('app/public/assets/foto/slider', $foto->galleries));
         } else {
             $filename_galleries = $foto->galleries_file;
         }
@@ -161,13 +161,13 @@ class BangunanControllerAdmin extends Controller
             }
         }
         $galleries_foto_array = serialize($galleries_foto_array);
-        
+
 
         // $slug_english = null;
         // if( !$foto->slug_english ) {
         //     $slug_english = generate_slug($request->judul_english, '-');
         // }
-        
+
         $foto->update([
             'nama' => $request->nama,
             'konten' => $request->konten,
@@ -195,7 +195,7 @@ class BangunanControllerAdmin extends Controller
 
         ]);
 
-        
+
 
         Alert::success('Berhasil', 'Foto berhasil diedit');
 
@@ -208,8 +208,8 @@ class BangunanControllerAdmin extends Controller
         $bangunan = Bangunan::findOrFail($photoId);
 
         if( $bangunan->galleries != null )
-            File::delete(storage_path('app/public/assets/foto/galleries', $bangunan->galleries));   
-        
+            File::delete(storage_path('app/public/assets/foto/galleries', $bangunan->galleries));
+
         foreach( unserialize($bangunan->galleries) as $sf_lama ) {
             File::delete(storage_path('app/public/assets/foto/galleries', $sf_lama));
         }

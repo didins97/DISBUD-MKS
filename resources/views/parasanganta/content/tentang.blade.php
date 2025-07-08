@@ -26,16 +26,9 @@
                         <p>Tentang Disbud</p>
                         <h3 class="">Dinas Kebudayaan Makassar</h3>
                     </div>
-                    <p>Dinas Kebudayaan Kota Makassar merupakan salah satu Perangkat Daerah yang menyelenggarakan urusan pemerintahan dalam bidang kebudayaan. Kedudukan dinas tersebut merupakan unsur pelaksana urusan pemerintahan yang menyelenggarakan bidang kebudayaan yang diatur dalam Peraturan Daerah Kota Makassar Nomor 08 Tahun 2016 tentang Pembentukan dan Susunan Perangkat Daerah Kota Makassar.</p>
-                    <p>Perangkat Daerah Dinas Kebudayaan Kota Makassar mempunyai tugas pokok yaitu membantu Walikota melaksanakan urusan pemerintahan bidang kebudayaan yang menjadi kewenangan daerah dan tugas pembantuan yang ditugaskan kepada daerah. Untuk melaksanakan tugas pokok sebagaimana dimaksud, Dinas Kebudayaan mempunyai fungsi sebagai berikut:.</p>
-                    <p>
-                    <ol>
-                        <li>Perumusan kebijakan penyelenggaraan Urusan Pemerintahan bidang kebudayaan;</li>
-                        <li>Pelaksanaan kebijakan Urusan Pemerintahan bidang kebudayaan;</li>
-                        <li>Pelaksanaan evaluasi dan pelaporan Urusan Pemerintahan bidang kebudayaan;</li>
-                        <li>Pelaksanaan administrasi dinas Urusan Pemerintahan bidang kebudayaan;</li>
-                    </ol>
-                    </p>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
                 </div><!-- /.about-four__content -->
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
